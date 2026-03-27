@@ -6,7 +6,7 @@
 
   <PropertyGroup Label="Nuget">
     <Description>C# SDK based on Synthesia OpenAPI specification.</Description>
-    <PackageTags>api;client;sdk;dotnet;swagger;openapi;specification;generated;nswag</PackageTags>
+    <PackageTags>synthesia;ai;video-generation;sdk;csharp;dotnet;openapi;autosdk</PackageTags>
   </PropertyGroup>
 
 </Project>
