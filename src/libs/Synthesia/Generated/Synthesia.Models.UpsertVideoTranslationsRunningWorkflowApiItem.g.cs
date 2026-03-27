@@ -1,0 +1,80 @@
+
+#nullable enable
+
+namespace Synthesia
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class UpsertVideoTranslationsRunningWorkflowApiItem
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("language")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Language { get; set; }
+
+        /// <summary>
+        /// Default Value: in_progress
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.UpsertVideoTranslationsRunningWorkflowApiItemStatusJsonConverter))]
+        public global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStatus? Status { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("step")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.UpsertVideoTranslationsRunningWorkflowApiItemStepJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStep Step { get; set; }
+
+        /// <summary>
+        /// Whether the translation was started by the request.<br/>
+        /// Default Value: true
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("startedByRequest")]
+        public bool? StartedByRequest { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UpsertVideoTranslationsRunningWorkflowApiItem" /> class.
+        /// </summary>
+        /// <param name="language"></param>
+        /// <param name="status">
+        /// Default Value: in_progress
+        /// </param>
+        /// <param name="step"></param>
+        /// <param name="startedByRequest">
+        /// Whether the translation was started by the request.<br/>
+        /// Default Value: true
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public UpsertVideoTranslationsRunningWorkflowApiItem(
+            string language,
+            global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStep step,
+            global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStatus? status,
+            bool? startedByRequest)
+        {
+            this.Language = language ?? throw new global::System.ArgumentNullException(nameof(language));
+            this.Step = step;
+            this.Status = status;
+            this.StartedByRequest = startedByRequest;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UpsertVideoTranslationsRunningWorkflowApiItem" /> class.
+        /// </summary>
+        public UpsertVideoTranslationsRunningWorkflowApiItem()
+        {
+        }
+    }
+}

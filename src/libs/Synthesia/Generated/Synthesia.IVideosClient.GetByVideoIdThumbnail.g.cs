@@ -1,0 +1,18 @@
+#nullable enable
+
+namespace Synthesia
+{
+    public partial interface IVideosClient
+    {
+        /// <summary>
+        /// Retrieve a GIF/JPG thumbnail<br/>
+        /// Use this endpoint to pull information on a given video. It will return a GIF thumbnail if it exists, otherwise a JPG.
+        /// </summary>
+        /// <param name="videoId"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Synthesia.ApiException"></exception>
+        global::System.Threading.Tasks.Task GetByVideoIdThumbnailAsync(
+            string videoId,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}
