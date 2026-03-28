@@ -23,7 +23,7 @@ var client = new SynthesiaClient(apiKey); // SYNTHESIA_API_KEY env var
 ## Key Files
 
 - `src/libs/Synthesia/openapi.yaml` — OpenAPI spec (downloaded from Synthesia API)
-- `src/libs/Synthesia/generate.sh` — Downloads spec, converts `apiKey` to `http/bearer`, adds top-level security array, runs autosdk
+- `src/libs/Synthesia/generate.sh` — Downloads spec, runs autosdk with `--security-scheme Http:Header:Bearer`
 - `src/libs/Synthesia/Generated/` — **Never edit** — auto-generated code
 - `src/libs/Synthesia/Extensions/SynthesiaClient.Tools.cs` — MEAI `AIFunction` tools (CreateVideo, CreateVideoFromTemplate, ListTemplates, GetVideo, ListVideos, DeleteVideo)
 - `src/tests/IntegrationTests/Tests.cs` — Test helper with bearer auth
@@ -31,8 +31,7 @@ var client = new SynthesiaClient(apiKey); // SYNTHESIA_API_KEY env var
 
 ## Spec Notes
 
-- `generate.sh` converts `apiKey` security scheme to `http/bearer` for AutoSDK constructor generation
-- Top-level `security` array injected via `jq`
+- `--security-scheme Http:Header:Bearer` overrides the spec's `apiKey` auth at generation time (no jq/yq spec patching needed)
 - Uses `--exclude-deprecated-operations` flag
 
 ## Sub-client Pattern
