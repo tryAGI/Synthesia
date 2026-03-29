@@ -85,15 +85,15 @@ namespace Synthesia
         /// <param name="avatar">
         /// Use one of [Synthesia stock avatars or your custom avatar](https://docs.synthesia.io/reference/avatars).
         /// </param>
-        /// <param name="avatarSettings">
-        /// Avatar settings.<br/>
-        /// Default Value: {"horizontalAlign":"center","scale":1.0,"style":"rectangular","voice":null,"seamless":false}
-        /// </param>
         /// <param name="background">
         /// Use Synthesia' stock backgrounds or your custom background. For the custom background, provide the ID of an uploaded asset (see [Create an asset](https://docs.synthesia.io/reference/create-an-asset)), or URL from where Synthesia should download the background.<br/>
         /// Transparent: green_screen Green screen background can be used if you want to replace background using FFMPEG or any of the video editing software.<br/>
         /// Solid: `off_white` / `warm_white` / `light_pink` / `soft_pink` / `light_blue` / `dark_blue` / `soft_cyan` / `strong_cyan` / `light_orange` / `soft_orange`<br/>
         /// Image: `white_studio` / `white_cafe` / `luxury_lobby` / `large_window` / `white_meeting_room` / `open_office`
+        /// </param>
+        /// <param name="avatarSettings">
+        /// Avatar settings.<br/>
+        /// Default Value: {"horizontalAlign":"center","scale":1.0,"style":"rectangular","voice":null,"seamless":false}
         /// </param>
         /// <param name="backgroundSettings">
         /// Video Settings object
@@ -129,8 +129,8 @@ namespace Synthesia
             global::Synthesia.InputTransition? transition)
         {
             this.Avatar = avatar ?? throw new global::System.ArgumentNullException(nameof(avatar));
-            this.Background = background ?? throw new global::System.ArgumentNullException(nameof(background));
             this.AvatarSettings = avatarSettings;
+            this.Background = background ?? throw new global::System.ArgumentNullException(nameof(background));
             this.BackgroundSettings = backgroundSettings;
             this.ScriptAudio = scriptAudio;
             this.ScriptLanguage = scriptLanguage;

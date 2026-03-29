@@ -83,6 +83,10 @@ namespace Synthesia
         /// <summary>
         /// Initializes a new instance of the <see cref="VideoFromTemplateApi" /> class.
         /// </summary>
+        /// <param name="templateId">
+        /// Unique identifier of the template from which to create this video. This may be retrieved from the templates page in STUDIO.
+        /// </param>
+        /// <param name="templateData"></param>
         /// <param name="folderId">
         /// Optional folder ID. If provided, the new video will be created under this folder and inherit its permissions.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
@@ -94,10 +98,6 @@ namespace Synthesia
         /// <param name="description">
         /// Description of the video (used on the video's share page). Defaults to the template description.
         /// </param>
-        /// <param name="templateId">
-        /// Unique identifier of the template from which to create this video. This may be retrieved from the templates page in STUDIO.
-        /// </param>
-        /// <param name="templateData"></param>
         /// <param name="test">
         /// Describes if the video is a test video. Test videos do not count towards your quota but are rendered with a watermark.<br/>
         /// Default Value: false
@@ -127,12 +127,12 @@ namespace Synthesia
             global::Synthesia.VideoFromTemplateApiVisibility? visibility,
             string? brandKitId)
         {
-            this.TemplateId = templateId;
-            this.TemplateData = templateData ?? throw new global::System.ArgumentNullException(nameof(templateData));
             this.FolderId = folderId;
             this.CallbackId = callbackId;
             this.CtaSettings = ctaSettings;
             this.Description = description;
+            this.TemplateId = templateId;
+            this.TemplateData = templateData ?? throw new global::System.ArgumentNullException(nameof(templateData));
             this.Test = test;
             this.Title = title;
             this.Visibility = visibility;

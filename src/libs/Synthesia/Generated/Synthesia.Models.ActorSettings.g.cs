@@ -60,6 +60,9 @@ namespace Synthesia
         /// <summary>
         /// Initializes a new instance of the <see cref="ActorSettings" /> class.
         /// </summary>
+        /// <param name="style">
+        /// `rectangular` style corresponds to the "Full body" avatar style in STUDIO. `circular style corresponds to the "Circle" avatar style in STUDIO. The position of circular avatar is fixed to the center of the video both vertically and horizontally, and can't be changed. With scale 1.0, circular avatar will cover total height of the video. Use circular style, if you need to make a round cutout of the avatar to integrate into e.g. screen recording app
+        /// </param>
         /// <param name="backgroundColor">
         /// HEX color code (e.g. #F2F7FF) for the background of circular style avatar.
         /// </param>
@@ -70,9 +73,6 @@ namespace Synthesia
         /// <param name="scale">
         /// The scale of the avatar.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
-        /// </param>
-        /// <param name="style">
-        /// `rectangular` style corresponds to the "Full body" avatar style in STUDIO. `circular style corresponds to the "Circle" avatar style in STUDIO. The position of circular avatar is fixed to the center of the video both vertically and horizontally, and can't be changed. With scale 1.0, circular avatar will cover total height of the video. Use circular style, if you need to make a round cutout of the avatar to integrate into e.g. screen recording app
         /// </param>
         /// <param name="voice">
         /// If a voice is not provided, defaults to our recommended voice for the selected avatar. See the complete list of voices.<br/>
@@ -93,10 +93,10 @@ namespace Synthesia
             global::System.Guid? voice,
             bool? seamless)
         {
-            this.Style = style;
             this.BackgroundColor = backgroundColor;
             this.HorizontalAlign = horizontalAlign;
             this.Scale = scale;
+            this.Style = style;
             this.Voice = voice;
             this.Seamless = seamless;
         }

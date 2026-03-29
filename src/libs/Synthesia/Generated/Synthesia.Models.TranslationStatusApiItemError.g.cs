@@ -40,10 +40,10 @@ namespace Synthesia
         /// Initializes a new instance of the <see cref="TranslationStatusApiItemError" /> class.
         /// </summary>
         /// <param name="language"></param>
+        /// <param name="errorCode"></param>
         /// <param name="status">
         /// Default Value: error
         /// </param>
-        /// <param name="errorCode"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -53,8 +53,8 @@ namespace Synthesia
             global::Synthesia.TranslationStatusApiItemErrorStatus? status)
         {
             this.Language = language ?? throw new global::System.ArgumentNullException(nameof(language));
-            this.ErrorCode = errorCode;
             this.Status = status;
+            this.ErrorCode = errorCode;
         }
 
         /// <summary>

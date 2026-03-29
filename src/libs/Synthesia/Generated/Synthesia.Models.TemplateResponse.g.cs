@@ -126,6 +126,11 @@ namespace Synthesia
         /// <summary>
         /// Initializes a new instance of the <see cref="TemplateResponse" /> class.
         /// </summary>
+        /// <param name="templateId">
+        /// Unique identifier of the template from which to create this video. This may be retrieved from the templates page in STUDIO.
+        /// </param>
+        /// <param name="templateData"></param>
+        /// <param name="userId"></param>
         /// <param name="folderId">
         /// Optional folder ID. If provided, the new video will be created under this folder and inherit its permissions.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
@@ -137,10 +142,6 @@ namespace Synthesia
         /// <param name="description">
         /// Description of the video (used on the video's share page). Defaults to the template description.
         /// </param>
-        /// <param name="templateId">
-        /// Unique identifier of the template from which to create this video. This may be retrieved from the templates page in STUDIO.
-        /// </param>
-        /// <param name="templateData"></param>
         /// <param name="test">
         /// Describes if the video is a test video. Test videos do not count towards your quota but are rendered with a watermark.<br/>
         /// Default Value: false
@@ -155,7 +156,6 @@ namespace Synthesia
         /// <param name="brandKitId">
         /// Brand kit ID for the video. Defaults to 'workspace_default' if not set. Use 'no_brand_kit' for no branding, or a UUID for a custom brand kit.
         /// </param>
-        /// <param name="userId"></param>
         /// <param name="createdAt"></param>
         /// <param name="download"></param>
         /// <param name="duration"></param>
@@ -184,17 +184,17 @@ namespace Synthesia
             int? lastUpdatedAt,
             global::System.Collections.Generic.IList<object>? variables)
         {
-            this.TemplateId = templateId;
-            this.TemplateData = templateData ?? throw new global::System.ArgumentNullException(nameof(templateData));
-            this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
             this.FolderId = folderId;
             this.CallbackId = callbackId;
             this.CtaSettings = ctaSettings;
             this.Description = description;
+            this.TemplateId = templateId;
+            this.TemplateData = templateData ?? throw new global::System.ArgumentNullException(nameof(templateData));
             this.Test = test;
             this.Title = title;
             this.Visibility = visibility;
             this.BrandKitId = brandKitId;
+            this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
             this.CreatedAt = createdAt;
             this.Download = download;
             this.Duration = duration;
