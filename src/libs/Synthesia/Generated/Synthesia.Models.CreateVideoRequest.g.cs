@@ -93,6 +93,9 @@ namespace Synthesia
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateVideoRequest" /> class.
         /// </summary>
+        /// <param name="input">
+        /// An array of objects that each describe a clip of a multi-clip video. You can think of the clips as different scenes in the video.
+        /// </param>
         /// <param name="folderId">
         /// Optional folder ID. If provided, the new video will be created under this folder and inherit its permissions.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
@@ -109,9 +112,6 @@ namespace Synthesia
         /// </param>
         /// <param name="description">
         /// Description of the video to be shown on the share page.
-        /// </param>
-        /// <param name="input">
-        /// An array of objects that each describe a clip of a multi-clip video. You can think of the clips as different scenes in the video.
         /// </param>
         /// <param name="soundtrack">
         /// soundtrack option is supported for backward compatibility. You should use the templates functionality for rich videos.
@@ -146,12 +146,12 @@ namespace Synthesia
             string? title,
             global::Synthesia.CreateVideoRequestVisibility? visibility)
         {
-            this.Input = input ?? throw new global::System.ArgumentNullException(nameof(input));
             this.FolderId = folderId;
             this.AspectRatio = aspectRatio;
             this.CtaSettings = ctaSettings;
             this.CallbackId = callbackId;
             this.Description = description;
+            this.Input = input ?? throw new global::System.ArgumentNullException(nameof(input));
             this.Soundtrack = soundtrack;
             this.SoundSettings = soundSettings;
             this.Test = test;

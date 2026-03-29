@@ -44,12 +44,12 @@ namespace Synthesia
         /// <param name="events">
         /// List of audit log events
         /// </param>
+        /// <param name="hasMore">
+        /// Whether there are more events to fetch
+        /// </param>
         /// <param name="nextCursor">
         /// Opaque cursor for fetching the next page. Pass as cursor parameter.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
-        /// </param>
-        /// <param name="hasMore">
-        /// Whether there are more events to fetch
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -60,8 +60,8 @@ namespace Synthesia
             string? nextCursor)
         {
             this.Events = events ?? throw new global::System.ArgumentNullException(nameof(events));
-            this.HasMore = hasMore;
             this.NextCursor = nextCursor;
+            this.HasMore = hasMore;
         }
 
         /// <summary>

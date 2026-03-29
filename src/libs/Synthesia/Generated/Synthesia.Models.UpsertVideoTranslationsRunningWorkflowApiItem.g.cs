@@ -47,10 +47,10 @@ namespace Synthesia
         /// Initializes a new instance of the <see cref="UpsertVideoTranslationsRunningWorkflowApiItem" /> class.
         /// </summary>
         /// <param name="language"></param>
+        /// <param name="step"></param>
         /// <param name="status">
         /// Default Value: in_progress
         /// </param>
-        /// <param name="step"></param>
         /// <param name="startedByRequest">
         /// Whether the translation was started by the request.<br/>
         /// Default Value: true
@@ -65,8 +65,8 @@ namespace Synthesia
             bool? startedByRequest)
         {
             this.Language = language ?? throw new global::System.ArgumentNullException(nameof(language));
-            this.Step = step;
             this.Status = status;
+            this.Step = step;
             this.StartedByRequest = startedByRequest;
         }
 

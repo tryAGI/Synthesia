@@ -107,6 +107,14 @@ namespace Synthesia
         /// Description of the video (used on the video's share page).
         /// </param>
         /// <param name="language"></param>
+        /// <param name="visibility">
+        /// Describes the visibility settings of the video.
+        /// </param>
+        /// <param name="download">
+        /// A time-limited URL which may be used to download the video.
+        /// </param>
+        /// <param name="thumbnail"></param>
+        /// <param name="captions"></param>
         /// <param name="status">
         /// The status of the dubbed video.<br/>
         /// Default Value: complete
@@ -119,14 +127,6 @@ namespace Synthesia
         /// UNIX timestamp representing the time video was last updated.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
-        /// <param name="visibility">
-        /// Describes the visibility settings of the video.
-        /// </param>
-        /// <param name="download">
-        /// A time-limited URL which may be used to download the video.
-        /// </param>
-        /// <param name="thumbnail"></param>
-        /// <param name="captions"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -147,13 +147,13 @@ namespace Synthesia
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
             this.Language = language;
+            this.Status = status;
+            this.CreatedAt = createdAt;
+            this.LastUpdatedAt = lastUpdatedAt;
             this.Visibility = visibility;
             this.Download = download ?? throw new global::System.ArgumentNullException(nameof(download));
             this.Thumbnail = thumbnail ?? throw new global::System.ArgumentNullException(nameof(thumbnail));
             this.Captions = captions ?? throw new global::System.ArgumentNullException(nameof(captions));
-            this.Status = status;
-            this.CreatedAt = createdAt;
-            this.LastUpdatedAt = lastUpdatedAt;
         }
 
         /// <summary>

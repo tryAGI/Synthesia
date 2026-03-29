@@ -38,10 +38,10 @@ namespace Synthesia
         /// Initializes a new instance of the <see cref="CreateAssetMultipartUploadResponse" /> class.
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="uploadCredentials"></param>
         /// <param name="uploadUrl">
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
-        /// <param name="uploadCredentials"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -51,8 +51,8 @@ namespace Synthesia
             string? uploadUrl)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.UploadCredentials = uploadCredentials ?? throw new global::System.ArgumentNullException(nameof(uploadCredentials));
             this.UploadUrl = uploadUrl;
+            this.UploadCredentials = uploadCredentials ?? throw new global::System.ArgumentNullException(nameof(uploadCredentials));
         }
 
         /// <summary>

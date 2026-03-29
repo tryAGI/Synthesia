@@ -11,167 +11,167 @@ namespace Synthesia
         /// <summary>
         /// 
         /// </summary>
-        ApplicationFontWoff,
+        ApplicationDividefontWoff,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationJson,
+        ApplicationDividejson,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationPdf,
+        ApplicationDividepdf,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndMsPowerpoint,
+        ApplicationDividevndMsPowerpoint,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation,
+        ApplicationDividevndOpenxmlformatsOfficedocumentPresentationmlPresentation,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaFolder,
+        ApplicationDividevndSynthesiaFolder,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaFontFamily,
+        ApplicationDividevndSynthesiaFontFamily,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioDubbedVideo,
+        ApplicationDividevndSynthesiaStudioDubbedVideo,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioImportedVideo,
+        ApplicationDividevndSynthesiaStudioImportedVideo,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioPhotoAvatarVideo,
+        ApplicationDividevndSynthesiaStudioPhotoAvatarVideo,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioSynthesiaAcademyVideo,
+        ApplicationDividevndSynthesiaStudioSynthesiaAcademyVideo,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioSynthesiaDemoVideo,
+        ApplicationDividevndSynthesiaStudioSynthesiaDemoVideo,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioSynthesiaExampleVideo,
+        ApplicationDividevndSynthesiaStudioSynthesiaExampleVideo,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioSynthesiaFeatureOverviewVideo,
+        ApplicationDividevndSynthesiaStudioSynthesiaFeatureOverviewVideo,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioSynthesiaProcessedGif,
+        ApplicationDividevndSynthesiaStudioSynthesiaProcessedGif,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioSynthesiaTemplate,
+        ApplicationDividevndSynthesiaStudioSynthesiaTemplate,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioSynthesiaWelcomeWebinarVideo,
+        ApplicationDividevndSynthesiaStudioSynthesiaWelcomeWebinarVideo,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioUserCourse,
+        ApplicationDividevndSynthesiaStudioUserCourse,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioUserTemplate,
+        ApplicationDividevndSynthesiaStudioUserTemplate,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndSynthesiaStudioVideo,
+        ApplicationDividevndSynthesiaStudioVideo,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationXXliffPlusxml,
+        ApplicationDividexXliffPlusxml,
         /// <summary>
         /// 
         /// </summary>
-        AudioAac,
+        AudioDivideaac,
         /// <summary>
         /// 
         /// </summary>
-        AudioFlac,
+        AudioDivideflac,
         /// <summary>
         /// 
         /// </summary>
-        AudioMp4,
+        AudioDividemp4,
         /// <summary>
         /// 
         /// </summary>
-        AudioMpeg,
+        AudioDividempeg,
         /// <summary>
         /// 
         /// </summary>
-        AudioOgg,
+        AudioDivideogg,
         /// <summary>
         /// 
         /// </summary>
-        AudioWav,
+        AudioDividewav,
         /// <summary>
         /// 
         /// </summary>
-        AudioWebm,
+        AudioDividewebm,
         /// <summary>
         /// 
         /// </summary>
-        FontOtf,
+        FontDivideotf,
         /// <summary>
         /// 
         /// </summary>
-        FontTtf,
+        FontDividettf,
         /// <summary>
         /// 
         /// </summary>
-        FontWoff,
+        FontDividewoff,
         /// <summary>
         /// 
         /// </summary>
-        FontWoff2,
+        FontDividewoff2,
         /// <summary>
         /// 
         /// </summary>
-        ImageGif,
+        ImageDividegif,
         /// <summary>
         /// 
         /// </summary>
-        ImageJpeg,
+        ImageDividejpeg,
         /// <summary>
         /// 
         /// </summary>
-        ImagePng,
+        ImageDividepng,
         /// <summary>
         /// 
         /// </summary>
-        ImageSvgPlusxml,
+        ImageDividesvgPlusxml,
         /// <summary>
         /// 
         /// </summary>
-        ImageWebp,
+        ImageDividewebp,
         /// <summary>
         /// 
         /// </summary>
-        TextCsv,
+        TextDividecsv,
         /// <summary>
         /// 
         /// </summary>
-        VideoMp4,
+        VideoDividemp4,
         /// <summary>
         /// 
         /// </summary>
-        VideoQuicktime,
+        VideoDividequicktime,
         /// <summary>
         /// 
         /// </summary>
-        VideoWebm,
+        VideoDividewebm,
     }
 
     /// <summary>
@@ -186,47 +186,47 @@ namespace Synthesia
         {
             return value switch
             {
-                AssetContentType.ApplicationFontWoff => "application/font-woff",
-                AssetContentType.ApplicationJson => "application/json",
-                AssetContentType.ApplicationPdf => "application/pdf",
-                AssetContentType.ApplicationVndMsPowerpoint => "application/vnd.ms-powerpoint",
-                AssetContentType.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation => "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                AssetContentType.ApplicationVndSynthesiaFolder => "application/vnd.synthesia.folder",
-                AssetContentType.ApplicationVndSynthesiaFontFamily => "application/vnd.synthesia.font-family",
-                AssetContentType.ApplicationVndSynthesiaStudioDubbedVideo => "application/vnd.synthesia.studio-dubbed-video",
-                AssetContentType.ApplicationVndSynthesiaStudioImportedVideo => "application/vnd.synthesia.studio-imported-video",
-                AssetContentType.ApplicationVndSynthesiaStudioPhotoAvatarVideo => "application/vnd.synthesia.studio-photo-avatar-video",
-                AssetContentType.ApplicationVndSynthesiaStudioSynthesiaAcademyVideo => "application/vnd.synthesia.studio-synthesia-academy-video",
-                AssetContentType.ApplicationVndSynthesiaStudioSynthesiaDemoVideo => "application/vnd.synthesia.studio-synthesia-demo-video",
-                AssetContentType.ApplicationVndSynthesiaStudioSynthesiaExampleVideo => "application/vnd.synthesia.studio-synthesia-example-video",
-                AssetContentType.ApplicationVndSynthesiaStudioSynthesiaFeatureOverviewVideo => "application/vnd.synthesia.studio-synthesia-feature-overview-video",
-                AssetContentType.ApplicationVndSynthesiaStudioSynthesiaProcessedGif => "application/vnd.synthesia.studio-synthesia-processed-gif",
-                AssetContentType.ApplicationVndSynthesiaStudioSynthesiaTemplate => "application/vnd.synthesia.studio-synthesia-template",
-                AssetContentType.ApplicationVndSynthesiaStudioSynthesiaWelcomeWebinarVideo => "application/vnd.synthesia.studio-synthesia-welcome-webinar-video",
-                AssetContentType.ApplicationVndSynthesiaStudioUserCourse => "application/vnd.synthesia.studio-user-course",
-                AssetContentType.ApplicationVndSynthesiaStudioUserTemplate => "application/vnd.synthesia.studio-user-template",
-                AssetContentType.ApplicationVndSynthesiaStudioVideo => "application/vnd.synthesia.studio-video",
-                AssetContentType.ApplicationXXliffPlusxml => "application/x-xliff+xml",
-                AssetContentType.AudioAac => "audio/aac",
-                AssetContentType.AudioFlac => "audio/flac",
-                AssetContentType.AudioMp4 => "audio/mp4",
-                AssetContentType.AudioMpeg => "audio/mpeg",
-                AssetContentType.AudioOgg => "audio/ogg",
-                AssetContentType.AudioWav => "audio/wav",
-                AssetContentType.AudioWebm => "audio/webm",
-                AssetContentType.FontOtf => "font/otf",
-                AssetContentType.FontTtf => "font/ttf",
-                AssetContentType.FontWoff => "font/woff",
-                AssetContentType.FontWoff2 => "font/woff2",
-                AssetContentType.ImageGif => "image/gif",
-                AssetContentType.ImageJpeg => "image/jpeg",
-                AssetContentType.ImagePng => "image/png",
-                AssetContentType.ImageSvgPlusxml => "image/svg+xml",
-                AssetContentType.ImageWebp => "image/webp",
-                AssetContentType.TextCsv => "text/csv",
-                AssetContentType.VideoMp4 => "video/mp4",
-                AssetContentType.VideoQuicktime => "video/quicktime",
-                AssetContentType.VideoWebm => "video/webm",
+                AssetContentType.ApplicationDividefontWoff => "application/font-woff",
+                AssetContentType.ApplicationDividejson => "application/json",
+                AssetContentType.ApplicationDividepdf => "application/pdf",
+                AssetContentType.ApplicationDividevndMsPowerpoint => "application/vnd.ms-powerpoint",
+                AssetContentType.ApplicationDividevndOpenxmlformatsOfficedocumentPresentationmlPresentation => "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                AssetContentType.ApplicationDividevndSynthesiaFolder => "application/vnd.synthesia.folder",
+                AssetContentType.ApplicationDividevndSynthesiaFontFamily => "application/vnd.synthesia.font-family",
+                AssetContentType.ApplicationDividevndSynthesiaStudioDubbedVideo => "application/vnd.synthesia.studio-dubbed-video",
+                AssetContentType.ApplicationDividevndSynthesiaStudioImportedVideo => "application/vnd.synthesia.studio-imported-video",
+                AssetContentType.ApplicationDividevndSynthesiaStudioPhotoAvatarVideo => "application/vnd.synthesia.studio-photo-avatar-video",
+                AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaAcademyVideo => "application/vnd.synthesia.studio-synthesia-academy-video",
+                AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaDemoVideo => "application/vnd.synthesia.studio-synthesia-demo-video",
+                AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaExampleVideo => "application/vnd.synthesia.studio-synthesia-example-video",
+                AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaFeatureOverviewVideo => "application/vnd.synthesia.studio-synthesia-feature-overview-video",
+                AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaProcessedGif => "application/vnd.synthesia.studio-synthesia-processed-gif",
+                AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaTemplate => "application/vnd.synthesia.studio-synthesia-template",
+                AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaWelcomeWebinarVideo => "application/vnd.synthesia.studio-synthesia-welcome-webinar-video",
+                AssetContentType.ApplicationDividevndSynthesiaStudioUserCourse => "application/vnd.synthesia.studio-user-course",
+                AssetContentType.ApplicationDividevndSynthesiaStudioUserTemplate => "application/vnd.synthesia.studio-user-template",
+                AssetContentType.ApplicationDividevndSynthesiaStudioVideo => "application/vnd.synthesia.studio-video",
+                AssetContentType.ApplicationDividexXliffPlusxml => "application/x-xliff+xml",
+                AssetContentType.AudioDivideaac => "audio/aac",
+                AssetContentType.AudioDivideflac => "audio/flac",
+                AssetContentType.AudioDividemp4 => "audio/mp4",
+                AssetContentType.AudioDividempeg => "audio/mpeg",
+                AssetContentType.AudioDivideogg => "audio/ogg",
+                AssetContentType.AudioDividewav => "audio/wav",
+                AssetContentType.AudioDividewebm => "audio/webm",
+                AssetContentType.FontDivideotf => "font/otf",
+                AssetContentType.FontDividettf => "font/ttf",
+                AssetContentType.FontDividewoff => "font/woff",
+                AssetContentType.FontDividewoff2 => "font/woff2",
+                AssetContentType.ImageDividegif => "image/gif",
+                AssetContentType.ImageDividejpeg => "image/jpeg",
+                AssetContentType.ImageDividepng => "image/png",
+                AssetContentType.ImageDividesvgPlusxml => "image/svg+xml",
+                AssetContentType.ImageDividewebp => "image/webp",
+                AssetContentType.TextDividecsv => "text/csv",
+                AssetContentType.VideoDividemp4 => "video/mp4",
+                AssetContentType.VideoDividequicktime => "video/quicktime",
+                AssetContentType.VideoDividewebm => "video/webm",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -237,47 +237,47 @@ namespace Synthesia
         {
             return value switch
             {
-                "application/font-woff" => AssetContentType.ApplicationFontWoff,
-                "application/json" => AssetContentType.ApplicationJson,
-                "application/pdf" => AssetContentType.ApplicationPdf,
-                "application/vnd.ms-powerpoint" => AssetContentType.ApplicationVndMsPowerpoint,
-                "application/vnd.openxmlformats-officedocument.presentationml.presentation" => AssetContentType.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation,
-                "application/vnd.synthesia.folder" => AssetContentType.ApplicationVndSynthesiaFolder,
-                "application/vnd.synthesia.font-family" => AssetContentType.ApplicationVndSynthesiaFontFamily,
-                "application/vnd.synthesia.studio-dubbed-video" => AssetContentType.ApplicationVndSynthesiaStudioDubbedVideo,
-                "application/vnd.synthesia.studio-imported-video" => AssetContentType.ApplicationVndSynthesiaStudioImportedVideo,
-                "application/vnd.synthesia.studio-photo-avatar-video" => AssetContentType.ApplicationVndSynthesiaStudioPhotoAvatarVideo,
-                "application/vnd.synthesia.studio-synthesia-academy-video" => AssetContentType.ApplicationVndSynthesiaStudioSynthesiaAcademyVideo,
-                "application/vnd.synthesia.studio-synthesia-demo-video" => AssetContentType.ApplicationVndSynthesiaStudioSynthesiaDemoVideo,
-                "application/vnd.synthesia.studio-synthesia-example-video" => AssetContentType.ApplicationVndSynthesiaStudioSynthesiaExampleVideo,
-                "application/vnd.synthesia.studio-synthesia-feature-overview-video" => AssetContentType.ApplicationVndSynthesiaStudioSynthesiaFeatureOverviewVideo,
-                "application/vnd.synthesia.studio-synthesia-processed-gif" => AssetContentType.ApplicationVndSynthesiaStudioSynthesiaProcessedGif,
-                "application/vnd.synthesia.studio-synthesia-template" => AssetContentType.ApplicationVndSynthesiaStudioSynthesiaTemplate,
-                "application/vnd.synthesia.studio-synthesia-welcome-webinar-video" => AssetContentType.ApplicationVndSynthesiaStudioSynthesiaWelcomeWebinarVideo,
-                "application/vnd.synthesia.studio-user-course" => AssetContentType.ApplicationVndSynthesiaStudioUserCourse,
-                "application/vnd.synthesia.studio-user-template" => AssetContentType.ApplicationVndSynthesiaStudioUserTemplate,
-                "application/vnd.synthesia.studio-video" => AssetContentType.ApplicationVndSynthesiaStudioVideo,
-                "application/x-xliff+xml" => AssetContentType.ApplicationXXliffPlusxml,
-                "audio/aac" => AssetContentType.AudioAac,
-                "audio/flac" => AssetContentType.AudioFlac,
-                "audio/mp4" => AssetContentType.AudioMp4,
-                "audio/mpeg" => AssetContentType.AudioMpeg,
-                "audio/ogg" => AssetContentType.AudioOgg,
-                "audio/wav" => AssetContentType.AudioWav,
-                "audio/webm" => AssetContentType.AudioWebm,
-                "font/otf" => AssetContentType.FontOtf,
-                "font/ttf" => AssetContentType.FontTtf,
-                "font/woff" => AssetContentType.FontWoff,
-                "font/woff2" => AssetContentType.FontWoff2,
-                "image/gif" => AssetContentType.ImageGif,
-                "image/jpeg" => AssetContentType.ImageJpeg,
-                "image/png" => AssetContentType.ImagePng,
-                "image/svg+xml" => AssetContentType.ImageSvgPlusxml,
-                "image/webp" => AssetContentType.ImageWebp,
-                "text/csv" => AssetContentType.TextCsv,
-                "video/mp4" => AssetContentType.VideoMp4,
-                "video/quicktime" => AssetContentType.VideoQuicktime,
-                "video/webm" => AssetContentType.VideoWebm,
+                "application/font-woff" => AssetContentType.ApplicationDividefontWoff,
+                "application/json" => AssetContentType.ApplicationDividejson,
+                "application/pdf" => AssetContentType.ApplicationDividepdf,
+                "application/vnd.ms-powerpoint" => AssetContentType.ApplicationDividevndMsPowerpoint,
+                "application/vnd.openxmlformats-officedocument.presentationml.presentation" => AssetContentType.ApplicationDividevndOpenxmlformatsOfficedocumentPresentationmlPresentation,
+                "application/vnd.synthesia.folder" => AssetContentType.ApplicationDividevndSynthesiaFolder,
+                "application/vnd.synthesia.font-family" => AssetContentType.ApplicationDividevndSynthesiaFontFamily,
+                "application/vnd.synthesia.studio-dubbed-video" => AssetContentType.ApplicationDividevndSynthesiaStudioDubbedVideo,
+                "application/vnd.synthesia.studio-imported-video" => AssetContentType.ApplicationDividevndSynthesiaStudioImportedVideo,
+                "application/vnd.synthesia.studio-photo-avatar-video" => AssetContentType.ApplicationDividevndSynthesiaStudioPhotoAvatarVideo,
+                "application/vnd.synthesia.studio-synthesia-academy-video" => AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaAcademyVideo,
+                "application/vnd.synthesia.studio-synthesia-demo-video" => AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaDemoVideo,
+                "application/vnd.synthesia.studio-synthesia-example-video" => AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaExampleVideo,
+                "application/vnd.synthesia.studio-synthesia-feature-overview-video" => AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaFeatureOverviewVideo,
+                "application/vnd.synthesia.studio-synthesia-processed-gif" => AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaProcessedGif,
+                "application/vnd.synthesia.studio-synthesia-template" => AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaTemplate,
+                "application/vnd.synthesia.studio-synthesia-welcome-webinar-video" => AssetContentType.ApplicationDividevndSynthesiaStudioSynthesiaWelcomeWebinarVideo,
+                "application/vnd.synthesia.studio-user-course" => AssetContentType.ApplicationDividevndSynthesiaStudioUserCourse,
+                "application/vnd.synthesia.studio-user-template" => AssetContentType.ApplicationDividevndSynthesiaStudioUserTemplate,
+                "application/vnd.synthesia.studio-video" => AssetContentType.ApplicationDividevndSynthesiaStudioVideo,
+                "application/x-xliff+xml" => AssetContentType.ApplicationDividexXliffPlusxml,
+                "audio/aac" => AssetContentType.AudioDivideaac,
+                "audio/flac" => AssetContentType.AudioDivideflac,
+                "audio/mp4" => AssetContentType.AudioDividemp4,
+                "audio/mpeg" => AssetContentType.AudioDividempeg,
+                "audio/ogg" => AssetContentType.AudioDivideogg,
+                "audio/wav" => AssetContentType.AudioDividewav,
+                "audio/webm" => AssetContentType.AudioDividewebm,
+                "font/otf" => AssetContentType.FontDivideotf,
+                "font/ttf" => AssetContentType.FontDividettf,
+                "font/woff" => AssetContentType.FontDividewoff,
+                "font/woff2" => AssetContentType.FontDividewoff2,
+                "image/gif" => AssetContentType.ImageDividegif,
+                "image/jpeg" => AssetContentType.ImageDividejpeg,
+                "image/png" => AssetContentType.ImageDividepng,
+                "image/svg+xml" => AssetContentType.ImageDividesvgPlusxml,
+                "image/webp" => AssetContentType.ImageDividewebp,
+                "text/csv" => AssetContentType.TextDividecsv,
+                "video/mp4" => AssetContentType.VideoDividemp4,
+                "video/quicktime" => AssetContentType.VideoDividequicktime,
+                "video/webm" => AssetContentType.VideoDividewebm,
                 _ => null,
             };
         }

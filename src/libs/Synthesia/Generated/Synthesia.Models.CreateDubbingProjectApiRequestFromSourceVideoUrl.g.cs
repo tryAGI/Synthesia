@@ -91,6 +91,10 @@ namespace Synthesia
         /// The languages to dub the source media asset to.<br/>
         /// Example: [es-ES, fr-FR]
         /// </param>
+        /// <param name="sourceVideoUrl">
+        /// The public URL where the video to dub is available. At the moment only supporting s3 signed urls<br/>
+        /// Example: s3://
+        /// </param>
         /// <param name="lipsyncEnabled">
         /// Whether to enable lipsync for the dubbed video.<br/>
         /// Default Value: false<br/>
@@ -105,10 +109,6 @@ namespace Synthesia
         /// The visibility of the dubbed video.<br/>
         /// Default Value: private<br/>
         /// Example: private
-        /// </param>
-        /// <param name="sourceVideoUrl">
-        /// The public URL where the video to dub is available. At the moment only supporting s3 signed urls<br/>
-        /// Example: s3://
         /// </param>
         /// <param name="sourceLanguage">
         /// The language of the source media asset. If not specified, the language will be detected automatically.<br/>
@@ -129,10 +129,10 @@ namespace Synthesia
         {
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.TargetLanguages = targetLanguages ?? throw new global::System.ArgumentNullException(nameof(targetLanguages));
-            this.SourceVideoUrl = sourceVideoUrl ?? throw new global::System.ArgumentNullException(nameof(sourceVideoUrl));
             this.LipsyncEnabled = lipsyncEnabled;
             this.VideoDuration = videoDuration;
             this.Visibility = visibility;
+            this.SourceVideoUrl = sourceVideoUrl ?? throw new global::System.ArgumentNullException(nameof(sourceVideoUrl));
             this.SourceLanguage = sourceLanguage;
         }
 

@@ -89,6 +89,11 @@ namespace Synthesia
         /// The languages to dub the source media asset to.<br/>
         /// Example: [es-ES, fr-FR]
         /// </param>
+        /// <param name="sourceAssetId">
+        /// The ID of the source media asset to create the dubbed video from.<br/>
+        /// Example: &lt;uuid&gt;
+        /// </param>
+        /// <param name="sourceLanguage"></param>
         /// <param name="lipsyncEnabled">
         /// Whether to enable lipsync for the dubbed video.<br/>
         /// Default Value: false<br/>
@@ -104,11 +109,6 @@ namespace Synthesia
         /// Default Value: private<br/>
         /// Example: private
         /// </param>
-        /// <param name="sourceAssetId">
-        /// The ID of the source media asset to create the dubbed video from.<br/>
-        /// Example: &lt;uuid&gt;
-        /// </param>
-        /// <param name="sourceLanguage"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -123,11 +123,11 @@ namespace Synthesia
         {
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.TargetLanguages = targetLanguages ?? throw new global::System.ArgumentNullException(nameof(targetLanguages));
-            this.SourceAssetId = sourceAssetId ?? throw new global::System.ArgumentNullException(nameof(sourceAssetId));
-            this.SourceLanguage = sourceLanguage;
             this.LipsyncEnabled = lipsyncEnabled;
             this.VideoDuration = videoDuration;
             this.Visibility = visibility;
+            this.SourceAssetId = sourceAssetId ?? throw new global::System.ArgumentNullException(nameof(sourceAssetId));
+            this.SourceLanguage = sourceLanguage;
         }
 
         /// <summary>

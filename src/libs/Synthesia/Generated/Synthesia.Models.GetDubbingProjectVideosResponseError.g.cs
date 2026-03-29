@@ -41,11 +41,11 @@ namespace Synthesia
         /// Initializes a new instance of the <see cref="GetDubbingProjectVideosResponseError" /> class.
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="errorCode"></param>
         /// <param name="status">
         /// The status of the dubbed video.<br/>
         /// Default Value: error
         /// </param>
-        /// <param name="errorCode"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -55,8 +55,8 @@ namespace Synthesia
             global::Synthesia.GetDubbingProjectVideosResponseErrorStatus? status)
         {
             this.Id = id;
-            this.ErrorCode = errorCode;
             this.Status = status;
+            this.ErrorCode = errorCode;
         }
 
         /// <summary>
