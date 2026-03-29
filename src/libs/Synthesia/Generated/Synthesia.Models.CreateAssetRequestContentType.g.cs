@@ -12,15 +12,15 @@ namespace Synthesia
         /// <summary>
         /// video/mp4, video/webm, or video/quicktime.
         /// </summary>
-        VideoDividemp4,
+        VideoMp4,
         /// <summary>
         /// video/mp4, video/webm, or video/quicktime.
         /// </summary>
-        VideoDividequicktime,
+        VideoQuicktime,
         /// <summary>
         /// video/mp4, video/webm, or video/quicktime.
         /// </summary>
-        VideoDividewebm,
+        VideoWebm,
     }
 
     /// <summary>
@@ -35,9 +35,9 @@ namespace Synthesia
         {
             return value switch
             {
-                CreateAssetRequestContentType.VideoDividemp4 => "video/mp4",
-                CreateAssetRequestContentType.VideoDividequicktime => "video/quicktime",
-                CreateAssetRequestContentType.VideoDividewebm => "video/webm",
+                CreateAssetRequestContentType.VideoMp4 => "video/mp4",
+                CreateAssetRequestContentType.VideoQuicktime => "video/quicktime",
+                CreateAssetRequestContentType.VideoWebm => "video/webm",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -48,9 +48,9 @@ namespace Synthesia
         {
             return value switch
             {
-                "video/mp4" => CreateAssetRequestContentType.VideoDividemp4,
-                "video/quicktime" => CreateAssetRequestContentType.VideoDividequicktime,
-                "video/webm" => CreateAssetRequestContentType.VideoDividewebm,
+                "video/mp4" => CreateAssetRequestContentType.VideoMp4,
+                "video/quicktime" => CreateAssetRequestContentType.VideoQuicktime,
+                "video/webm" => CreateAssetRequestContentType.VideoWebm,
                 _ => null,
             };
         }
