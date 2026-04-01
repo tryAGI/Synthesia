@@ -59,13 +59,13 @@ namespace Synthesia.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Synthesia.TranslationStatusApiItemSuccess), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Synthesia.TranslationStatusApiItemSuccess?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Synthesia.TranslationStatusApiItemSuccess).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Complete, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Complete!, typeInfo);
             }
             else if (value.IsError)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Synthesia.TranslationStatusApiItemError), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Synthesia.TranslationStatusApiItemError?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Synthesia.TranslationStatusApiItemError).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Error, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Error!, typeInfo);
             }
         }
     }
