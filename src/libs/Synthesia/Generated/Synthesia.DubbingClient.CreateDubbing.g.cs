@@ -73,7 +73,7 @@ namespace Synthesia
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+            var __httpRequestContentBody = request.ToJson(JsonSerializerOptions);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -110,13 +110,13 @@ namespace Synthesia
                     if (ReadResponseAsString)
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_400 = global::Synthesia.OneOf<global::Synthesia.CreateDubbingProjectApiResponseFail, global::Synthesia.CreateDubbingResponse2>.FromJson(__content_400, JsonSerializerContext);
+                        __value_400 = global::Synthesia.OneOf<global::Synthesia.CreateDubbingProjectApiResponseFail, global::Synthesia.CreateDubbingResponse2>.FromJson(__content_400, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_400 = global::Synthesia.OneOf<global::Synthesia.CreateDubbingProjectApiResponseFail, global::Synthesia.CreateDubbingResponse2>.FromJson(__content_400, JsonSerializerContext);
+                        __value_400 = global::Synthesia.OneOf<global::Synthesia.CreateDubbingProjectApiResponseFail, global::Synthesia.CreateDubbingResponse2>.FromJson(__content_400, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -148,13 +148,13 @@ namespace Synthesia
                     if (ReadResponseAsString)
                     {
                         __content_403 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_403 = global::Synthesia.Error.FromJson(__content_403, JsonSerializerContext);
+                        __value_403 = global::Synthesia.Error.FromJson(__content_403, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_403 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_403 = global::Synthesia.Error.FromJson(__content_403, JsonSerializerContext);
+                        __value_403 = global::Synthesia.Error.FromJson(__content_403, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -186,13 +186,13 @@ namespace Synthesia
                     if (ReadResponseAsString)
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_404 = global::Synthesia.Error.FromJson(__content_404, JsonSerializerContext);
+                        __value_404 = global::Synthesia.Error.FromJson(__content_404, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_404 = global::Synthesia.Error.FromJson(__content_404, JsonSerializerContext);
+                        __value_404 = global::Synthesia.Error.FromJson(__content_404, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -224,13 +224,13 @@ namespace Synthesia
                     if (ReadResponseAsString)
                     {
                         __content_501 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_501 = global::Synthesia.CreateDubbingResponse3.FromJson(__content_501, JsonSerializerContext);
+                        __value_501 = global::Synthesia.CreateDubbingResponse3.FromJson(__content_501, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_501 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_501 = global::Synthesia.CreateDubbingResponse3.FromJson(__content_501, JsonSerializerContext);
+                        __value_501 = global::Synthesia.CreateDubbingResponse3.FromJson(__content_501, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -262,13 +262,13 @@ namespace Synthesia
                     if (ReadResponseAsString)
                     {
                         __content_default = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerContext);
+                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_default = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerContext);
+                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -312,7 +312,7 @@ namespace Synthesia
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Synthesia.CreateDubbingProjectApiResponseSuccess.FromJson(__content, JsonSerializerContext) ??
+                        global::Synthesia.CreateDubbingProjectApiResponseSuccess.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -343,7 +343,7 @@ namespace Synthesia
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Synthesia.CreateDubbingProjectApiResponseSuccess.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::Synthesia.CreateDubbingProjectApiResponseSuccess.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
