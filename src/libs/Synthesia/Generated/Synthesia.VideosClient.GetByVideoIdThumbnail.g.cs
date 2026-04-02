@@ -91,13 +91,13 @@ namespace Synthesia
                     if (ReadResponseAsString)
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_400 = global::Synthesia.Error.FromJson(__content_400, JsonSerializerContext);
+                        __value_400 = global::Synthesia.Error.FromJson(__content_400, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_400 = global::Synthesia.Error.FromJson(__content_400, JsonSerializerContext);
+                        __value_400 = global::Synthesia.Error.FromJson(__content_400, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -129,13 +129,13 @@ namespace Synthesia
                     if (ReadResponseAsString)
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_404 = global::Synthesia.Error.FromJson(__content_404, JsonSerializerContext);
+                        __value_404 = global::Synthesia.Error.FromJson(__content_404, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_404 = global::Synthesia.Error.FromJson(__content_404, JsonSerializerContext);
+                        __value_404 = global::Synthesia.Error.FromJson(__content_404, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -167,13 +167,13 @@ namespace Synthesia
                     if (ReadResponseAsString)
                     {
                         __content_default = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerContext);
+                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_default = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerContext);
+                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
