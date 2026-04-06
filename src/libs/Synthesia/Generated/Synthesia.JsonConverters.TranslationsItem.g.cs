@@ -12,21 +12,28 @@ namespace Synthesia.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
 
             var readerCopy = reader;
-            var discriminator = global::System.Text.Json.JsonSerializer.Deserialize<global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminator>(ref readerCopy, options);
+            var discriminatorTypeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminator), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminator> ??
+                            throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminator)}");
+            var discriminator = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, discriminatorTypeInfo);
 
             global::Synthesia.TranslationStatusApiItemSuccess? complete = default;
             if (discriminator?.Status == global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus.Complete)
             {
-                complete = global::System.Text.Json.JsonSerializer.Deserialize<global::Synthesia.TranslationStatusApiItemSuccess>(ref reader, options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Synthesia.TranslationStatusApiItemSuccess), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Synthesia.TranslationStatusApiItemSuccess> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Synthesia.TranslationStatusApiItemSuccess)}");
+                complete = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Synthesia.TranslationStatusApiItemError? error = default;
             if (discriminator?.Status == global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus.Error)
             {
-                error = global::System.Text.Json.JsonSerializer.Deserialize<global::Synthesia.TranslationStatusApiItemError>(ref reader, options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Synthesia.TranslationStatusApiItemError), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Synthesia.TranslationStatusApiItemError> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Synthesia.TranslationStatusApiItemError)}");
+                error = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
 
             var __value = new global::Synthesia.TranslationsItem(
@@ -45,15 +52,20 @@ namespace Synthesia.JsonConverters
             global::Synthesia.TranslationsItem value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsComplete)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Complete, typeof(global::Synthesia.TranslationStatusApiItemSuccess), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Synthesia.TranslationStatusApiItemSuccess), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Synthesia.TranslationStatusApiItemSuccess?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Synthesia.TranslationStatusApiItemSuccess).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Complete!, typeInfo);
             }
             else if (value.IsError)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Error, typeof(global::Synthesia.TranslationStatusApiItemError), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Synthesia.TranslationStatusApiItemError), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Synthesia.TranslationStatusApiItemError?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Synthesia.TranslationStatusApiItemError).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Error!, typeInfo);
             }
         }
     }
