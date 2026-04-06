@@ -119,13 +119,13 @@ namespace Synthesia
                     if (ReadResponseAsString)
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_400 = global::Synthesia.Error.FromJson(__content_400, JsonSerializerOptions);
+                        __value_400 = global::Synthesia.Error.FromJson(__content_400, JsonSerializerContext);
                     }
                     else
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_400 = global::Synthesia.Error.FromJson(__content_400, JsonSerializerOptions);
+                        __value_400 = global::Synthesia.Error.FromJson(__content_400, JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -157,13 +157,13 @@ namespace Synthesia
                     if (ReadResponseAsString)
                     {
                         __content_403 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_403 = global::Synthesia.Error.FromJson(__content_403, JsonSerializerOptions);
+                        __value_403 = global::Synthesia.Error.FromJson(__content_403, JsonSerializerContext);
                     }
                     else
                     {
                         __content_403 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_403 = global::Synthesia.Error.FromJson(__content_403, JsonSerializerOptions);
+                        __value_403 = global::Synthesia.Error.FromJson(__content_403, JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -195,13 +195,13 @@ namespace Synthesia
                     if (ReadResponseAsString)
                     {
                         __content_default = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerOptions);
+                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerContext);
                     }
                     else
                     {
                         __content_default = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerOptions);
+                        __value_default = global::Synthesia.Error.FromJson(__content_default, JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -245,7 +245,7 @@ namespace Synthesia
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Synthesia.VideoListResponse.FromJson(__content, JsonSerializerOptions) ??
+                        global::Synthesia.VideoListResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -275,7 +275,7 @@ namespace Synthesia
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Synthesia.VideoListResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                        await global::Synthesia.VideoListResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
