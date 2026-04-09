@@ -5,6 +5,25 @@ namespace Synthesia
 {
     public partial class WebhooksClient
     {
+
+
+        private static readonly global::Synthesia.EndPointSecurityRequirement s_DeleteWebhooksByWebhookIdSecurityRequirement0 =
+            new global::Synthesia.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Synthesia.EndPointAuthorizationRequirement[]
+                {                    new global::Synthesia.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Synthesia.EndPointSecurityRequirement[] s_DeleteWebhooksByWebhookIdSecurityRequirements =
+            new global::Synthesia.EndPointSecurityRequirement[]
+            {                s_DeleteWebhooksByWebhookIdSecurityRequirement0,
+            };
         partial void PrepareDeleteWebhooksByWebhookIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string webhookId);
@@ -33,9 +52,15 @@ namespace Synthesia
                 httpClient: HttpClient,
                 webhookId: ref webhookId);
 
+
+            var __authorizations = global::Synthesia.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteWebhooksByWebhookIdSecurityRequirements,
+                operationName: "DeleteWebhooksByWebhookIdAsync");
+
             var __pathBuilder = new global::Synthesia.PathBuilder(
                 path: $"/v2/webhooks/{webhookId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -45,7 +70,7 @@ namespace Synthesia
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

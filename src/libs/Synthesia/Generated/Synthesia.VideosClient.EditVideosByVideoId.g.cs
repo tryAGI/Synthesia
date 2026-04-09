@@ -5,6 +5,25 @@ namespace Synthesia
 {
     public partial class VideosClient
     {
+
+
+        private static readonly global::Synthesia.EndPointSecurityRequirement s_EditVideosByVideoIdSecurityRequirement0 =
+            new global::Synthesia.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Synthesia.EndPointAuthorizationRequirement[]
+                {                    new global::Synthesia.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Synthesia.EndPointSecurityRequirement[] s_EditVideosByVideoIdSecurityRequirements =
+            new global::Synthesia.EndPointSecurityRequirement[]
+            {                s_EditVideosByVideoIdSecurityRequirement0,
+            };
         partial void PrepareEditVideosByVideoIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string videoId,
@@ -46,9 +65,15 @@ namespace Synthesia
                 videoId: ref videoId,
                 request: request);
 
+
+            var __authorizations = global::Synthesia.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_EditVideosByVideoIdSecurityRequirements,
+                operationName: "EditVideosByVideoIdAsync");
+
             var __pathBuilder = new global::Synthesia.PathBuilder(
                 path: $"/v2/videos/{videoId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: new global::System.Net.Http.HttpMethod("PATCH"),
@@ -58,7 +83,7 @@ namespace Synthesia
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

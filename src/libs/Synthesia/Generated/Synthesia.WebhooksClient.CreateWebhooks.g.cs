@@ -5,6 +5,25 @@ namespace Synthesia
 {
     public partial class WebhooksClient
     {
+
+
+        private static readonly global::Synthesia.EndPointSecurityRequirement s_CreateWebhooksSecurityRequirement0 =
+            new global::Synthesia.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Synthesia.EndPointAuthorizationRequirement[]
+                {                    new global::Synthesia.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Synthesia.EndPointSecurityRequirement[] s_CreateWebhooksSecurityRequirements =
+            new global::Synthesia.EndPointSecurityRequirement[]
+            {                s_CreateWebhooksSecurityRequirement0,
+            };
         partial void PrepareCreateWebhooksArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Synthesia.CreateWebhookRequest request);
@@ -41,9 +60,15 @@ namespace Synthesia
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Synthesia.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateWebhooksSecurityRequirements,
+                operationName: "CreateWebhooksAsync");
+
             var __pathBuilder = new global::Synthesia.PathBuilder(
                 path: "/v2/webhooks",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -53,7 +78,7 @@ namespace Synthesia
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
