@@ -5,6 +5,25 @@ namespace Synthesia
 {
     public partial class TemplatesClient
     {
+
+
+        private static readonly global::Synthesia.EndPointSecurityRequirement s_GetTemplatesSecurityRequirement0 =
+            new global::Synthesia.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Synthesia.EndPointAuthorizationRequirement[]
+                {                    new global::Synthesia.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Synthesia.EndPointSecurityRequirement[] s_GetTemplatesSecurityRequirements =
+            new global::Synthesia.EndPointSecurityRequirement[]
+            {                s_GetTemplatesSecurityRequirement0,
+            };
         partial void PrepareGetTemplatesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? limit,
@@ -54,6 +73,12 @@ namespace Synthesia
                 offset: ref offset,
                 source: source);
 
+
+            var __authorizations = global::Synthesia.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetTemplatesSecurityRequirements,
+                operationName: "GetTemplatesAsync");
+
             var __pathBuilder = new global::Synthesia.PathBuilder(
                 path: "/v2/templates",
                 baseUri: HttpClient.BaseAddress); 
@@ -61,7 +86,7 @@ namespace Synthesia
                 .AddOptionalParameter("limit", limit?.ToString())
                 .AddOptionalParameter("offset", offset?.ToString())
                 .AddOptionalParameter("source", source, selector: static x => x.ToValueString(), delimiter: ",", explode: true) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -71,7 +96,7 @@ namespace Synthesia
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

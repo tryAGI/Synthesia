@@ -5,6 +5,25 @@ namespace Synthesia
 {
     public partial class VideosClient
     {
+
+
+        private static readonly global::Synthesia.EndPointSecurityRequirement s_GetVideosByVideoIdXliffSecurityRequirement0 =
+            new global::Synthesia.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Synthesia.EndPointAuthorizationRequirement[]
+                {                    new global::Synthesia.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Synthesia.EndPointSecurityRequirement[] s_GetVideosByVideoIdXliffSecurityRequirements =
+            new global::Synthesia.EndPointSecurityRequirement[]
+            {                s_GetVideosByVideoIdXliffSecurityRequirement0,
+            };
         partial void PrepareGetVideosByVideoIdXliffArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid videoId,
@@ -48,13 +67,19 @@ namespace Synthesia
                 videoVersion: ref videoVersion,
                 xliffVersion: ref xliffVersion);
 
+
+            var __authorizations = global::Synthesia.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetVideosByVideoIdXliffSecurityRequirements,
+                operationName: "GetVideosByVideoIdXliffAsync");
+
             var __pathBuilder = new global::Synthesia.PathBuilder(
                 path: $"/v2/videos/{videoId}/xliff",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("videoVersion", videoVersion?.ToString())
                 .AddOptionalParameter("xliffVersion", xliffVersion?.ToValueString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -64,7 +89,7 @@ namespace Synthesia
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

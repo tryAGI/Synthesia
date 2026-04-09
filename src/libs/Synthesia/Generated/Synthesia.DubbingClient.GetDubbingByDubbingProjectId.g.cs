@@ -5,6 +5,25 @@ namespace Synthesia
 {
     public partial class DubbingClient
     {
+
+
+        private static readonly global::Synthesia.EndPointSecurityRequirement s_GetDubbingByDubbingProjectIdSecurityRequirement0 =
+            new global::Synthesia.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Synthesia.EndPointAuthorizationRequirement[]
+                {                    new global::Synthesia.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Synthesia.EndPointSecurityRequirement[] s_GetDubbingByDubbingProjectIdSecurityRequirements =
+            new global::Synthesia.EndPointSecurityRequirement[]
+            {                s_GetDubbingByDubbingProjectIdSecurityRequirement0,
+            };
         partial void PrepareGetDubbingByDubbingProjectIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid dubbingProjectId,
@@ -46,12 +65,18 @@ namespace Synthesia
                 dubbingProjectId: ref dubbingProjectId,
                 targetLanguages: targetLanguages);
 
+
+            var __authorizations = global::Synthesia.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetDubbingByDubbingProjectIdSecurityRequirements,
+                operationName: "GetDubbingByDubbingProjectIdAsync");
+
             var __pathBuilder = new global::Synthesia.PathBuilder(
                 path: $"/v2/dubbing/{dubbingProjectId}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("targetLanguages", targetLanguages, delimiter: ",", explode: true) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -61,7 +86,7 @@ namespace Synthesia
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

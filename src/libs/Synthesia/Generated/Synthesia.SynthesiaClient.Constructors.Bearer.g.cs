@@ -6,6 +6,7 @@ namespace Synthesia
     public sealed partial class SynthesiaClient
     {
         /// <inheritdoc cref="SynthesiaClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Synthesia.EndPointAuthorization}?, bool)"/>
+
         public SynthesiaClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,
