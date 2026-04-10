@@ -25,6 +25,7 @@ namespace Synthesia
             Authorizations.Add(new global::Synthesia.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "HttpBearer",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

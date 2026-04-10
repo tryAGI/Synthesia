@@ -10,12 +10,14 @@ namespace Synthesia
         /// </summary>
         /// <param name="dubbingProjectId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Synthesia.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Synthesia.AddLocalesToDubbingProjectResponse> PutDubbingByDubbingProjectIdAsync(
             global::System.Guid dubbingProjectId,
 
             global::Synthesia.AddLocalesToDubbingProjectRequest request,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Add locales to a a dubbing project (original imported video)<br/>
@@ -41,6 +43,7 @@ namespace Synthesia
         /// Default Value: private<br/>
         /// Example: private
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Synthesia.AddLocalesToDubbingProjectResponse> PutDubbingByDubbingProjectIdAsync(
@@ -49,6 +52,7 @@ namespace Synthesia
             bool? lipsyncEnabled = default,
             global::Synthesia.AddLocalesToDubbingProjectRequestVideoDuration? videoDuration = default,
             global::Synthesia.AddLocalesToDubbingProjectRequestVisibility? visibility = default,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

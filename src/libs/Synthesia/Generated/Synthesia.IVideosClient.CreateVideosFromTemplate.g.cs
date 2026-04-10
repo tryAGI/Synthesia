@@ -9,11 +9,13 @@ namespace Synthesia
         /// Create a video based on a template created in Synthesia.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Synthesia.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Synthesia.VideoResponse> CreateVideosFromTemplateAsync(
 
             global::Synthesia.VideoFromTemplateApi request,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a video from a template<br/>
@@ -48,6 +50,7 @@ namespace Synthesia
         /// <param name="brandKitId">
         /// Brand kit ID for the video. Defaults to 'workspace_default' if not set. Use 'no_brand_kit' for no branding, or a UUID for a custom brand kit.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Synthesia.VideoResponse> CreateVideosFromTemplateAsync(
@@ -61,6 +64,7 @@ namespace Synthesia
             string? title = default,
             global::Synthesia.VideoFromTemplateApiVisibility? visibility = default,
             string? brandKitId = default,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
