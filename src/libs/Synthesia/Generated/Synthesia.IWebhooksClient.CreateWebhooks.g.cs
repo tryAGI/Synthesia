@@ -9,11 +9,13 @@ namespace Synthesia
         /// Use the Create a webhook endpoint to create a new even subscription.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Synthesia.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Synthesia.WebhookResponse> CreateWebhooksAsync(
 
             global::Synthesia.CreateWebhookRequest request,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a Webhook<br/>
@@ -25,11 +27,13 @@ namespace Synthesia
         /// <param name="url">
         /// The URL to send notifications to
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Synthesia.WebhookResponse> CreateWebhooksAsync(
             global::System.Collections.Generic.IList<global::Synthesia.CreateWebhookRequestEvent> events,
             string url,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

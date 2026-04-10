@@ -17,12 +17,14 @@ namespace Synthesia
         /// <param name="source">
         /// Default Value: [synthesia, workspace]
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Synthesia.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Synthesia.TemplateListResponse> GetTemplatesAsync(
             int? limit = default,
             int? offset = default,
             global::System.Collections.Generic.IList<global::Synthesia.GetTemplatesSourceItem>? source = default,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
