@@ -1,0 +1,26 @@
+{
+  "Examples": [
+    {
+      "Order": 1,
+      "Title": "Query audit log events",
+      "Slug": "getauditlogevents",
+      "Description": "Retrieve paginated audit log events for a workspace or an organization.\nExactly one of workspaceId or organizationId must be provided.\n\nSupports filtering by date range (Unix timestamps), multiple actions, multiple actor IDs, and target ID.\nAny combination of filters can be applied together.\n\n**Array parameters use comma-separated values:**\n- Multiple actions: \u0060?actions=billing.credits.consumed,dubbing.project.created\u0060\n- Multiple actors: \u0060?actorIds=user-123,user-456\u0060\n\nExample queries:\n- Latest events: \u0060GET /v2/auditLogs/events?workspaceId=12345678-1234-1234-1234-123456789abc\u0026limit=50\u0060\n- Filtered by action and date:\n  \u0060GET /v2/auditLogs/events?workspaceId=12345678-1234-1234-1234-123456789abc\u0060\n  \u0060\u0026actions=billing.credits.consumed\u0026startDate=1704067200\u0026endDate=1706745599\u0060\n- Multiple filters:\n  \u0060GET /v2/auditLogs/events?workspaceId=12345678-1234-1234-1234-123456789abc\u0060\n  \u0060\u0026actions=billing.credits.consumed,dubbing.project.created\u0026actorIds=user-123,user-456\u0060\n\nThis endpoint is rate-limited and usage is tracked against your API quota.",
+      "Language": "csharp",
+      "Code": "using var client = new SynthesiaClient(apiKey);\n\nvar response = await client.AuditLogs.GetAuditLogEventsAsync(\n    actions: \u0022billing.credits.consumed,dubbing.project.created\u0022,\n    actorIds: \u0022user-123,user-456\u0022,\n    startDate: 1704067200,\n    endDate: 1706745599\n);",
+      "Format": "sdk",
+      "OperationId": "getAuditLogEvents",
+      "Setup": "This example assumes \u0060using Synthesia;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 2,
+      "Title": "Get dubbing project status and videos",
+      "Slug": "get-dubbing-project-status-and-videos",
+      "Description": "Retrieve the status of a dubbing project and its dubbed videos.\n**Status values:** - \u0060uploading\u0060: The source video is still being uploaded/processed (only for projects created via sourceVideoUrl) - \u0060in_progress\u0060: Dubbing is in progress - \u0060complete\u0060: All dubbing is complete - \u0060error\u0060: An error occurred during dubbing\n**Response varies by status:** - UPLOADING: Returns only id and status - IN_PROGRESS/COMPLETE: Returns id, status, and dubbedAssets array - ERROR: Returns id, status, and errorCode\n**Dubbed asset status:** - IN_PROGRESS: Returns minimal data (id, language, status) - COMPLETE: Returns full data including download URLs - ERROR: Returns minimal data plus errorCode",
+      "Language": "http",
+      "Code": "### Get dubbing project status and videos\nGET {{host}}/v2/dubbing/{{dubbing_project_id}}?targetLanguages=[\u0022es\u0022,\u0022fr\u0022]\nAuthorization: Bearer {{token}}\nAccept: application/json\n\n## Responses\n# 200\n# Description: Successfully retrieved dubbing project status\n# Content-Type: application/json\n# 400\n# Description: Bad Request - Invalid dubbing project.\n# Content-Type: application/json\n# 403\n# Description: Forbidden - Wrong API key.\n# Content-Type: application/json\n# 404\n# Description: Not Found - Feature disabled or target languages not found.\n# Content-Type: application/json\n# default\n# Description: Unexpected Server error.\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "getDubbingByDubbingProjectId",
+      "Setup": null
+    }
+  ]
+}
