@@ -49,7 +49,7 @@ namespace Synthesia
         public string? Description { get; set; }
 
         /// <summary>
-        /// An array of objects that each describe a clip of a multi-clip video. You can think of the clips as different scenes in the video.
+        /// An array of objects that each describe a clip of a multi-clip video. You can think of the clips as different scenes in the video. Maximum 25 scenes per video.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("input")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -144,7 +144,7 @@ namespace Synthesia
         /// Initializes a new instance of the <see cref="VideoResponse" /> class.
         /// </summary>
         /// <param name="input">
-        /// An array of objects that each describe a clip of a multi-clip video. You can think of the clips as different scenes in the video.
+        /// An array of objects that each describe a clip of a multi-clip video. You can think of the clips as different scenes in the video. Maximum 25 scenes per video.
         /// </param>
         /// <param name="captions">
         /// Downloadable captions files.<br/>
