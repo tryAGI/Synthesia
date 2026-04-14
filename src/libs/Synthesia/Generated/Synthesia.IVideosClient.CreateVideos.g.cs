@@ -39,7 +39,7 @@ namespace Synthesia
         /// Description of the video to be shown on the share page.
         /// </param>
         /// <param name="input">
-        /// An array of objects that each describe a clip of a multi-clip video. You can think of the clips as different scenes in the video.
+        /// An array of objects that each describe a clip of a multi-clip video. You can think of the clips as different scenes in the video. Maximum 25 scenes per video.
         /// </param>
         /// <param name="soundtrack">
         /// soundtrack option is supported for backward compatibility. You should use the templates functionality for rich videos.
