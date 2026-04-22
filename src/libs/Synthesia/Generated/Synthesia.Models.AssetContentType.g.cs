@@ -39,6 +39,10 @@ namespace Synthesia
         /// <summary>
         /// 
         /// </summary>
+        ApplicationVndSynthesiaSrCodeScene,
+        /// <summary>
+        /// 
+        /// </summary>
         ApplicationVndSynthesiaStudioDubbedVideo,
         /// <summary>
         /// 
@@ -193,6 +197,7 @@ namespace Synthesia
                 AssetContentType.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation => "application/vnd.openxmlformats-officedocument.presentationml.presentation",
                 AssetContentType.ApplicationVndSynthesiaFolder => "application/vnd.synthesia.folder",
                 AssetContentType.ApplicationVndSynthesiaFontFamily => "application/vnd.synthesia.font-family",
+                AssetContentType.ApplicationVndSynthesiaSrCodeScene => "application/vnd.synthesia.sr-code-scene",
                 AssetContentType.ApplicationVndSynthesiaStudioDubbedVideo => "application/vnd.synthesia.studio-dubbed-video",
                 AssetContentType.ApplicationVndSynthesiaStudioImportedVideo => "application/vnd.synthesia.studio-imported-video",
                 AssetContentType.ApplicationVndSynthesiaStudioPhotoAvatarVideo => "application/vnd.synthesia.studio-photo-avatar-video",
@@ -244,6 +249,7 @@ namespace Synthesia
                 "application/vnd.openxmlformats-officedocument.presentationml.presentation" => AssetContentType.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation,
                 "application/vnd.synthesia.folder" => AssetContentType.ApplicationVndSynthesiaFolder,
                 "application/vnd.synthesia.font-family" => AssetContentType.ApplicationVndSynthesiaFontFamily,
+                "application/vnd.synthesia.sr-code-scene" => AssetContentType.ApplicationVndSynthesiaSrCodeScene,
                 "application/vnd.synthesia.studio-dubbed-video" => AssetContentType.ApplicationVndSynthesiaStudioDubbedVideo,
                 "application/vnd.synthesia.studio-imported-video" => AssetContentType.ApplicationVndSynthesiaStudioImportedVideo,
                 "application/vnd.synthesia.studio-photo-avatar-video" => AssetContentType.ApplicationVndSynthesiaStudioPhotoAvatarVideo,
