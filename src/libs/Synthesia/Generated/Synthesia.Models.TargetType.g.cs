@@ -27,6 +27,10 @@ namespace Synthesia
         /// </summary>
         Organization,
         /// <summary>
+        /// 
+        /// </summary>
+        PlaybackState,
+        /// <summary>
         /// A user entity (can be same as Actor in self-service actions like login/profile updates)
         /// </summary>
         User,
@@ -55,6 +59,7 @@ namespace Synthesia
                 TargetType.Asset => "asset",
                 TargetType.LearnerGroup => "learner_group",
                 TargetType.Organization => "organization",
+                TargetType.PlaybackState => "playback_state",
                 TargetType.User => "user",
                 TargetType.Video => "video",
                 TargetType.Workspace => "workspace",
@@ -71,6 +76,7 @@ namespace Synthesia
                 "asset" => TargetType.Asset,
                 "learner_group" => TargetType.LearnerGroup,
                 "organization" => TargetType.Organization,
+                "playback_state" => TargetType.PlaybackState,
                 "user" => TargetType.User,
                 "video" => TargetType.Video,
                 "workspace" => TargetType.Workspace,
