@@ -139,7 +139,7 @@ namespace Synthesia
                 PrepareEditVideosByVideoIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    videoId: videoId,
+                    videoId: videoId!,
                     request: request);
 
                 return __httpRequest;

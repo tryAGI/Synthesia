@@ -139,7 +139,7 @@ namespace Synthesia
                 PrepareGetVideosByVideoIdXliffRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    videoId: videoId,
+                    videoId: videoId!,
                     videoVersion: videoVersion,
                     xliffVersion: xliffVersion);
 

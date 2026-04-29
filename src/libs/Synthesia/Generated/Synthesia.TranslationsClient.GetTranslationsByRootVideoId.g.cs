@@ -125,7 +125,7 @@ namespace Synthesia
                 PrepareGetTranslationsByRootVideoIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    rootVideoId: rootVideoId);
+                    rootVideoId: rootVideoId!);
 
                 return __httpRequest;
             }
