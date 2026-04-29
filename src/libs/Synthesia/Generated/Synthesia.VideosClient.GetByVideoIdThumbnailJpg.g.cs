@@ -120,7 +120,7 @@ namespace Synthesia
                 PrepareGetByVideoIdThumbnailJpgRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    videoId: videoId);
+                    videoId: videoId!);
 
                 return __httpRequest;
             }

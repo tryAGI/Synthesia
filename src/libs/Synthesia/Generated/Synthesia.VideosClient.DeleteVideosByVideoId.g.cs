@@ -120,7 +120,7 @@ namespace Synthesia
                 PrepareDeleteVideosByVideoIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    videoId: videoId);
+                    videoId: videoId!);
 
                 return __httpRequest;
             }

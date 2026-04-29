@@ -139,7 +139,7 @@ namespace Synthesia
                 PreparePutTranslationsByRootVideoIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    rootVideoId: rootVideoId,
+                    rootVideoId: rootVideoId!,
                     request: request);
 
                 return __httpRequest;

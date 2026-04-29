@@ -125,7 +125,7 @@ namespace Synthesia
                 PrepareGetAssetsByUserMediaAssetIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    userMediaAssetId: userMediaAssetId);
+                    userMediaAssetId: userMediaAssetId!);
 
                 return __httpRequest;
             }

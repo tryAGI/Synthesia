@@ -139,7 +139,7 @@ namespace Synthesia
                 PreparePutDubbingByDubbingProjectIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    dubbingProjectId: dubbingProjectId,
+                    dubbingProjectId: dubbingProjectId!,
                     request: request);
 
                 return __httpRequest;
