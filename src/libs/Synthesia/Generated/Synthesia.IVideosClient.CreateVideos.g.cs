@@ -21,6 +21,19 @@ namespace Synthesia
         /// Create a video<br/>
         /// Create a video within your Synthesia account. To get started on this endpoint check the [API Quickstart guide](https://docs.synthesia.io/reference/synthesia-api-quickstart).
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Synthesia.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Synthesia.AutoSDKHttpResponse<global::Synthesia.VideoResponse>> CreateVideosAsResponseAsync(
+
+            global::Synthesia.CreateVideoRequest request,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create a video<br/>
+        /// Create a video within your Synthesia account. To get started on this endpoint check the [API Quickstart guide](https://docs.synthesia.io/reference/synthesia-api-quickstart).
+        /// </summary>
         /// <param name="folderId">
         /// Optional folder ID. If provided, the new video will be created under this folder and inherit its permissions.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464

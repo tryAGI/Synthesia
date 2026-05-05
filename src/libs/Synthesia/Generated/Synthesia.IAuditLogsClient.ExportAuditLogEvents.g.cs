@@ -67,6 +67,40 @@ namespace Synthesia
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Synthesia.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::System.IO.Stream> ExportAuditLogEventsAsStreamAsync(
+
+            global::Synthesia.AuditLogsExportRequest request,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Export audit log events as CSV<br/>
+        /// Export audit log events for a workspace or organization as a CSV file.<br/>
+        /// Exactly one of workspaceId or organizationId must be provided.<br/>
+        /// Supports the same filtering options as the query endpoints:<br/>
+        /// - Date range (Unix timestamps)<br/>
+        /// - Multiple actions<br/>
+        /// - Multiple actor IDs<br/>
+        /// - Target ID<br/>
+        /// **Export limits:**<br/>
+        /// - Maximum 10,000 events per export<br/>
+        /// - If more events match the filters, the export will be truncated<br/>
+        /// - Truncated exports include "_TRUNCATED" in the filename<br/>
+        /// **Example requests:**<br/>
+        /// - Export all events for an organization:<br/>
+        ///   {"organizationId": "12345678-1234-1234-1234-123456789abc"}<br/>
+        /// - Export filtered events:<br/>
+        ///   {"organizationId": "12345678-1234-1234-1234-123456789abc",<br/>
+        ///    "startDate": 1704067200, "endDate": 1735689599,<br/>
+        ///    "actions": ["billing.credits.consumed", "video.created"]}<br/>
+        /// - Export by workspace with filters:<br/>
+        ///   {"workspaceId": "12345678-1234-1234-1234-123456789abc",<br/>
+        ///    "actorIds": ["user-123", "user-456"]}<br/>
+        /// This endpoint is rate-limited and usage is tracked against your API quota.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Synthesia.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Synthesia.AutoSDKHttpResponse<byte[]>> ExportAuditLogEventsAsResponseAsync(
 
             global::Synthesia.AuditLogsExportRequest request,

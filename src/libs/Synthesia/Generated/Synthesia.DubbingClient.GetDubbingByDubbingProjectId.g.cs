@@ -61,6 +61,33 @@ namespace Synthesia
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetDubbingByDubbingProjectIdAsResponseAsync(
+                dubbingProjectId: dubbingProjectId,
+                targetLanguages: targetLanguages,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Get dubbing project status and videos<br/>
+        /// Retrieve the status of a dubbing project and its dubbed videos.<br/>
+        /// **Status values:** - `uploading`: The source video is still being uploaded/processed (only for projects created via sourceVideoUrl) - `in_progress`: Dubbing is in progress - `complete`: All dubbing is complete - `error`: An error occurred during dubbing<br/>
+        /// **Response varies by status:** - UPLOADING: Returns only id and status - IN_PROGRESS/COMPLETE: Returns id, status, and dubbedAssets array - ERROR: Returns id, status, and errorCode<br/>
+        /// **Dubbed asset status:** - IN_PROGRESS: Returns minimal data (id, language, status) - COMPLETE: Returns full data including download URLs - ERROR: Returns minimal data plus errorCode
+        /// </summary>
+        /// <param name="dubbingProjectId"></param>
+        /// <param name="targetLanguages"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Synthesia.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Synthesia.AutoSDKHttpResponse<global::Synthesia.OneOf<global::Synthesia.GetDubbingProjectVideosResponseUploading, global::Synthesia.GetDubbingProjectVideosResponseInProgress, global::Synthesia.GetDubbingProjectVideosResponseComplete, global::Synthesia.GetDubbingProjectVideosResponseError>>> GetDubbingByDubbingProjectIdAsResponseAsync(
+            global::System.Guid dubbingProjectId,
+            global::System.Collections.Generic.IList<string>? targetLanguages = default,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetDubbingByDubbingProjectIdArguments(
@@ -90,11 +117,12 @@ namespace Synthesia
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Synthesia.PathBuilder(
                                 path: $"/v2/dubbing/{dubbingProjectId}",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("targetLanguages", targetLanguages, delimiter: ",", explode: true) 
+                                .AddOptionalParameter("targetLanguages", targetLanguages, delimiter: ",", explode: true)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Synthesia.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -167,6 +195,8 @@ namespace Synthesia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -177,6 +207,11 @@ namespace Synthesia
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Synthesia.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Synthesia.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -194,6 +229,8 @@ namespace Synthesia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -203,8 +240,7 @@ namespace Synthesia
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Synthesia.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -213,6 +249,11 @@ namespace Synthesia
                         __attempt < __maxAttempts &&
                         global::Synthesia.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Synthesia.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Synthesia.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Synthesia.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -229,14 +270,15 @@ namespace Synthesia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Synthesia.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -276,6 +318,8 @@ namespace Synthesia
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -296,6 +340,8 @@ namespace Synthesia
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // Bad Request - Invalid dubbing project.
@@ -472,9 +518,13 @@ namespace Synthesia
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Synthesia.OneOf<global::Synthesia.GetDubbingProjectVideosResponseUploading, global::Synthesia.GetDubbingProjectVideosResponseInProgress, global::Synthesia.GetDubbingProjectVideosResponseComplete, global::Synthesia.GetDubbingProjectVideosResponseError>.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Synthesia.OneOf<global::Synthesia.GetDubbingProjectVideosResponseUploading, global::Synthesia.GetDubbingProjectVideosResponseInProgress, global::Synthesia.GetDubbingProjectVideosResponseComplete, global::Synthesia.GetDubbingProjectVideosResponseError>.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Synthesia.AutoSDKHttpResponse<global::Synthesia.OneOf<global::Synthesia.GetDubbingProjectVideosResponseUploading, global::Synthesia.GetDubbingProjectVideosResponseInProgress, global::Synthesia.GetDubbingProjectVideosResponseComplete, global::Synthesia.GetDubbingProjectVideosResponseError>>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Synthesia.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -502,9 +552,13 @@ namespace Synthesia
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Synthesia.OneOf<global::Synthesia.GetDubbingProjectVideosResponseUploading, global::Synthesia.GetDubbingProjectVideosResponseInProgress, global::Synthesia.GetDubbingProjectVideosResponseComplete, global::Synthesia.GetDubbingProjectVideosResponseError>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Synthesia.OneOf<global::Synthesia.GetDubbingProjectVideosResponseUploading, global::Synthesia.GetDubbingProjectVideosResponseInProgress, global::Synthesia.GetDubbingProjectVideosResponseComplete, global::Synthesia.GetDubbingProjectVideosResponseError>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Synthesia.AutoSDKHttpResponse<global::Synthesia.OneOf<global::Synthesia.GetDubbingProjectVideosResponseUploading, global::Synthesia.GetDubbingProjectVideosResponseInProgress, global::Synthesia.GetDubbingProjectVideosResponseComplete, global::Synthesia.GetDubbingProjectVideosResponseError>>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Synthesia.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

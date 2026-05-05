@@ -54,6 +54,27 @@ namespace Synthesia
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetTemplatesByTemplateIdAsResponseAsync(
+                templateId: templateId,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Retrieve a template<br/>
+        /// You can use Retrieve a template endpoint to pull information on a template. In particular, you may use it to find out the variables available for customisation.
+        /// </summary>
+        /// <param name="templateId"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Synthesia.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Synthesia.AutoSDKHttpResponse<global::Synthesia.TemplateResponse>> GetTemplatesByTemplateIdAsResponseAsync(
+            string templateId,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetTemplatesByTemplateIdArguments(
@@ -82,6 +103,7 @@ namespace Synthesia
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Synthesia.PathBuilder(
                                 path: $"/v2/templates/{templateId}",
                                 baseUri: HttpClient.BaseAddress);
@@ -155,6 +177,8 @@ namespace Synthesia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -165,6 +189,11 @@ namespace Synthesia
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Synthesia.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Synthesia.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -182,6 +211,8 @@ namespace Synthesia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -191,8 +222,7 @@ namespace Synthesia
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Synthesia.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -201,6 +231,11 @@ namespace Synthesia
                         __attempt < __maxAttempts &&
                         global::Synthesia.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Synthesia.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Synthesia.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Synthesia.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -217,14 +252,15 @@ namespace Synthesia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Synthesia.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -264,6 +300,8 @@ namespace Synthesia
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -284,6 +322,8 @@ namespace Synthesia
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // Bad request.
@@ -460,9 +500,13 @@ namespace Synthesia
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Synthesia.TemplateResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Synthesia.TemplateResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Synthesia.AutoSDKHttpResponse<global::Synthesia.TemplateResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Synthesia.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -490,9 +534,13 @@ namespace Synthesia
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Synthesia.TemplateResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Synthesia.TemplateResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Synthesia.AutoSDKHttpResponse<global::Synthesia.TemplateResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Synthesia.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

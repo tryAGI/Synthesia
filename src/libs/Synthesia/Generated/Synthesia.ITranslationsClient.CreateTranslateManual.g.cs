@@ -21,6 +21,19 @@ namespace Synthesia
         /// Translate and generate a video from XLIFF definition<br/>
         /// Given XLIFF content, translate and generate a video.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Synthesia.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Synthesia.AutoSDKHttpResponse<global::Synthesia.CreateTranslatedVideoFromXliffResponse>> CreateTranslateManualAsResponseAsync(
+
+            global::Synthesia.CreateTranslatedVideoFromXliffRequest request,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Translate and generate a video from XLIFF definition<br/>
+        /// Given XLIFF content, translate and generate a video.
+        /// </summary>
         /// <param name="videoId"></param>
         /// <param name="xliffContent"></param>
         /// <param name="callbackId">
