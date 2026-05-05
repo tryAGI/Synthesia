@@ -24,6 +24,21 @@ namespace Synthesia
         /// Use the Update a video endpoint to make the video public and accessible via the share page or update its title and description.
         /// </summary>
         /// <param name="videoId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Synthesia.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Synthesia.AutoSDKHttpResponse<global::Synthesia.VideoResponse>> EditVideosByVideoIdAsResponseAsync(
+            string videoId,
+
+            global::Synthesia.UpdateVideoMetadataRequest request,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Update a video<br/>
+        /// Use the Update a video endpoint to make the video public and accessible via the share page or update its title and description.
+        /// </summary>
+        /// <param name="videoId"></param>
         /// <param name="ctaSettings"></param>
         /// <param name="description"></param>
         /// <param name="title"></param>

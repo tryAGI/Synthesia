@@ -24,6 +24,21 @@ namespace Synthesia
         /// Kick off TranslateVideoWorkflow for each requested target language. Returns a unified `translations` list. Each entry includes a `startedByRequest` flag: `true` if the workflow was started by this request, `false` if it was already in progress.
         /// </summary>
         /// <param name="rootVideoId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Synthesia.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Synthesia.AutoSDKHttpResponse<global::Synthesia.UpsertVideoTranslationsSuccessApiResponse>> PutTranslationsByRootVideoIdAsResponseAsync(
+            global::System.Guid rootVideoId,
+
+            global::Synthesia.UpsertVideoTranslationsApiRequest request,
+            global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Start/Update a video translation<br/>
+        /// Kick off TranslateVideoWorkflow for each requested target language. Returns a unified `translations` list. Each entry includes a `startedByRequest` flag: `true` if the workflow was started by this request, `false` if it was already in progress.
+        /// </summary>
+        /// <param name="rootVideoId"></param>
         /// <param name="targetLanguages">
         /// List of language codes to translate the video into. See https://docs.synthesia.io/docs/supported-languages for accepted values.<br/>
         /// Example: [es, fr]
