@@ -21,6 +21,10 @@ namespace Synthesia
         /// <summary>
         /// 
         /// </summary>
+        BillingPlan,
+        /// <summary>
+        /// 
+        /// </summary>
         LearnerGroup,
         /// <summary>
         /// An organization entity
@@ -57,6 +61,7 @@ namespace Synthesia
             return value switch
             {
                 TargetType.Asset => "asset",
+                TargetType.BillingPlan => "billing_plan",
                 TargetType.LearnerGroup => "learner_group",
                 TargetType.Organization => "organization",
                 TargetType.PlaybackState => "playback_state",
@@ -74,6 +79,7 @@ namespace Synthesia
             return value switch
             {
                 "asset" => TargetType.Asset,
+                "billing_plan" => TargetType.BillingPlan,
                 "learner_group" => TargetType.LearnerGroup,
                 "organization" => TargetType.Organization,
                 "playback_state" => TargetType.PlaybackState,
