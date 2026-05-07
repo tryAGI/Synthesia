@@ -66,7 +66,7 @@ public static class SynthesiaToolExtensions
             async (string templateId, string? templateDataJson, string? title, string? description, CancellationToken cancellationToken) =>
             {
                 object templateData = templateDataJson is not null
-                    ? JsonSerializer.Deserialize<Dictionary<string, object>>(templateDataJson) ?? new Dictionary<string, object>()
+                    ? ParseJsonObject(templateDataJson)
                     : new Dictionary<string, object>();
 
                 var response = await client.Videos.CreateVideosFromTemplateAsync(
@@ -267,5 +267,22 @@ public static class SynthesiaToolExtensions
         }
 
         return string.Join("\n", parts);
+    }
+
+    private static Dictionary<string, object> ParseJsonObject(string json)
+    {
+        using var document = JsonDocument.Parse(json);
+        if (document.RootElement.ValueKind != JsonValueKind.Object)
+        {
+            throw new ArgumentException("Expected a JSON object.", nameof(json));
+        }
+
+        var result = new Dictionary<string, object>(StringComparer.Ordinal);
+        foreach (var property in document.RootElement.EnumerateObject())
+        {
+            result[property.Name] = property.Value.Clone();
+        }
+
+        return result;
     }
 }
