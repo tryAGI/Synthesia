@@ -397,6 +397,7 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateDubbingResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateDubbingResponse3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.OneOf<global::Synthesia.GetDubbingProjectVideosResponseUploading, global::Synthesia.GetDubbingProjectVideosResponseInProgress, global::Synthesia.GetDubbingProjectVideosResponseComplete, global::Synthesia.GetDubbingProjectVideosResponseError>), TypeInfoPropertyName = "GetDubbingProjectVideosResponseError_6fdb2bfd159f6d5b")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.OneOf<global::Synthesia.GetDubbingProjectVideosResponseUploading, global::Synthesia.GetDubbingProjectVideosResponseInProgress, global::Synthesia.GetDubbingProjectVideosResponseComplete, global::Synthesia.GetDubbingProjectVideosResponseError>?), TypeInfoPropertyName = "GetDubbingProjectVideosResponseError_bd208661388836a6")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Synthesia.DubbingOutputLanguage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Synthesia.DubbedVideosApiError>))]
