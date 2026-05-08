@@ -34,6 +34,19 @@ namespace Synthesia
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickComplete(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Synthesia.TranslationStatusApiItemSuccess? value)
+        {
+            value = Complete;
+            return IsComplete;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Synthesia.TranslationStatusApiItemError? Error { get; init; }
 #else
@@ -47,6 +60,19 @@ namespace Synthesia
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Error))]
 #endif
         public bool IsError => Error != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickError(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Synthesia.TranslationStatusApiItemError? value)
+        {
+            value = Error;
+            return IsError;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -126,8 +152,8 @@ namespace Synthesia
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Synthesia.TranslationStatusApiItemSuccess?, TResult>? complete = null,
-            global::System.Func<global::Synthesia.TranslationStatusApiItemError?, TResult>? error = null,
+            global::System.Func<global::Synthesia.TranslationStatusApiItemSuccess, TResult>? complete = null,
+            global::System.Func<global::Synthesia.TranslationStatusApiItemError, TResult>? error = null,
             bool validate = true)
         {
             if (validate)
@@ -151,8 +177,32 @@ namespace Synthesia
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Synthesia.TranslationStatusApiItemSuccess?>? complete = null,
-            global::System.Action<global::Synthesia.TranslationStatusApiItemError?>? error = null,
+            global::System.Action<global::Synthesia.TranslationStatusApiItemSuccess>? complete = null,
+
+            global::System.Action<global::Synthesia.TranslationStatusApiItemError>? error = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsComplete)
+            {
+                complete?.Invoke(Complete!);
+            }
+            else if (IsError)
+            {
+                error?.Invoke(Error!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Synthesia.TranslationStatusApiItemSuccess>? complete = null,
+            global::System.Action<global::Synthesia.TranslationStatusApiItemError>? error = null,
             bool validate = true)
         {
             if (validate)
