@@ -70,5 +70,6 @@ namespace Synthesia
         public AuditLogsPageResponse()
         {
         }
+
     }
 }

@@ -244,5 +244,6 @@ namespace Synthesia
         public VideoResponse()
         {
         }
+
     }
 }

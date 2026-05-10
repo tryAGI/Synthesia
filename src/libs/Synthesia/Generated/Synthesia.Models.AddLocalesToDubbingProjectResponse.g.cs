@@ -51,5 +51,6 @@ namespace Synthesia
         public AddLocalesToDubbingProjectResponse()
         {
         }
+
     }
 }

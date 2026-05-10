@@ -47,6 +47,13 @@ namespace Synthesia
         /// <summary>
         /// 
         /// </summary>
+        public global::Synthesia.TranslationStatusApiItemSuccess PickComplete() => IsComplete
+            ? Complete!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Complete' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Synthesia.TranslationStatusApiItemError? Error { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace Synthesia
             value = Error;
             return IsError;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Synthesia.TranslationStatusApiItemError PickError() => IsError
+            ? Error!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Error' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

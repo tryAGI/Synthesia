@@ -57,5 +57,6 @@ namespace Synthesia
         public UpsertVideoTranslationsSuccessApiResponse()
         {
         }
+
     }
 }

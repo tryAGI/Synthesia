@@ -129,5 +129,6 @@ namespace Synthesia
         public AuditLogsQueryRequest()
         {
         }
+
     }
 }

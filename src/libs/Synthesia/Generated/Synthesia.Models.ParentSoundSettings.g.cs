@@ -52,5 +52,6 @@ namespace Synthesia
         public ParentSoundSettings()
         {
         }
+
     }
 }

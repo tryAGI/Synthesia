@@ -67,5 +67,6 @@ namespace Synthesia
         public UpdateVideoMetadataRequest()
         {
         }
+
     }
 }

@@ -55,5 +55,6 @@ namespace Synthesia
         public DubbingAssetRequestConfiguration()
         {
         }
+
     }
 }

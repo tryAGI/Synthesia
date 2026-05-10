@@ -100,5 +100,6 @@ namespace Synthesia
         public CreateAssetRequest()
         {
         }
+
     }
 }

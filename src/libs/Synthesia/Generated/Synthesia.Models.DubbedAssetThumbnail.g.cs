@@ -56,5 +56,6 @@ namespace Synthesia
         public DubbedAssetThumbnail()
         {
         }
+
     }
 }

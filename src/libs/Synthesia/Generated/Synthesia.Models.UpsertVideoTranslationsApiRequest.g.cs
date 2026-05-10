@@ -72,5 +72,6 @@ namespace Synthesia
         public UpsertVideoTranslationsApiRequest()
         {
         }
+
     }
 }

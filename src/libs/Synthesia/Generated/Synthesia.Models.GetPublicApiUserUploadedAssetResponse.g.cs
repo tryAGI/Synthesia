@@ -103,5 +103,6 @@ namespace Synthesia
         public GetPublicApiUserUploadedAssetResponse()
         {
         }
+
     }
 }

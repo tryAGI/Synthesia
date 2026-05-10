@@ -80,5 +80,6 @@ namespace Synthesia
         public InputVideoBackgroundSettings()
         {
         }
+
     }
 }

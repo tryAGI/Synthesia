@@ -41,5 +41,6 @@ namespace Synthesia
         public CreateDubbingProjectApiResponseFail()
         {
         }
+
     }
 }
