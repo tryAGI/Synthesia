@@ -94,6 +94,11 @@ namespace Synthesia
         /// <summary>
         /// 
         /// </summary>
+        public static TranslationsItem FromComplete(global::Synthesia.TranslationStatusApiItemSuccess? value) => new TranslationsItem(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator TranslationsItem(global::Synthesia.TranslationStatusApiItemError value) => new TranslationsItem((global::Synthesia.TranslationStatusApiItemError?)value);
 
         /// <summary>
@@ -108,6 +113,11 @@ namespace Synthesia
         {
             Error = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static TranslationsItem FromError(global::Synthesia.TranslationStatusApiItemError? value) => new TranslationsItem(value);
 
         /// <summary>
         /// 
