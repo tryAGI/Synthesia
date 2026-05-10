@@ -65,5 +65,6 @@ namespace Synthesia
         public GetDubbingProjectVideosResponseInProgress()
         {
         }
+
     }
 }

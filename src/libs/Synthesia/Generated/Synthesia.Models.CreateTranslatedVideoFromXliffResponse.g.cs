@@ -40,5 +40,6 @@ namespace Synthesia
         public CreateTranslatedVideoFromXliffResponse()
         {
         }
+
     }
 }

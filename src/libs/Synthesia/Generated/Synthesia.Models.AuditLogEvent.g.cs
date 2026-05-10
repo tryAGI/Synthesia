@@ -153,5 +153,6 @@ namespace Synthesia
         public AuditLogEvent()
         {
         }
+
     }
 }

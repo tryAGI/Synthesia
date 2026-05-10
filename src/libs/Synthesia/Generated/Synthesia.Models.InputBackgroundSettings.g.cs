@@ -63,5 +63,6 @@ namespace Synthesia
         public InputBackgroundSettings()
         {
         }
+
     }
 }
