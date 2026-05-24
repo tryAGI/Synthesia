@@ -374,18 +374,17 @@ namespace Synthesia
                                     __exception_400 = __ex;
                                 }
 
-                                throw new global::Synthesia.ApiException<global::Synthesia.OneOf<global::Synthesia.CreateDubbingProjectApiResponseFail, global::Synthesia.CreateDubbingResponse2>?>(
+
+                                throw global::Synthesia.ApiException<global::Synthesia.OneOf<global::Synthesia.CreateDubbingProjectApiResponseFail, global::Synthesia.CreateDubbingResponse2>?>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_400,
-                                    ResponseObject = __value_400,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_400,
+                                    responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Forbidden - Wrong API key.
                             if ((int)__response.StatusCode == 403)
@@ -412,18 +411,17 @@ namespace Synthesia
                                     __exception_403 = __ex;
                                 }
 
-                                throw new global::Synthesia.ApiException<global::Synthesia.Error>(
+
+                                throw global::Synthesia.ApiException<global::Synthesia.Error>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_403,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_403,
-                                    ResponseObject = __value_403,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_403,
+                                    responseObject: __value_403,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Asset ID was not found.
                             if ((int)__response.StatusCode == 404)
@@ -450,18 +448,17 @@ namespace Synthesia
                                     __exception_404 = __ex;
                                 }
 
-                                throw new global::Synthesia.ApiException<global::Synthesia.Error>(
+
+                                throw global::Synthesia.ApiException<global::Synthesia.Error>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_404,
-                                    ResponseObject = __value_404,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_404,
+                                    responseObject: __value_404,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Not Implemented
                             if ((int)__response.StatusCode == 501)
@@ -488,18 +485,17 @@ namespace Synthesia
                                     __exception_501 = __ex;
                                 }
 
-                                throw new global::Synthesia.ApiException<global::Synthesia.CreateDubbingResponse3>(
+
+                                throw global::Synthesia.ApiException<global::Synthesia.CreateDubbingResponse3>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_501 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_501,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_501,
-                                    ResponseObject = __value_501,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_501,
+                                    responseObject: __value_501,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Unexpected Server error.
                             if (!__response.IsSuccessStatusCode)
@@ -526,18 +522,17 @@ namespace Synthesia
                                     __exception_default = __ex;
                                 }
 
-                                throw new global::Synthesia.ApiException<global::Synthesia.Error>(
+
+                                throw global::Synthesia.ApiException<global::Synthesia.Error>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_default ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_default,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_default,
-                                    ResponseObject = __value_default,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_default,
+                                    responseObject: __value_default,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                             if (__effectiveReadResponseAsString)
@@ -571,17 +566,15 @@ namespace Synthesia
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    throw new global::Synthesia.ApiException(
+                                    throw global::Synthesia.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
                             else
@@ -618,17 +611,15 @@ namespace Synthesia
                                     {
                                     }
 
-                                    throw new global::Synthesia.ApiException(
+                                    throw global::Synthesia.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
 
