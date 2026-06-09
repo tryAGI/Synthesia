@@ -140,7 +140,7 @@ namespace Synthesia
         /// <summary>
         /// 
         /// </summary>
-        public global::Synthesia.PublicApiImportedAndDubbedVideosErrorCode? Type28 { get; set; }
+        public global::Synthesia.ImportedAndDubbedVideosErrorCode? Type28 { get; set; }
         /// <summary>
         /// 
         /// </summary>

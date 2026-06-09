@@ -35,9 +35,9 @@ namespace Synthesia
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("errorCode")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.PublicApiImportedAndDubbedVideosErrorCodeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.ImportedAndDubbedVideosErrorCodeJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Synthesia.PublicApiImportedAndDubbedVideosErrorCode ErrorCode { get; set; }
+        public required global::Synthesia.ImportedAndDubbedVideosErrorCode ErrorCode { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -61,7 +61,7 @@ namespace Synthesia
         public DubbedAssetError(
             global::System.Guid id,
             global::Synthesia.DubbingOutputLanguage language,
-            global::Synthesia.PublicApiImportedAndDubbedVideosErrorCode errorCode,
+            global::Synthesia.ImportedAndDubbedVideosErrorCode errorCode,
             global::Synthesia.DubbedAssetErrorStatus? status)
         {
             this.Id = id;

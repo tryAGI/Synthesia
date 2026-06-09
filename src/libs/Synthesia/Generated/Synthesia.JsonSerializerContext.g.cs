@@ -61,9 +61,9 @@ namespace Synthesia
 
             typeof(global::Synthesia.JsonConverters.UpsertVideoTranslationsApiRequestAutoGenerateNullableJsonConverter),
 
-            typeof(global::Synthesia.JsonConverters.PublicApiImportedAndDubbedVideosErrorCodeJsonConverter),
+            typeof(global::Synthesia.JsonConverters.ImportedAndDubbedVideosErrorCodeJsonConverter),
 
-            typeof(global::Synthesia.JsonConverters.PublicApiImportedAndDubbedVideosErrorCodeNullableJsonConverter),
+            typeof(global::Synthesia.JsonConverters.ImportedAndDubbedVideosErrorCodeNullableJsonConverter),
 
             typeof(global::Synthesia.JsonConverters.DubbedAssetCompleteStatusJsonConverter),
 
@@ -274,7 +274,7 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsApiRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsApiRequestAutoGenerate), TypeInfoPropertyName = "UpsertVideoTranslationsApiRequestAutoGenerate2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.DubbedVideosApiError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.PublicApiImportedAndDubbedVideosErrorCode), TypeInfoPropertyName = "PublicApiImportedAndDubbedVideosErrorCode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ImportedAndDubbedVideosErrorCode), TypeInfoPropertyName = "ImportedAndDubbedVideosErrorCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.DubbedAssetCaptions))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.DubbedAssetComplete))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.DubbedAssetCompleteStatus), TypeInfoPropertyName = "DubbedAssetCompleteStatus2")]
