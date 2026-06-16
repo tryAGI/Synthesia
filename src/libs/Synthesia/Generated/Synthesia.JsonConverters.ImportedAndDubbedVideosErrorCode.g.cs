@@ -3,10 +3,10 @@
 namespace Synthesia.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class PublicApiImportedAndDubbedVideosErrorCodeJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Synthesia.PublicApiImportedAndDubbedVideosErrorCode>
+    public sealed class ImportedAndDubbedVideosErrorCodeJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Synthesia.ImportedAndDubbedVideosErrorCode>
     {
         /// <inheritdoc />
-        public override global::Synthesia.PublicApiImportedAndDubbedVideosErrorCode Read(
+        public override global::Synthesia.ImportedAndDubbedVideosErrorCode Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Synthesia.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Synthesia.PublicApiImportedAndDubbedVideosErrorCodeExtensions.ToEnum(stringValue) ?? default;
+                        return global::Synthesia.ImportedAndDubbedVideosErrorCodeExtensions.ToEnum(stringValue) ?? default;
                     }
                     
                     break;
@@ -26,11 +26,11 @@ namespace Synthesia.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Synthesia.PublicApiImportedAndDubbedVideosErrorCode)numValue;
+                    return (global::Synthesia.ImportedAndDubbedVideosErrorCode)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Synthesia.PublicApiImportedAndDubbedVideosErrorCode);
+                    return default(global::Synthesia.ImportedAndDubbedVideosErrorCode);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,12 +42,12 @@ namespace Synthesia.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Synthesia.PublicApiImportedAndDubbedVideosErrorCode value,
+            global::Synthesia.ImportedAndDubbedVideosErrorCode value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            writer.WriteStringValue(global::Synthesia.PublicApiImportedAndDubbedVideosErrorCodeExtensions.ToValueString(value));
+            writer.WriteStringValue(global::Synthesia.ImportedAndDubbedVideosErrorCodeExtensions.ToValueString(value));
         }
     }
 }
