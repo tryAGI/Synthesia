@@ -335,6 +335,7 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationsItem), TypeInfoPropertyName = "TranslationsItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus), TypeInfoPropertyName = "GetVideoTranslationsApiResponseTranslationDiscriminatorStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateInteractiveAvatarSessionRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CtaSettings))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateResponseVisibility), TypeInfoPropertyName = "TemplateResponseVisibility2")]

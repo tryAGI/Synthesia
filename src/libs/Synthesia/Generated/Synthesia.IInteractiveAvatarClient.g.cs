@@ -4,11 +4,10 @@
 namespace Synthesia
 {
     /// <summary>
-    /// Synthesia public API endpoints<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public partial interface ISynthesiaClient : global::System.IDisposable
+    public partial interface IInteractiveAvatarClient : global::System.IDisposable
     {
         /// <summary>
         /// The HttpClient instance.
@@ -44,46 +43,6 @@ namespace Synthesia
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public AssetsClient Assets { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public AuditLogsClient AuditLogs { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public DubbingClient Dubbing { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public InteractiveAvatarClient InteractiveAvatar { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public TemplatesClient Templates { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public TranslationsClient Translations { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public VideosClient Videos { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public WebhooksClient Webhooks { get; }
 
     }
 }
