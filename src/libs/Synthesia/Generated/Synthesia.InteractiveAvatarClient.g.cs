@@ -4,11 +4,10 @@
 namespace Synthesia
 {
     /// <summary>
-    /// Synthesia public API endpoints<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public sealed partial class SynthesiaClient : global::Synthesia.ISynthesiaClient, global::System.IDisposable
+    public sealed partial class InteractiveAvatarClient : global::Synthesia.IInteractiveAvatarClient, global::System.IDisposable
     {
         /// <summary>
         /// Synthesia public API URL.
@@ -41,79 +40,7 @@ namespace Synthesia
 
 
         /// <summary>
-        /// 
-        /// </summary>
-        public AssetsClient Assets => new AssetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public AuditLogsClient AuditLogs => new AuditLogsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public DubbingClient Dubbing => new DubbingClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public InteractiveAvatarClient InteractiveAvatar => new InteractiveAvatarClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public TemplatesClient Templates => new TemplatesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public TranslationsClient Translations => new TranslationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public VideosClient Videos => new VideosClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public WebhooksClient Webhooks => new WebhooksClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// Creates a new instance of the SynthesiaClient.
+        /// Creates a new instance of the InteractiveAvatarClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
@@ -121,7 +48,7 @@ namespace Synthesia
         /// <param name="baseUri">The base URL for the API. If not provided, the default baseUri from OpenAPI spec will be used.</param>
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public SynthesiaClient(
+        public InteractiveAvatarClient(
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::Synthesia.EndPointAuthorization>? authorizations = null,
@@ -135,14 +62,14 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// Creates a new instance of the SynthesiaClient with explicit options but no base URL override.
+        /// Creates a new instance of the InteractiveAvatarClient with explicit options but no base URL override.
         /// Skips passing <c>baseUri</c> so the default base URL from the OpenAPI spec applies.
         /// </summary>
         /// <param name="httpClient">The HttpClient instance. If not provided, a new one will be created.</param>
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public SynthesiaClient(
+        public InteractiveAvatarClient(
             global::System.Net.Http.HttpClient? httpClient,
             global::System.Collections.Generic.List<global::Synthesia.EndPointAuthorization>? authorizations,
             global::Synthesia.AutoSDKClientOptions? options,
@@ -156,7 +83,7 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// Creates a new instance of the SynthesiaClient.
+        /// Creates a new instance of the InteractiveAvatarClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
@@ -165,7 +92,7 @@ namespace Synthesia
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public SynthesiaClient(
+        public InteractiveAvatarClient(
             global::System.Net.Http.HttpClient? httpClient,
             global::System.Uri? baseUri,
             global::System.Collections.Generic.List<global::Synthesia.EndPointAuthorization>? authorizations,
