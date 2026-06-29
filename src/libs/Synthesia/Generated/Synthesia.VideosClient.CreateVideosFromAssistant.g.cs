@@ -35,8 +35,8 @@ namespace Synthesia
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// Create a video from a prompt and a PDF via the Assistant<br/>
-        /// Pilot endpoint. Accepts a text prompt and a single PDF (multipart/form-data, max 6 MB) and returns a videoId and embed code immediately. The video is generated and published asynchronously by the Assistant.
+        /// Create a video from a prompt and PDFs via the Assistant<br/>
+        /// Pilot endpoint. Accepts a text prompt and up to 5 PDFs (multipart/form-data, repeat the `file` field per PDF, 6 MB total request body) and returns a videoId and embed code immediately. The video is generated and published asynchronously by the Assistant.
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -51,8 +51,8 @@ namespace Synthesia
             ).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a video from a prompt and a PDF via the Assistant<br/>
-        /// Pilot endpoint. Accepts a text prompt and a single PDF (multipart/form-data, max 6 MB) and returns a videoId and embed code immediately. The video is generated and published asynchronously by the Assistant.
+        /// Create a video from a prompt and PDFs via the Assistant<br/>
+        /// Pilot endpoint. Accepts a text prompt and up to 5 PDFs (multipart/form-data, repeat the `file` field per PDF, 6 MB total request body) and returns a videoId and embed code immediately. The video is generated and published asynchronously by the Assistant.
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
