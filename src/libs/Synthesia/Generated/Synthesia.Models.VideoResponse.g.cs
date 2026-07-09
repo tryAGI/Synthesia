@@ -98,6 +98,12 @@ namespace Synthesia
         public int? CreatedAt { get; set; }
 
         /// <summary>
+        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("contentProvenance")]
+        public global::Synthesia.ContentProvenanceResponse? ContentProvenance { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("download")]
@@ -185,6 +191,9 @@ namespace Synthesia
         /// Default Value: private
         /// </param>
         /// <param name="createdAt"></param>
+        /// <param name="contentProvenance">
+        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
+        /// </param>
         /// <param name="download"></param>
         /// <param name="duration"></param>
         /// <param name="id"></param>
@@ -210,6 +219,7 @@ namespace Synthesia
             string? title,
             global::Synthesia.VideoResponseVisibility? visibility,
             int? createdAt,
+            global::Synthesia.ContentProvenanceResponse? contentProvenance,
             string? download,
             string? duration,
             global::System.Guid? id,
@@ -230,6 +240,7 @@ namespace Synthesia
             this.Title = title;
             this.Visibility = visibility;
             this.CreatedAt = createdAt;
+            this.ContentProvenance = contentProvenance;
             this.Download = download;
             this.Duration = duration;
             this.Id = id;
