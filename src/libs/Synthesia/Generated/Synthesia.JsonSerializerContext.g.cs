@@ -361,6 +361,8 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ParentSoundtrackRegion))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ParentSoundSettings))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.ParentSoundtrackRegion>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.C2PAContentProvenanceResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ContentProvenanceResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoThumbnailTypesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseAspectRatio), TypeInfoPropertyName = "VideoResponseAspectRatio2")]
