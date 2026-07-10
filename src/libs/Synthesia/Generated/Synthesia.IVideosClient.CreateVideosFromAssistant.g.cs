@@ -6,7 +6,7 @@ namespace Synthesia
     {
         /// <summary>
         /// Create a video from a prompt and PDFs via the Assistant<br/>
-        /// Pilot endpoint. Accepts a text prompt and up to 5 PDFs (multipart/form-data, repeat the `file` field per PDF, 6 MB total request body) and returns a videoId and embed code immediately. The video is generated and published asynchronously by the Assistant.
+        /// Pilot endpoint. Accepts a text prompt and up to 5 PDFs (multipart/form-data, repeat the `file` field per PDF, 6 MB total request body) and returns a videoId and embed code immediately. The video is generated and published asynchronously by the Assistant. An optional `duration` field (`short`, `medium` or `long`; defaults to `medium`) sizes the video to roughly 1, 2 or 5 minutes respectively.
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -16,7 +16,7 @@ namespace Synthesia
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a video from a prompt and PDFs via the Assistant<br/>
-        /// Pilot endpoint. Accepts a text prompt and up to 5 PDFs (multipart/form-data, repeat the `file` field per PDF, 6 MB total request body) and returns a videoId and embed code immediately. The video is generated and published asynchronously by the Assistant.
+        /// Pilot endpoint. Accepts a text prompt and up to 5 PDFs (multipart/form-data, repeat the `file` field per PDF, 6 MB total request body) and returns a videoId and embed code immediately. The video is generated and published asynchronously by the Assistant. An optional `duration` field (`short`, `medium` or `long`; defaults to `medium`) sizes the video to roughly 1, 2 or 5 minutes respectively.
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
