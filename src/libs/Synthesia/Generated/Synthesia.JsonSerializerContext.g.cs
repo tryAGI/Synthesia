@@ -57,6 +57,10 @@ namespace Synthesia
 
             typeof(global::Synthesia.JsonConverters.CreateDubbingProjectApiRequestFromSourceVideoUrlVisibilityNullableJsonConverter),
 
+            typeof(global::Synthesia.JsonConverters.DubbingAuthorizeActionJsonConverter),
+
+            typeof(global::Synthesia.JsonConverters.DubbingAuthorizeActionNullableJsonConverter),
+
             typeof(global::Synthesia.JsonConverters.UpsertVideoTranslationsApiRequestAutoGenerateJsonConverter),
 
             typeof(global::Synthesia.JsonConverters.UpsertVideoTranslationsApiRequestAutoGenerateNullableJsonConverter),
@@ -267,6 +271,8 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateDubbingProjectApiRequestFromSourceVideoUrl))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateDubbingProjectApiRequestFromSourceVideoUrlVideoDuration), TypeInfoPropertyName = "CreateDubbingProjectApiRequestFromSourceVideoUrlVideoDuration2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateDubbingProjectApiRequestFromSourceVideoUrlVisibility), TypeInfoPropertyName = "CreateDubbingProjectApiRequestFromSourceVideoUrlVisibility2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.DubbingAuthorizeAction), TypeInfoPropertyName = "DubbingAuthorizeAction2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.DubbingAuthorizeRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.AuditLogsQueryRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
@@ -308,6 +314,7 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetDubbingProjectVideosResponseCompleteStatus), TypeInfoPropertyName = "GetDubbingProjectVideosResponseCompleteStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetDubbingProjectVideosResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetDubbingProjectVideosResponseErrorStatus), TypeInfoPropertyName = "GetDubbingProjectVideosResponseErrorStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.DubbingAuthorizeResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.Actor))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ActorType), TypeInfoPropertyName = "ActorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.AuditLogEvent))]
