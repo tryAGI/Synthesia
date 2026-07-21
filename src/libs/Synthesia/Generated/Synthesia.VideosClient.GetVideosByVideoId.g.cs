@@ -27,11 +27,13 @@ namespace Synthesia
             };
         partial void PrepareGetVideosByVideoIdArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string videoId);
+            ref string videoId,
+            ref bool? includeRejected);
         partial void PrepareGetVideosByVideoIdRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string videoId);
+            string videoId,
+            bool? includeRejected);
         partial void ProcessGetVideosByVideoIdResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -46,16 +48,21 @@ namespace Synthesia
         /// You can use Retrieve a video endpoint to pull for the video status.
         /// </summary>
         /// <param name="videoId"></param>
+        /// <param name="includeRejected">
+        /// Default Value: false
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Synthesia.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Synthesia.VideoResponse> GetVideosByVideoIdAsync(
             string videoId,
+            bool? includeRejected = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await GetVideosByVideoIdAsResponseAsync(
                 videoId: videoId,
+                includeRejected: includeRejected,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -67,11 +74,15 @@ namespace Synthesia
         /// You can use Retrieve a video endpoint to pull for the video status.
         /// </summary>
         /// <param name="videoId"></param>
+        /// <param name="includeRejected">
+        /// Default Value: false
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Synthesia.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Synthesia.AutoSDKHttpResponse<global::Synthesia.VideoResponse>> GetVideosByVideoIdAsResponseAsync(
             string videoId,
+            bool? includeRejected = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -79,7 +90,8 @@ namespace Synthesia
                 client: HttpClient);
             PrepareGetVideosByVideoIdArguments(
                 httpClient: HttpClient,
-                videoId: ref videoId);
+                videoId: ref videoId,
+                includeRejected: ref includeRejected);
 
 
             var __authorizations = global::Synthesia.EndPointSecurityResolver.ResolveAuthorizations(
@@ -107,6 +119,9 @@ namespace Synthesia
                             var __pathBuilder = new global::Synthesia.PathBuilder(
                                 path: $"/v2/videos/{videoId}",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddOptionalParameter("includeRejected", includeRejected?.ToString().ToLowerInvariant())
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Synthesia.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -147,7 +162,8 @@ namespace Synthesia
                 PrepareGetVideosByVideoIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    videoId: videoId!);
+                    videoId: videoId!,
+                    includeRejected: includeRejected);
 
                 return __httpRequest;
             }
