@@ -15,7 +15,8 @@ namespace Synthesia
         /// USER: A user entity (can be same as Actor in self-service actions like login/profile updates)<br/>
         /// ORGANIZATION: An organization entity<br/>
         /// ASSET: An asset entity (avatars, images, etc.)<br/>
-        /// LEARNER_GROUP: An LMS learner group (cohort) entity
+        /// LEARNER_GROUP: An LMS learner group (cohort) entity<br/>
+        /// ASSIGNMENT: An LMS training assignment entity
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.TargetTypeJsonConverter))]
@@ -51,7 +52,8 @@ namespace Synthesia
         /// USER: A user entity (can be same as Actor in self-service actions like login/profile updates)<br/>
         /// ORGANIZATION: An organization entity<br/>
         /// ASSET: An asset entity (avatars, images, etc.)<br/>
-        /// LEARNER_GROUP: An LMS learner group (cohort) entity
+        /// LEARNER_GROUP: An LMS learner group (cohort) entity<br/>
+        /// ASSIGNMENT: An LMS training assignment entity
         /// </param>
         /// <param name="id"></param>
         /// <param name="name">

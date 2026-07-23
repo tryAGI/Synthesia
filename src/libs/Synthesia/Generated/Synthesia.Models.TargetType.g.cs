@@ -10,7 +10,8 @@ namespace Synthesia
     /// USER: A user entity (can be same as Actor in self-service actions like login/profile updates)<br/>
     /// ORGANIZATION: An organization entity<br/>
     /// ASSET: An asset entity (avatars, images, etc.)<br/>
-    /// LEARNER_GROUP: An LMS learner group (cohort) entity
+    /// LEARNER_GROUP: An LMS learner group (cohort) entity<br/>
+    /// ASSIGNMENT: An LMS training assignment entity
     /// </summary>
     public enum TargetType
     {
@@ -18,6 +19,10 @@ namespace Synthesia
         /// An asset entity (avatars, images, etc.)
         /// </summary>
         Asset,
+        /// <summary>
+        /// An LMS training assignment entity
+        /// </summary>
+        Assignment,
         /// <summary>
         /// 
         /// </summary>
@@ -61,6 +66,7 @@ namespace Synthesia
             return value switch
             {
                 TargetType.Asset => "asset",
+                TargetType.Assignment => "assignment",
                 TargetType.BillingPlan => "billing_plan",
                 TargetType.LearnerGroup => "learner_group",
                 TargetType.Organization => "organization",
@@ -79,6 +85,7 @@ namespace Synthesia
             return value switch
             {
                 "asset" => TargetType.Asset,
+                "assignment" => TargetType.Assignment,
                 "billing_plan" => TargetType.BillingPlan,
                 "learner_group" => TargetType.LearnerGroup,
                 "organization" => TargetType.Organization,
