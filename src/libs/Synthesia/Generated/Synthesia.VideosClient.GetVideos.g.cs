@@ -29,15 +29,13 @@ namespace Synthesia
             global::System.Net.Http.HttpClient httpClient,
             ref int? limit,
             ref int? offset,
-            global::System.Collections.Generic.IList<global::Synthesia.GetVideosSourceItem>? source,
-            ref bool? includeRejected);
+            global::System.Collections.Generic.IList<global::Synthesia.GetVideosSourceItem>? source);
         partial void PrepareGetVideosRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int? limit,
             int? offset,
-            global::System.Collections.Generic.IList<global::Synthesia.GetVideosSourceItem>? source,
-            bool? includeRejected);
+            global::System.Collections.Generic.IList<global::Synthesia.GetVideosSourceItem>? source);
         partial void ProcessGetVideosResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -60,9 +58,6 @@ namespace Synthesia
         /// <param name="source">
         /// Default Value: [workspace, shared_with_me, my_videos]
         /// </param>
-        /// <param name="includeRejected">
-        /// Default Value: false
-        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Synthesia.ApiException"></exception>
@@ -70,7 +65,6 @@ namespace Synthesia
             int? limit = default,
             int? offset = default,
             global::System.Collections.Generic.IList<global::Synthesia.GetVideosSourceItem>? source = default,
-            bool? includeRejected = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -78,7 +72,6 @@ namespace Synthesia
                 limit: limit,
                 offset: offset,
                 source: source,
-                includeRejected: includeRejected,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -98,9 +91,6 @@ namespace Synthesia
         /// <param name="source">
         /// Default Value: [workspace, shared_with_me, my_videos]
         /// </param>
-        /// <param name="includeRejected">
-        /// Default Value: false
-        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Synthesia.ApiException"></exception>
@@ -108,7 +98,6 @@ namespace Synthesia
             int? limit = default,
             int? offset = default,
             global::System.Collections.Generic.IList<global::Synthesia.GetVideosSourceItem>? source = default,
-            bool? includeRejected = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -118,8 +107,7 @@ namespace Synthesia
                 httpClient: HttpClient,
                 limit: ref limit,
                 offset: ref offset,
-                source: source,
-                includeRejected: ref includeRejected);
+                source: source);
 
 
             var __authorizations = global::Synthesia.EndPointSecurityResolver.ResolveAuthorizations(
@@ -151,7 +139,6 @@ namespace Synthesia
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("offset", offset?.ToString())
                                 .AddOptionalParameter("source", source, selector: static x => x.ToValueString(), delimiter: ",", explode: true)
-                                .AddOptionalParameter("includeRejected", includeRejected?.ToString().ToLowerInvariant())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Synthesia.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -195,8 +182,7 @@ namespace Synthesia
                     httpRequestMessage: __httpRequest,
                     limit: limit,
                     offset: offset,
-                    source: source,
-                    includeRejected: includeRejected);
+                    source: source);
 
                 return __httpRequest;
             }
