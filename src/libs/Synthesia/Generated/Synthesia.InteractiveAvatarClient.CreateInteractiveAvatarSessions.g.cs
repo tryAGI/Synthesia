@@ -132,7 +132,7 @@ namespace Synthesia
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -330,7 +330,7 @@ namespace Synthesia
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 400)
                             {
                                 string? __content_400 = null;
@@ -362,7 +362,7 @@ namespace Synthesia
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 403)
                             {
                                 string? __content_403 = null;
@@ -394,7 +394,7 @@ namespace Synthesia
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 404)
                             {
                                 string? __content_404 = null;
@@ -426,7 +426,7 @@ namespace Synthesia
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 422)
                             {
                                 string? __content_422 = null;
@@ -458,7 +458,7 @@ namespace Synthesia
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // 
+                            //
                             if (!__response.IsSuccessStatusCode)
                             {
                                 string? __content_default = null;

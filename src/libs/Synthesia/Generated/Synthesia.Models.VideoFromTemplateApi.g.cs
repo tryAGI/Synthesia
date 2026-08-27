@@ -4,7 +4,7 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class VideoFromTemplateApi
     {
@@ -22,7 +22,7 @@ namespace Synthesia
         public string? CallbackId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ctaSettings")]
         public global::Synthesia.CtaSettings? CtaSettings { get; set; }
@@ -41,7 +41,7 @@ namespace Synthesia
         public required global::System.Guid TemplateId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("templateData")]
         [global::System.Text.Json.Serialization.JsonRequired]

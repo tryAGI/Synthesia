@@ -4,20 +4,20 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TranslationStatusApiItemErrorErrorCode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssetNotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GenerationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TranslationFailed,
     }

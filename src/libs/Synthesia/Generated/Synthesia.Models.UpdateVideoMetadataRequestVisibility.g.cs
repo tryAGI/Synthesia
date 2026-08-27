@@ -4,16 +4,16 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UpdateVideoMetadataRequestVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

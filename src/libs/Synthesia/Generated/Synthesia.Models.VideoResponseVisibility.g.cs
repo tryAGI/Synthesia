@@ -12,11 +12,11 @@ namespace Synthesia
     public enum VideoResponseVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

@@ -4,18 +4,18 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class WebhookListResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("webhooks")]
         public global::System.Collections.Generic.IList<global::Synthesia.WebhookResponse>? Webhooks { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nextOffset")]
         public int? NextOffset { get; set; }

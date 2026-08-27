@@ -9,75 +9,75 @@ namespace Synthesia
     public enum InputTransition
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fadeblack,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fadescale,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fadewhite,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Jumpcut,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slidedown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slideleft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slideoverdown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slideoverleft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slideoverright,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slideoverup,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slideright,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slideup,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wipedown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wipeleft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wiperight,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wipeup,
     }

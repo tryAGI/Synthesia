@@ -4,7 +4,7 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateVideoRequest
     {
@@ -56,7 +56,7 @@ namespace Synthesia
         public global::Synthesia.CreateVideoRequestSoundtrack? Soundtrack { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("soundSettings")]
         public global::Synthesia.ParentSoundSettings? SoundSettings { get; set; }

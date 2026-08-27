@@ -22,7 +22,7 @@ namespace Synthesia
         /// </summary>
         SlowDown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SlowDownMci,
     }

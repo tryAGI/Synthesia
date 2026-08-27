@@ -4,7 +4,7 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class VideoResponse
     {
@@ -63,7 +63,7 @@ namespace Synthesia
         public global::Synthesia.VideoResponseSoundtrack? Soundtrack { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("soundSettings")]
         public global::Synthesia.ParentSoundSettings? SoundSettings { get; set; }
@@ -92,7 +92,7 @@ namespace Synthesia
         public global::Synthesia.VideoResponseVisibility? Visibility { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         public int? CreatedAt { get; set; }
@@ -104,31 +104,31 @@ namespace Synthesia
         public global::Synthesia.ContentProvenanceResponse? ContentProvenance { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("download")]
         public string? Download { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("duration")]
         public string? Duration { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         public global::System.Guid? Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lastUpdatedAt")]
         public int? LastUpdatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.VideoResponseStatusJsonConverter))]

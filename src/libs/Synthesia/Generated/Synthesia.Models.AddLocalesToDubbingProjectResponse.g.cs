@@ -4,12 +4,12 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AddLocalesToDubbingProjectResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dubbedErrors")]
         public global::System.Collections.Generic.IList<global::Synthesia.DubbedVideosApiError>? DubbedErrors { get; set; }

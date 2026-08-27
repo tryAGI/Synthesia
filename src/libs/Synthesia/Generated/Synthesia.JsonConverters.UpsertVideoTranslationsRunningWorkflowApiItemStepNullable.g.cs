@@ -20,7 +20,7 @@ namespace Synthesia.JsonConverters
                     {
                         return global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStepExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

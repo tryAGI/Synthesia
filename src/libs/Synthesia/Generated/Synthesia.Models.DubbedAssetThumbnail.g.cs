@@ -4,7 +4,7 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DubbedAssetThumbnail
     {

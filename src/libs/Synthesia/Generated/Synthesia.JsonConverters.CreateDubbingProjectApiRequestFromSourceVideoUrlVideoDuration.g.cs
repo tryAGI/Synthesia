@@ -20,7 +20,7 @@ namespace Synthesia.JsonConverters
                     {
                         return global::Synthesia.CreateDubbingProjectApiRequestFromSourceVideoUrlVideoDurationExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

@@ -9,7 +9,7 @@ namespace Synthesia
     public sealed partial class Metadata
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]

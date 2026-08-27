@@ -4,19 +4,19 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ParentSoundtrackRegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("soundtrack")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Soundtrack { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("slideRange")]
         [global::System.Text.Json.Serialization.JsonRequired]

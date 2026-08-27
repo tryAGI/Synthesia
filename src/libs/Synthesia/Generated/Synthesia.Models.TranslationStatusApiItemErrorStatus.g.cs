@@ -9,7 +9,7 @@ namespace Synthesia
     public enum TranslationStatusApiItemErrorStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
     }

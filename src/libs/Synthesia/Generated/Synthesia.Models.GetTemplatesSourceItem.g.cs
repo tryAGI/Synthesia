@@ -4,16 +4,16 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetTemplatesSourceItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Synthesia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Workspace,
     }

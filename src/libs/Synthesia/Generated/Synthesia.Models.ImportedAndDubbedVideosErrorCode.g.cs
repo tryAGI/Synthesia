@@ -4,24 +4,24 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ImportedAndDubbedVideosErrorCode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InvalidTargetLanguage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Moderation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProcessingError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoDurationLimitReached,
     }

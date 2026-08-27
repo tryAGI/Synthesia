@@ -4,18 +4,18 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class VideoListResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("videos")]
         public global::System.Collections.Generic.IList<global::Synthesia.VideoResponse>? Videos { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nextOffset")]
         public int? NextOffset { get; set; }

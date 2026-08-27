@@ -10,11 +10,11 @@ namespace Synthesia
     public enum UpsertVideoTranslationsApiRequestAutoGenerate
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

@@ -9,171 +9,171 @@ namespace Synthesia
     public enum AssetContentType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationFontWoff,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationJson,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationPdf,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndMsPowerpoint,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaFolder,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaFontFamily,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaSrCodeScene,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioDubbedVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioImportedVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioPhotoAvatarVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioSynthesiaAcademyVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioSynthesiaDemoVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioSynthesiaExampleVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioSynthesiaFeatureOverviewVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioSynthesiaProcessedGif,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioSynthesiaTemplate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioSynthesiaWelcomeWebinarVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioUserCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioUserTemplate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndSynthesiaStudioVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationXXliffPlusxml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioAac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioFlac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioMp4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioMpeg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioOgg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioWav,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioWebm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FontOtf,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FontTtf,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FontWoff,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FontWoff2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageGif,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageJpeg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImagePng,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageSvgPlusxml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageWebp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextCsv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoMp4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoQuicktime,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoWebm,
     }

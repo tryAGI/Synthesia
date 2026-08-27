@@ -4,20 +4,20 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PublicApiUserUploadedAssetErrorCodes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssetUpload,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LanguageDetect,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unknown,
     }

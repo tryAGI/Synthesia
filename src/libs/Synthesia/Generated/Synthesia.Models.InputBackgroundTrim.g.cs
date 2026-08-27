@@ -4,19 +4,19 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class InputBackgroundTrim
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("startTime")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double StartTime { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("endTime")]
         [global::System.Text.Json.Serialization.JsonRequired]

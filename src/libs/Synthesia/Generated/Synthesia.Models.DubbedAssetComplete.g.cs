@@ -9,7 +9,7 @@ namespace Synthesia
     public sealed partial class DubbedAssetComplete
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -30,7 +30,7 @@ namespace Synthesia
         public required string Description { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("language")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.DubbingOutputLanguageJsonConverter))]
@@ -77,14 +77,14 @@ namespace Synthesia
         public required string Download { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("thumbnail")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Synthesia.DubbedAssetThumbnail Thumbnail { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("captions")]
         [global::System.Text.Json.Serialization.JsonRequired]

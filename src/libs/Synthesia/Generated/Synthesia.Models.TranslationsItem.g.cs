@@ -5,17 +5,17 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct TranslationsItem : global::System.IEquatable<TranslationsItem>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus? Status { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Synthesia.TranslationStatusApiItemSuccess? Complete { get; init; }
@@ -24,7 +24,7 @@ namespace Synthesia
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Complete))]
@@ -32,7 +32,7 @@ namespace Synthesia
         public bool IsComplete => Complete != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickComplete(
 #if NET6_0_OR_GREATER
@@ -45,14 +45,14 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Synthesia.TranslationStatusApiItemSuccess PickComplete() => IsComplete
             ? Complete!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Complete' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Synthesia.TranslationStatusApiItemError? Error { get; init; }
@@ -61,7 +61,7 @@ namespace Synthesia
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Error))]
@@ -69,7 +69,7 @@ namespace Synthesia
         public bool IsError => Error != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickError(
 #if NET6_0_OR_GREATER
@@ -82,23 +82,23 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Synthesia.TranslationStatusApiItemError PickError() => IsError
             ? Error!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Error' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator TranslationsItem(global::Synthesia.TranslationStatusApiItemSuccess value) => new TranslationsItem((global::Synthesia.TranslationStatusApiItemSuccess?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Synthesia.TranslationStatusApiItemSuccess?(TranslationsItem @this) => @this.Complete;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranslationsItem(global::Synthesia.TranslationStatusApiItemSuccess? value)
         {
@@ -106,22 +106,22 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static TranslationsItem FromComplete(global::Synthesia.TranslationStatusApiItemSuccess? value) => new TranslationsItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator TranslationsItem(global::Synthesia.TranslationStatusApiItemError value) => new TranslationsItem((global::Synthesia.TranslationStatusApiItemError?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Synthesia.TranslationStatusApiItemError?(TranslationsItem @this) => @this.Error;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranslationsItem(global::Synthesia.TranslationStatusApiItemError? value)
         {
@@ -129,12 +129,12 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static TranslationsItem FromError(global::Synthesia.TranslationStatusApiItemError? value) => new TranslationsItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranslationsItem(
             global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus? status,
@@ -149,23 +149,23 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Error as object ??
-            Complete as object 
+            Complete as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Complete?.ToString() ??
-            Error?.ToString() 
+            Error?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -173,7 +173,7 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Synthesia.TranslationStatusApiItemSuccess, TResult>? complete = null,
@@ -198,7 +198,7 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Synthesia.TranslationStatusApiItemSuccess>? complete = null,
@@ -222,7 +222,7 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Synthesia.TranslationStatusApiItemSuccess>? complete = null,
@@ -245,7 +245,7 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -266,18 +266,18 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(TranslationsItem other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Synthesia.TranslationStatusApiItemSuccess?>.Default.Equals(Complete, other.Complete) &&
-                global::System.Collections.Generic.EqualityComparer<global::Synthesia.TranslationStatusApiItemError?>.Default.Equals(Error, other.Error) 
+                global::System.Collections.Generic.EqualityComparer<global::Synthesia.TranslationStatusApiItemError?>.Default.Equals(Error, other.Error)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(TranslationsItem obj1, TranslationsItem obj2)
         {
@@ -285,7 +285,7 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(TranslationsItem obj1, TranslationsItem obj2)
         {
@@ -293,7 +293,7 @@ namespace Synthesia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

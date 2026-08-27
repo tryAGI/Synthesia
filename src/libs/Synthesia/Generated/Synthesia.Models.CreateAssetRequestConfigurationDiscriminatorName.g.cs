@@ -4,12 +4,12 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateAssetRequestConfigurationDiscriminatorName
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dubbing,
     }

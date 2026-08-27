@@ -9,14 +9,14 @@ namespace Synthesia
     public sealed partial class DubbedAssetError
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Guid Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("language")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.DubbingOutputLanguageJsonConverter))]
@@ -32,7 +32,7 @@ namespace Synthesia
         public global::Synthesia.DubbedAssetErrorStatus? Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("errorCode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.ImportedAndDubbedVideosErrorCodeJsonConverter))]

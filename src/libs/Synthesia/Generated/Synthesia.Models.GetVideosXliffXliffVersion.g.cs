@@ -4,12 +4,12 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetVideosXliffXliffVersion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x12,
     }

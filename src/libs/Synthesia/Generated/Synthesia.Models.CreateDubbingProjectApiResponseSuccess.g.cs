@@ -4,12 +4,12 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateDubbingProjectApiResponseSuccess
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdImportedAsset")]
         [global::System.Text.Json.Serialization.JsonRequired]

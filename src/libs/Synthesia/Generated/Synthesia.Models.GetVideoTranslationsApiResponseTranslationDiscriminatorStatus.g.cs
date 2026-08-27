@@ -4,20 +4,20 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetVideoTranslationsApiResponseTranslationDiscriminatorStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Complete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InProgress,
     }

@@ -4,12 +4,12 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ContentProvenanceResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("c2pa")]
         public global::Synthesia.C2PAContentProvenanceResponse? C2pa { get; set; }

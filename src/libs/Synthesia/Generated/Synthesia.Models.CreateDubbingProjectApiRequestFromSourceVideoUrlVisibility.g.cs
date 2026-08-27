@@ -11,11 +11,11 @@ namespace Synthesia
     public enum CreateDubbingProjectApiRequestFromSourceVideoUrlVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

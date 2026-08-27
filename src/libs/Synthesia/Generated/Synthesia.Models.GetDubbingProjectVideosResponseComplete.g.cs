@@ -9,7 +9,7 @@ namespace Synthesia
     public sealed partial class GetDubbingProjectVideosResponseComplete
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]

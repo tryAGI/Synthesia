@@ -11,11 +11,11 @@ namespace Synthesia
     public enum CreateDubbingProjectApiRequestFromSourceVideoUrlVideoDuration
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Adaptive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Original,
     }

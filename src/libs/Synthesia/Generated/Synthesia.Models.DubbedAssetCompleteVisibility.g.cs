@@ -9,11 +9,11 @@ namespace Synthesia
     public enum DubbedAssetCompleteVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

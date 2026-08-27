@@ -10,7 +10,7 @@ namespace Synthesia
     public enum DubbedAssetInProgressStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InProgress,
     }

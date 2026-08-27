@@ -10,11 +10,11 @@ namespace Synthesia
     public enum TemplateResponseVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }
