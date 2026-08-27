@@ -4,12 +4,12 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetPublicApiUserUploadedAssetResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -31,7 +31,7 @@ namespace Synthesia
         public required global::Synthesia.AssetContentType ContentType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.PublicApiUserUploadedAssetStatusJsonConverter))]
@@ -39,7 +39,7 @@ namespace Synthesia
         public required global::Synthesia.PublicApiUserUploadedAssetStatus Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         [global::System.Text.Json.Serialization.JsonRequired]

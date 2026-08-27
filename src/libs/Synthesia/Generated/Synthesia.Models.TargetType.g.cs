@@ -24,11 +24,11 @@ namespace Synthesia
         /// </summary>
         Assignment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingPlan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LearnerGroup,
         /// <summary>
@@ -36,7 +36,7 @@ namespace Synthesia
         /// </summary>
         Organization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PlaybackState,
         /// <summary>

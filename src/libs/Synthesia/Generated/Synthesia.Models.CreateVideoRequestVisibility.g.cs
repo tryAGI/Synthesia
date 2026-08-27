@@ -12,11 +12,11 @@ namespace Synthesia
     public enum CreateVideoRequestVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

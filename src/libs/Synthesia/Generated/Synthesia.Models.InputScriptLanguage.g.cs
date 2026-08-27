@@ -11,239 +11,239 @@ namespace Synthesia
     public enum InputScriptLanguage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Missing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Af,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Af001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Am,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Am001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ar001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArAe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArBh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArDz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArEg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArIq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArJo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArKw,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArLy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArMa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArQa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArSa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArSy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArTn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArYe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         As001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AsIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Az001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AzAz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bg001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bn001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BnBd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bs001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BsBa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ca,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ca001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cs001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cy001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Da,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Da001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         De001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeCh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeDe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         El,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         El001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         En001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnAu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnCa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnGb,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnHk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnIe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnKe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnMx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnNg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnNz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnPh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnSg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnTz,
         /// <summary>
@@ -251,127 +251,127 @@ namespace Synthesia
         /// </summary>
         EnUs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnZa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Es001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsAr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsBo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsCl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsCo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsCr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsCu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsDo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsEc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsEs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsGq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsGt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsHn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsLa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsMx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsNi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsPa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsPe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsPr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsPy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsSv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsUs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsUy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsVe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Et,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Et001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eu001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EuEs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fa001,
         /// <summary>
@@ -379,51 +379,51 @@ namespace Synthesia
         /// </summary>
         Fi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fi001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fil,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fil001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fr001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrBe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrCa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrCh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrFr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ga,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ga001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gl001,
         /// <summary>
@@ -431,395 +431,395 @@ namespace Synthesia
         /// </summary>
         Gu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gu001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hi001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hr001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HtHt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hu001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hy001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HyAm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Is,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Is001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         It,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         It001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Iw,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Iw001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ja,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ja001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Jv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Jv001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ka001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KaGe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kk001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KkKz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Km,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Km001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kn001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ko,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ko001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lo001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LoLa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lt001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lv001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MiNz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mk001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MkMk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ml001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mn001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MnMn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mr001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ms,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ms001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mt001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         My,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         My001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nb,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nb001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ne001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NeNp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nl001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NlBe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NlNl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Or001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pa001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PaIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pl001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ps001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PsAf,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pt001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PtBr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PtPt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ro,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ro001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ru,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ru001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Si001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SiLk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sk001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sl001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         So,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         So001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sq001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SqAl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sr001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Su,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Su001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sv001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sw001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SwKe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SwTz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ta001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TaIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TaLk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TaSg,
         /// <summary>
@@ -827,7 +827,7 @@ namespace Synthesia
         /// </summary>
         Te,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Te001,
         /// <summary>
@@ -835,7 +835,7 @@ namespace Synthesia
         /// </summary>
         Th,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Th001,
         /// <summary>
@@ -843,75 +843,75 @@ namespace Synthesia
         /// </summary>
         Tr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tr001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uk001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ur001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UrIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UrPk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uz001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vi001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WuuCn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         YueCn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Zh001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhCn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhHk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhTw,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Zu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Zu001,
     }

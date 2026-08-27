@@ -44,21 +44,21 @@ namespace Synthesia
     public sealed partial class AuditLogEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Action { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -86,7 +86,7 @@ namespace Synthesia
         public required global::Synthesia.Context Context { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("details")]
         [global::System.Text.Json.Serialization.JsonRequired]

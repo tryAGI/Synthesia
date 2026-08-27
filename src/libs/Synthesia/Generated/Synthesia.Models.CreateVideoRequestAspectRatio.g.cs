@@ -14,19 +14,19 @@ namespace Synthesia
         /// </summary>
         x16_9,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x1_1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x4_5,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x5_4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x9_16,
     }

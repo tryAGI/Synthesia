@@ -4,40 +4,40 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MultipartUploadCredentialsResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accessKeyId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AccessKeyId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secretAccessKey")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SecretAccessKey { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sessionToken")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SessionToken { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bucket")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Bucket { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("key")]
         [global::System.Text.Json.Serialization.JsonRequired]

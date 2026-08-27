@@ -4,19 +4,19 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class C2PAContentProvenanceResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("signedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SignedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("claimGenerator")]
         [global::System.Text.Json.Serialization.JsonRequired]

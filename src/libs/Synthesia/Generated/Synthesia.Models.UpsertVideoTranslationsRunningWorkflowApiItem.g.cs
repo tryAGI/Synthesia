@@ -4,12 +4,12 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UpsertVideoTranslationsRunningWorkflowApiItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("language")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -23,7 +23,7 @@ namespace Synthesia
         public global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStatus? Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("step")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.UpsertVideoTranslationsRunningWorkflowApiItemStepJsonConverter))]

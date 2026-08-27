@@ -4,16 +4,16 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DubbingAuthorizeAction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Edit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         View,
     }

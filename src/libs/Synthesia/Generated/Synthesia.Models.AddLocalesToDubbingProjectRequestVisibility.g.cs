@@ -11,11 +11,11 @@ namespace Synthesia
     public enum AddLocalesToDubbingProjectRequestVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

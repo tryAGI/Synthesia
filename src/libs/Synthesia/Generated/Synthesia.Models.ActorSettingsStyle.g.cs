@@ -9,15 +9,15 @@ namespace Synthesia
     public enum ActorSettingsStyle
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Circular,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rectangular,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VoiceOnly,
     }

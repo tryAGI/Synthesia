@@ -4,19 +4,19 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DubbingAuthorizeRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("videoId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string VideoId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.DubbingAuthorizeActionJsonConverter))]
@@ -24,7 +24,7 @@ namespace Synthesia
         public required global::Synthesia.DubbingAuthorizeAction Action { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("locale")]
         [global::System.Text.Json.Serialization.JsonRequired]

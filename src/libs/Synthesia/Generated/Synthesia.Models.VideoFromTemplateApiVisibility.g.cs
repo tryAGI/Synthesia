@@ -10,11 +10,11 @@ namespace Synthesia
     public enum VideoFromTemplateApiVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

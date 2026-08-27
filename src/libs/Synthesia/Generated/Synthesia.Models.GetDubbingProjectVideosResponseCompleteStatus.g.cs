@@ -10,7 +10,7 @@ namespace Synthesia
     public enum GetDubbingProjectVideosResponseCompleteStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Complete,
     }

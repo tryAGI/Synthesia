@@ -10,7 +10,7 @@ namespace Synthesia
     public enum DubbedAssetCompleteStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Complete,
     }

@@ -4,16 +4,16 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateWebhookRequestEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoFailed,
     }

@@ -9,19 +9,19 @@ namespace Synthesia
     public enum CreateVideoRequestSoundtrack
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Corporate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Inspirational,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Modern,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Urban,
     }

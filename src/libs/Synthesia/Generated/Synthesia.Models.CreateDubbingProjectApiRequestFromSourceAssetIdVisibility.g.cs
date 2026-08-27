@@ -11,11 +11,11 @@ namespace Synthesia
     public enum CreateDubbingProjectApiRequestFromSourceAssetIdVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

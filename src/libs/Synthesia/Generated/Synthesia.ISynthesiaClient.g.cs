@@ -40,48 +40,48 @@ namespace Synthesia
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssetsClient Assets { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuditLogsClient AuditLogs { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DubbingClient Dubbing { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InteractiveAvatarClient InteractiveAvatar { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TemplatesClient Templates { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranslationsClient Translations { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public VideosClient Videos { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WebhooksClient Webhooks { get; }
 

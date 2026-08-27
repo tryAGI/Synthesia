@@ -10,7 +10,7 @@ namespace Synthesia
     public enum GetDubbingProjectVideosResponseErrorStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
     }

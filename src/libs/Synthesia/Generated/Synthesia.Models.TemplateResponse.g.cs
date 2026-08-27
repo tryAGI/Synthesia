@@ -4,7 +4,7 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TemplateResponse
     {
@@ -22,7 +22,7 @@ namespace Synthesia
         public string? CallbackId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ctaSettings")]
         public global::Synthesia.CtaSettings? CtaSettings { get; set; }
@@ -41,7 +41,7 @@ namespace Synthesia
         public required global::System.Guid TemplateId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("templateData")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -75,44 +75,44 @@ namespace Synthesia
         public string? BrandKitId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string UserId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         public int? CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("download")]
         public string? Download { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("duration")]
         public string? Duration { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         public global::System.Guid? Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lastUpdatedAt")]
         public int? LastUpdatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("variables")]
         public global::System.Collections.Generic.IList<object>? Variables { get; set; }

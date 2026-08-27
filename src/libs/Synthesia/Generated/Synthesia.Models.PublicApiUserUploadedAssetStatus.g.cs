@@ -4,24 +4,24 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PublicApiUserUploadedAssetStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AwaitingUpload,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Processing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ready,
     }

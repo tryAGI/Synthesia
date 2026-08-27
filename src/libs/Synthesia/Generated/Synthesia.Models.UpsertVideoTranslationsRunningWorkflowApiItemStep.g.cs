@@ -4,16 +4,16 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UpsertVideoTranslationsRunningWorkflowApiItemStep
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Generation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Translation,
     }

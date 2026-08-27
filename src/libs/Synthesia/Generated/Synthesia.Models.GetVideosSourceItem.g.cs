@@ -4,20 +4,20 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetVideosSourceItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MyVideos,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SharedWithMe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Workspace,
     }

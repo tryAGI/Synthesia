@@ -10,15 +10,15 @@ namespace Synthesia
     public enum InputVideoBackgroundSettingsLongBackgroundContentMatchMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ExtendContent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpeedUp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trim,
     }

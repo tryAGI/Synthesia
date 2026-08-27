@@ -4,18 +4,18 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TemplateListResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("templates")]
         public global::System.Collections.Generic.IList<global::Synthesia.TemplateResponse>? Templates { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nextOffset")]
         public int? NextOffset { get; set; }

@@ -10,7 +10,7 @@ namespace Synthesia
     public enum DubbedAssetErrorStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
     }

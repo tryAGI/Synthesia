@@ -38,7 +38,7 @@ namespace Synthesia
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Synthesia.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -48,7 +48,7 @@ namespace Synthesia
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssetsClient Assets => new AssetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -57,7 +57,7 @@ namespace Synthesia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuditLogsClient AuditLogs => new AuditLogsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -66,7 +66,7 @@ namespace Synthesia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DubbingClient Dubbing => new DubbingClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -75,7 +75,7 @@ namespace Synthesia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InteractiveAvatarClient InteractiveAvatar => new InteractiveAvatarClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -84,7 +84,7 @@ namespace Synthesia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TemplatesClient Templates => new TemplatesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -93,7 +93,7 @@ namespace Synthesia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranslationsClient Translations => new TranslationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -102,7 +102,7 @@ namespace Synthesia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public VideosClient Videos => new VideosClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -111,7 +111,7 @@ namespace Synthesia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WebhooksClient Webhooks => new WebhooksClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

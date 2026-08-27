@@ -9,7 +9,7 @@ namespace Synthesia
     public sealed partial class GetDubbingProjectVideosResponseError
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -24,7 +24,7 @@ namespace Synthesia
         public global::Synthesia.GetDubbingProjectVideosResponseErrorStatus? Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("errorCode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.ImportedAndDubbedVideosErrorCodeJsonConverter))]

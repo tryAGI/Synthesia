@@ -4,7 +4,7 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Input
     {
@@ -61,7 +61,7 @@ namespace Synthesia
         public string? ScriptText { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("soundSettings")]
         public global::Synthesia.InputSoundSettings? SoundSettings { get; set; }

@@ -9,7 +9,7 @@ namespace Synthesia
     public enum DubbingAssetRequestConfigurationName
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dubbing,
     }

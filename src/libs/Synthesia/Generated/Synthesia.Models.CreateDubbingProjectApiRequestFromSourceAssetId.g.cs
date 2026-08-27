@@ -4,7 +4,7 @@
 namespace Synthesia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateDubbingProjectApiRequestFromSourceAssetId
     {
@@ -65,7 +65,7 @@ namespace Synthesia
         public required string SourceAssetId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sourceLanguage")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.DubbingInputLanguageJsonConverter))]

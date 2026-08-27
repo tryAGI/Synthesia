@@ -11,11 +11,11 @@ namespace Synthesia
     public enum AddLocalesToDubbingProjectRequestVideoDuration
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Adaptive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Original,
     }

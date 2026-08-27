@@ -9,7 +9,7 @@ namespace Synthesia
     public enum UpsertVideoTranslationsRunningWorkflowApiItemStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InProgress,
     }

@@ -10,7 +10,7 @@ namespace Synthesia
     public enum ActorSettingsHorizontalAlign
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Center,
         /// <summary>
