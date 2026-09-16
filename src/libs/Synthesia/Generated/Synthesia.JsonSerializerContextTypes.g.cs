@@ -129,11 +129,11 @@ namespace Synthesia
         /// <summary>
         ///
         /// </summary>
-        public global::System.Guid? Type24 { get; set; }
+        public global::System.Collections.Generic.IList<string>? Type24 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<string>? Type25 { get; set; }
+        public global::System.Guid? Type25 { get; set; }
         /// <summary>
         ///
         /// </summary>
