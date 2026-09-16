@@ -131,12 +131,6 @@ namespace Synthesia
         ///    "actorIds": ["user-123", "user-456"]}<br/>
         /// This endpoint is rate-limited and usage is tracked against your API quota.
         /// </summary>
-        /// <param name="workspaceId">
-        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
-        /// </param>
-        /// <param name="organizationId">
-        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
-        /// </param>
         /// <param name="startDate">
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
@@ -152,17 +146,23 @@ namespace Synthesia
         /// <param name="targetId">
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
+        /// <param name="workspaceId">
+        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
+        /// </param>
+        /// <param name="organizationId">
+        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<byte[]> ExportAuditLogEventsAsync(
-            global::System.Guid? workspaceId = default,
-            global::System.Guid? organizationId = default,
             int? startDate = default,
             int? endDate = default,
             global::System.Collections.Generic.IList<string>? actions = default,
             global::System.Collections.Generic.IList<string>? actorIds = default,
             string? targetId = default,
+            global::System.Guid? workspaceId = default,
+            global::System.Guid? organizationId = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

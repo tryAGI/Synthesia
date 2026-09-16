@@ -670,11 +670,11 @@ namespace Synthesia
         /// }<br/>
         /// This endpoint is rate-limited and usage is tracked against your API quota.
         /// </summary>
-        /// <param name="workspaceId">
+        /// <param name="cursor">
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
-        /// <param name="organizationId">
-        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
+        /// <param name="limit">
+        /// Default Value: 50
         /// </param>
         /// <param name="startDate">
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
@@ -691,39 +691,39 @@ namespace Synthesia
         /// <param name="targetId">
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
-        /// <param name="cursor">
+        /// <param name="workspaceId">
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
-        /// <param name="limit">
-        /// Default Value: 50
+        /// <param name="organizationId">
+        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Synthesia.AuditLogsPageResponse> SearchAuditLogEventsAsync(
-            global::System.Guid? workspaceId = default,
-            global::System.Guid? organizationId = default,
+            string? cursor = default,
+            int? limit = default,
             int? startDate = default,
             int? endDate = default,
             global::System.Collections.Generic.IList<string>? actions = default,
             global::System.Collections.Generic.IList<string>? actorIds = default,
             string? targetId = default,
-            string? cursor = default,
-            int? limit = default,
+            global::System.Guid? workspaceId = default,
+            global::System.Guid? organizationId = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::Synthesia.AuditLogsQueryRequest
             {
-                WorkspaceId = workspaceId,
-                OrganizationId = organizationId,
+                Cursor = cursor,
+                Limit = limit,
                 StartDate = startDate,
                 EndDate = endDate,
                 Actions = actions,
                 ActorIds = actorIds,
                 TargetId = targetId,
-                Cursor = cursor,
-                Limit = limit,
+                WorkspaceId = workspaceId,
+                OrganizationId = organizationId,
             };
 
             return await SearchAuditLogEventsAsync(
