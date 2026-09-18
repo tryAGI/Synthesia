@@ -36,7 +36,7 @@ namespace Synthesia
 
         /// <summary>
         /// Create a video from a prompt and PDFs via the Assistant<br/>
-        /// Pilot endpoint. Accepts a text prompt and up to 5 PDFs (multipart/form-data) and returns a videoId and embed code immediately. Supply each PDF either inline by repeating the `file` field (6 MB total request body) or as a short-lived presigned URL by repeating the `fileUrl` field (https only, no size limit). The two forms cannot be mixed. The video is generated and published asynchronously by the Assistant. An optional `duration` field (`short`, `medium` or `long`; defaults to `medium`) sizes the video to roughly 1, 2 or 5 minutes respectively. An optional `motionGraphics` field (`brief` or `comprehensive`) selects the richness of the video's motion graphics; `comprehensive` produces richer graphics but takes longer to render.
+        /// Pilot endpoint. Accepts a text prompt and up to 5 PDFs (multipart/form-data) and returns a videoId and embed code after document validation and planning. Supply each PDF either inline by repeating the `file` field or as a short-lived presigned URL by repeating the `fileUrl` field (HTTPS Amazon S3 URLs only). The two forms cannot be mixed. Each downloaded PDF is limited to 10,000,000 bytes. Inline requests also have an infrastructure request-body limit. The video is generated and published asynchronously by the Assistant. An optional `duration` field (`short`, `medium` or `long`; defaults to `medium`) sizes the video to roughly 1, 2 or 5 minutes respectively. An optional `motionGraphics` field (`brief` or `comprehensive`) selects the richness of the video's motion graphics; `comprehensive` produces richer graphics but takes longer to render.
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -52,7 +52,7 @@ namespace Synthesia
         }
         /// <summary>
         /// Create a video from a prompt and PDFs via the Assistant<br/>
-        /// Pilot endpoint. Accepts a text prompt and up to 5 PDFs (multipart/form-data) and returns a videoId and embed code immediately. Supply each PDF either inline by repeating the `file` field (6 MB total request body) or as a short-lived presigned URL by repeating the `fileUrl` field (https only, no size limit). The two forms cannot be mixed. The video is generated and published asynchronously by the Assistant. An optional `duration` field (`short`, `medium` or `long`; defaults to `medium`) sizes the video to roughly 1, 2 or 5 minutes respectively. An optional `motionGraphics` field (`brief` or `comprehensive`) selects the richness of the video's motion graphics; `comprehensive` produces richer graphics but takes longer to render.
+        /// Pilot endpoint. Accepts a text prompt and up to 5 PDFs (multipart/form-data) and returns a videoId and embed code after document validation and planning. Supply each PDF either inline by repeating the `file` field or as a short-lived presigned URL by repeating the `fileUrl` field (HTTPS Amazon S3 URLs only). The two forms cannot be mixed. Each downloaded PDF is limited to 10,000,000 bytes. Inline requests also have an infrastructure request-body limit. The video is generated and published asynchronously by the Assistant. An optional `duration` field (`short`, `medium` or `long`; defaults to `medium`) sizes the video to roughly 1, 2 or 5 minutes respectively. An optional `motionGraphics` field (`brief` or `comprehensive`) selects the richness of the video's motion graphics; `comprehensive` produces richer graphics but takes longer to render.
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -369,6 +369,70 @@ namespace Synthesia
                                     message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_403,
                                     responseBody: __content_403,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            //
+                            if ((int)__response.StatusCode == 413)
+                            {
+                                string? __content_413 = null;
+                                global::System.Exception? __exception_413 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_413 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                    else
+                                    {
+                                        __content_413 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_413 = __ex;
+                                }
+
+
+                                throw global::Synthesia.ApiException.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_413 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_413,
+                                    responseBody: __content_413,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            //
+                            if ((int)__response.StatusCode == 502)
+                            {
+                                string? __content_502 = null;
+                                global::System.Exception? __exception_502 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_502 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                    else
+                                    {
+                                        __content_502 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_502 = __ex;
+                                }
+
+
+                                throw global::Synthesia.ApiException.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_502 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_502,
+                                    responseBody: __content_502,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
