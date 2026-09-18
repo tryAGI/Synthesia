@@ -27,10 +27,12 @@ namespace Synthesia
             };
         partial void PrepareCreateInteractiveAvatarSessionsArguments(
             global::System.Net.Http.HttpClient httpClient,
+            ref string? xSynthSessionId,
             global::Synthesia.CreateInteractiveAvatarSessionRequest request);
         partial void PrepareCreateInteractiveAvatarSessionsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string? xSynthSessionId,
             global::Synthesia.CreateInteractiveAvatarSessionRequest request);
         partial void ProcessCreateInteractiveAvatarSessionsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -40,6 +42,7 @@ namespace Synthesia
         /// Start an interactive avatar session<br/>
         /// Launch a Synthesia avatar into a developer-supplied LiveKit room and return the session id.
         /// </summary>
+        /// <param name="xSynthSessionId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -47,12 +50,14 @@ namespace Synthesia
         public async global::System.Threading.Tasks.Task CreateInteractiveAvatarSessionsAsync(
 
             global::Synthesia.CreateInteractiveAvatarSessionRequest request,
+            string? xSynthSessionId = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             await CreateInteractiveAvatarSessionsAsResponseAsync(
 
                 request: request,
+                xSynthSessionId: xSynthSessionId,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -61,6 +66,7 @@ namespace Synthesia
         /// Start an interactive avatar session<br/>
         /// Launch a Synthesia avatar into a developer-supplied LiveKit room and return the session id.
         /// </summary>
+        /// <param name="xSynthSessionId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -68,6 +74,7 @@ namespace Synthesia
         public async global::System.Threading.Tasks.Task<global::Synthesia.AutoSDKHttpResponse> CreateInteractiveAvatarSessionsAsResponseAsync(
 
             global::Synthesia.CreateInteractiveAvatarSessionRequest request,
+            string? xSynthSessionId = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -77,6 +84,7 @@ namespace Synthesia
                 client: HttpClient);
             PrepareCreateInteractiveAvatarSessionsArguments(
                 httpClient: HttpClient,
+                xSynthSessionId: ref xSynthSessionId,
                 request: request);
 
 
@@ -134,6 +142,12 @@ namespace Synthesia
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
+
+            if (xSynthSessionId != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("X-Synth-Session-Id", xSynthSessionId.ToString());
+            }
+
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
                                 content: __httpRequestContentBody,
@@ -151,6 +165,7 @@ namespace Synthesia
                 PrepareCreateInteractiveAvatarSessionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    xSynthSessionId: xSynthSessionId,
                     request: request);
 
                 return __httpRequest;
@@ -638,6 +653,7 @@ namespace Synthesia
         /// Start an interactive avatar session<br/>
         /// Launch a Synthesia avatar into a developer-supplied LiveKit room and return the session id.
         /// </summary>
+        /// <param name="xSynthSessionId"></param>
         /// <param name="avatarIds"></param>
         /// <param name="livekitUrl"></param>
         /// <param name="lkToken"></param>
@@ -648,6 +664,7 @@ namespace Synthesia
             global::System.Collections.Generic.IList<string> avatarIds,
             string livekitUrl,
             string lkToken,
+            string? xSynthSessionId = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -659,6 +676,7 @@ namespace Synthesia
             };
 
             await CreateInteractiveAvatarSessionsAsync(
+                xSynthSessionId: xSynthSessionId,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

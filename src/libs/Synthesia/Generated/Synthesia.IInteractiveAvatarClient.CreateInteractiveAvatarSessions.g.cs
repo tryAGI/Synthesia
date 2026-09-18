@@ -8,6 +8,7 @@ namespace Synthesia
         /// Start an interactive avatar session<br/>
         /// Launch a Synthesia avatar into a developer-supplied LiveKit room and return the session id.
         /// </summary>
+        /// <param name="xSynthSessionId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -15,12 +16,14 @@ namespace Synthesia
         global::System.Threading.Tasks.Task CreateInteractiveAvatarSessionsAsync(
 
             global::Synthesia.CreateInteractiveAvatarSessionRequest request,
+            string? xSynthSessionId = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Start an interactive avatar session<br/>
         /// Launch a Synthesia avatar into a developer-supplied LiveKit room and return the session id.
         /// </summary>
+        /// <param name="xSynthSessionId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -28,12 +31,14 @@ namespace Synthesia
         global::System.Threading.Tasks.Task<global::Synthesia.AutoSDKHttpResponse> CreateInteractiveAvatarSessionsAsResponseAsync(
 
             global::Synthesia.CreateInteractiveAvatarSessionRequest request,
+            string? xSynthSessionId = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Start an interactive avatar session<br/>
         /// Launch a Synthesia avatar into a developer-supplied LiveKit room and return the session id.
         /// </summary>
+        /// <param name="xSynthSessionId"></param>
         /// <param name="avatarIds"></param>
         /// <param name="livekitUrl"></param>
         /// <param name="lkToken"></param>
@@ -44,6 +49,7 @@ namespace Synthesia
             global::System.Collections.Generic.IList<string> avatarIds,
             string livekitUrl,
             string lkToken,
+            string? xSynthSessionId = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
