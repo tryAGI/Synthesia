@@ -11,7 +11,8 @@ namespace Synthesia
     /// ORGANIZATION: An organization entity<br/>
     /// ASSET: An asset entity (avatars, images, etc.)<br/>
     /// LEARNER_GROUP: An LMS learner group (cohort) entity<br/>
-    /// ASSIGNMENT: An LMS training assignment entity
+    /// ASSIGNMENT: An LMS training assignment entity<br/>
+    /// CALENDAR_INVITE: A calendar invite sent by the calendar module
     /// </summary>
     public enum TargetType
     {
@@ -27,6 +28,10 @@ namespace Synthesia
         ///
         /// </summary>
         BillingPlan,
+        /// <summary>
+        ///
+        /// </summary>
+        CalendarInvite,
         /// <summary>
         ///
         /// </summary>
@@ -68,6 +73,7 @@ namespace Synthesia
                 TargetType.Asset => "asset",
                 TargetType.Assignment => "assignment",
                 TargetType.BillingPlan => "billing_plan",
+                TargetType.CalendarInvite => "calendar_invite",
                 TargetType.LearnerGroup => "learner_group",
                 TargetType.Organization => "organization",
                 TargetType.PlaybackState => "playback_state",
@@ -87,6 +93,7 @@ namespace Synthesia
                 "asset" => TargetType.Asset,
                 "assignment" => TargetType.Assignment,
                 "billing_plan" => TargetType.BillingPlan,
+                "calendar_invite" => TargetType.CalendarInvite,
                 "learner_group" => TargetType.LearnerGroup,
                 "organization" => TargetType.Organization,
                 "playback_state" => TargetType.PlaybackState,

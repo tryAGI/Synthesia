@@ -36,6 +36,15 @@ namespace Synthesia
         public bool? LipsyncEnabled { get; set; }
 
         /// <summary>
+        /// Whether to burn translated captions into the dubbed video.<br/>
+        /// Default Value: false<br/>
+        /// Example: false
+        /// </summary>
+        /// <example>false</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("burnedInCaptionsEnabled")]
+        public bool? BurnedInCaptionsEnabled { get; set; }
+
+        /// <summary>
         /// The duration of the video to create.<br/>
         /// Default Value: adaptive<br/>
         /// Example: adaptive
@@ -100,6 +109,11 @@ namespace Synthesia
         /// Default Value: false<br/>
         /// Example: true
         /// </param>
+        /// <param name="burnedInCaptionsEnabled">
+        /// Whether to burn translated captions into the dubbed video.<br/>
+        /// Default Value: false<br/>
+        /// Example: false
+        /// </param>
         /// <param name="videoDuration">
         /// The duration of the video to create.<br/>
         /// Default Value: adaptive<br/>
@@ -123,6 +137,7 @@ namespace Synthesia
             global::System.Collections.Generic.IList<global::Synthesia.DubbingOutputLanguage> targetLanguages,
             string sourceVideoUrl,
             bool? lipsyncEnabled,
+            bool? burnedInCaptionsEnabled,
             global::Synthesia.CreateDubbingProjectApiRequestFromSourceVideoUrlVideoDuration? videoDuration,
             global::Synthesia.CreateDubbingProjectApiRequestFromSourceVideoUrlVisibility? visibility,
             global::Synthesia.DubbingInputLanguage? sourceLanguage)
@@ -130,6 +145,7 @@ namespace Synthesia
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.TargetLanguages = targetLanguages ?? throw new global::System.ArgumentNullException(nameof(targetLanguages));
             this.LipsyncEnabled = lipsyncEnabled;
+            this.BurnedInCaptionsEnabled = burnedInCaptionsEnabled;
             this.VideoDuration = videoDuration;
             this.Visibility = visibility;
             this.SourceVideoUrl = sourceVideoUrl ?? throw new global::System.ArgumentNullException(nameof(sourceVideoUrl));
