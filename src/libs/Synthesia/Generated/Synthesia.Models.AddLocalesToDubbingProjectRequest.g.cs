@@ -27,6 +27,15 @@ namespace Synthesia
         public bool? LipsyncEnabled { get; set; }
 
         /// <summary>
+        /// Whether to burn captions into the dubbed video.<br/>
+        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464<br/>
+        /// Example: false
+        /// </summary>
+        /// <example>false</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("burnedInCaptionsEnabled")]
+        public bool? BurnedInCaptionsEnabled { get; set; }
+
+        /// <summary>
         /// The duration of the video to create.<br/>
         /// Default Value: adaptive<br/>
         /// Example: adaptive
@@ -64,6 +73,11 @@ namespace Synthesia
         /// Default Value: false<br/>
         /// Example: true
         /// </param>
+        /// <param name="burnedInCaptionsEnabled">
+        /// Whether to burn captions into the dubbed video.<br/>
+        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464<br/>
+        /// Example: false
+        /// </param>
         /// <param name="videoDuration">
         /// The duration of the video to create.<br/>
         /// Default Value: adaptive<br/>
@@ -80,11 +94,13 @@ namespace Synthesia
         public AddLocalesToDubbingProjectRequest(
             global::System.Collections.Generic.IList<global::Synthesia.DubbingOutputLanguage> targetLanguages,
             bool? lipsyncEnabled,
+            bool? burnedInCaptionsEnabled,
             global::Synthesia.AddLocalesToDubbingProjectRequestVideoDuration? videoDuration,
             global::Synthesia.AddLocalesToDubbingProjectRequestVisibility? visibility)
         {
             this.TargetLanguages = targetLanguages ?? throw new global::System.ArgumentNullException(nameof(targetLanguages));
             this.LipsyncEnabled = lipsyncEnabled;
+            this.BurnedInCaptionsEnabled = burnedInCaptionsEnabled;
             this.VideoDuration = videoDuration;
             this.Visibility = visibility;
         }
