@@ -36,7 +36,7 @@ namespace Synthesia
         public bool? LipsyncEnabled { get; set; }
 
         /// <summary>
-        /// Whether to burn translated captions into the dubbed video.<br/>
+        /// Whether to burn captions into the dubbed video.<br/>
         /// Default Value: false<br/>
         /// Example: false
         /// </summary>
@@ -110,7 +110,7 @@ namespace Synthesia
         /// Example: true
         /// </param>
         /// <param name="burnedInCaptionsEnabled">
-        /// Whether to burn translated captions into the dubbed video.<br/>
+        /// Whether to burn captions into the dubbed video.<br/>
         /// Default Value: false<br/>
         /// Example: false
         /// </param>

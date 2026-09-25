@@ -48,6 +48,11 @@ namespace Synthesia
         /// Default Value: false<br/>
         /// Example: true
         /// </param>
+        /// <param name="burnedInCaptionsEnabled">
+        /// Whether to burn captions into the dubbed video.<br/>
+        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464<br/>
+        /// Example: false
+        /// </param>
         /// <param name="videoDuration">
         /// The duration of the video to create.<br/>
         /// Default Value: adaptive<br/>
@@ -65,6 +70,7 @@ namespace Synthesia
             global::System.Guid dubbingProjectId,
             global::System.Collections.Generic.IList<global::Synthesia.DubbingOutputLanguage> targetLanguages,
             bool? lipsyncEnabled = default,
+            bool? burnedInCaptionsEnabled = default,
             global::Synthesia.AddLocalesToDubbingProjectRequestVideoDuration? videoDuration = default,
             global::Synthesia.AddLocalesToDubbingProjectRequestVisibility? visibility = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
