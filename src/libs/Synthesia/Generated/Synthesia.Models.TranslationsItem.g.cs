@@ -47,8 +47,8 @@ namespace Synthesia
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TranslationStatusApiItemSuccess PickComplete() => IsComplete
-            ? Complete!
+        public global::Synthesia.TranslationStatusApiItemSuccess PickComplete() => Complete is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Complete' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace Synthesia
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TranslationStatusApiItemError PickError() => IsError
-            ? Error!
+        public global::Synthesia.TranslationStatusApiItemError PickError() => Error is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Error' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -185,13 +185,13 @@ namespace Synthesia
                 Validate();
             }
 
-            if (IsComplete && complete != null)
+            if (Complete is { } __value0 && complete != null)
             {
-                return complete(Complete!);
+                return complete(__value0);
             }
-            else if (IsError && error != null)
+            else if (Error is { } __value1 && error != null)
             {
-                return error(Error!);
+                return error(__value1);
             }
 
             return default(TResult);
@@ -211,13 +211,13 @@ namespace Synthesia
                 Validate();
             }
 
-            if (IsComplete)
+            if (Complete is { } __value0)
             {
-                complete?.Invoke(Complete!);
+                complete?.Invoke(__value0);
             }
-            else if (IsError)
+            else if (Error is { } __value1)
             {
-                error?.Invoke(Error!);
+                error?.Invoke(__value1);
             }
         }
 
@@ -234,13 +234,13 @@ namespace Synthesia
                 Validate();
             }
 
-            if (IsComplete)
+            if (Complete is { } __value0)
             {
-                complete?.Invoke(Complete!);
+                complete?.Invoke(__value0);
             }
-            else if (IsError)
+            else if (Error is { } __value1)
             {
-                error?.Invoke(Error!);
+                error?.Invoke(__value1);
             }
         }
 
