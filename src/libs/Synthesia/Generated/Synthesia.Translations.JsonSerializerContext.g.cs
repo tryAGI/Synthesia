@@ -16,9 +16,28 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsApiRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsApiRequestAutoGenerate), TypeInfoPropertyName = "UpsertVideoTranslationsApiRequestAutoGenerate2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStatus), TypeInfoPropertyName = "UpsertVideoTranslationsRunningWorkflowApiItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStep), TypeInfoPropertyName = "UpsertVideoTranslationsRunningWorkflowApiItemStep2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsSuccessApiResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationStatusApiItemError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationStatusApiItemErrorStatus), TypeInfoPropertyName = "TranslationStatusApiItemErrorStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationStatusApiItemErrorErrorCode), TypeInfoPropertyName = "TranslationStatusApiItemErrorErrorCode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationStatusApiItemSuccess))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationStatusApiItemSuccessStatus), TypeInfoPropertyName = "TranslationStatusApiItemSuccessStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationStatusApiItemSuccessStep), TypeInfoPropertyName = "TranslationStatusApiItemSuccessStep2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetVideoTranslationsApiResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.TranslationsItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationsItem), TypeInfoPropertyName = "TranslationsItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminator))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus), TypeInfoPropertyName = "GetVideoTranslationsApiResponseTranslationDiscriminatorStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CtaSettings))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.Error))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoAssetCaptionTypesResponse))]
@@ -47,24 +66,21 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseSoundtrack), TypeInfoPropertyName = "VideoResponseSoundtrack2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseVisibility), TypeInfoPropertyName = "VideoResponseVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseStatus), TypeInfoPropertyName = "VideoResponseStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApi))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApiVisibility), TypeInfoPropertyName = "VideoFromTemplateApiVisibility2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoListResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.VideoResponse>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestAspectRatio), TypeInfoPropertyName = "CreateVideoRequestAspectRatio2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestSoundtrack), TypeInfoPropertyName = "CreateVideoRequestSoundtrack2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestVisibility), TypeInfoPropertyName = "CreateVideoRequestVisibility2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpdateVideoMetadataRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpdateVideoMetadataRequestVisibility), TypeInfoPropertyName = "UpdateVideoMetadataRequestVisibility2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoXliffResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.GetVideosSourceItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetVideosSourceItem), TypeInfoPropertyName = "GetVideosSourceItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetVideosXliffXliffVersion), TypeInfoPropertyName = "GetVideosXliffXliffVersion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateTranslatedVideoFromXliffRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateTranslatedVideoFromXliffResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsApiRequestAutoGenerate?), TypeInfoPropertyName = "NullableUpsertVideoTranslationsApiRequestAutoGenerate2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStatus?), TypeInfoPropertyName = "NullableUpsertVideoTranslationsRunningWorkflowApiItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStep?), TypeInfoPropertyName = "NullableUpsertVideoTranslationsRunningWorkflowApiItemStep2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationStatusApiItemErrorStatus?), TypeInfoPropertyName = "NullableTranslationStatusApiItemErrorStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationStatusApiItemErrorErrorCode?), TypeInfoPropertyName = "NullableTranslationStatusApiItemErrorErrorCode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationStatusApiItemSuccessStatus?), TypeInfoPropertyName = "NullableTranslationStatusApiItemSuccessStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationStatusApiItemSuccessStep?), TypeInfoPropertyName = "NullableTranslationStatusApiItemSuccessStep2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TranslationsItem?), TypeInfoPropertyName = "NullableTranslationsItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus?), TypeInfoPropertyName = "NullableGetVideoTranslationsApiResponseTranslationDiscriminatorStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ActorSettingsHorizontalAlign?), TypeInfoPropertyName = "NullableActorSettingsHorizontalAlign2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ActorSettingsStyle?), TypeInfoPropertyName = "NullableActorSettingsStyle2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.InputVideoBackgroundSettingsShortBackgroundContentMatchMode?), TypeInfoPropertyName = "NullableInputVideoBackgroundSettingsShortBackgroundContentMatchMode2")]
@@ -75,24 +91,18 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseSoundtrack?), TypeInfoPropertyName = "NullableVideoResponseSoundtrack2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseVisibility?), TypeInfoPropertyName = "NullableVideoResponseVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseStatus?), TypeInfoPropertyName = "NullableVideoResponseStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApiVisibility?), TypeInfoPropertyName = "NullableVideoFromTemplateApiVisibility2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestAspectRatio?), TypeInfoPropertyName = "NullableCreateVideoRequestAspectRatio2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestSoundtrack?), TypeInfoPropertyName = "NullableCreateVideoRequestSoundtrack2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestVisibility?), TypeInfoPropertyName = "NullableCreateVideoRequestVisibility2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpdateVideoMetadataRequestVisibility?), TypeInfoPropertyName = "NullableUpdateVideoMetadataRequestVisibility2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetVideosSourceItem?), TypeInfoPropertyName = "NullableGetVideosSourceItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetVideosXliffXliffVersion?), TypeInfoPropertyName = "NullableGetVideosXliffXliffVersion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Synthesia.TranslationsItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Synthesia.ParentSoundtrackRegion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Synthesia.Input>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Synthesia.VideoResponse>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Synthesia.GetVideosSourceItem>))]
-    internal sealed partial class VideosSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    internal sealed partial class TranslationsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
     /// <summary>
     ///
     /// </summary>
-    public sealed partial class VideosSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
+    public sealed partial class TranslationsSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
 
@@ -105,9 +115,9 @@ namespace Synthesia
         /// <summary>
         ///
         /// </summary>
-        public static VideosSourceGenerationContext Default { get; } = new(DefaultOptions);
+        public static TranslationsSourceGenerationContext Default { get; } = new(DefaultOptions);
 
-        private VideosSourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
+        private TranslationsSourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
             : base(options)
         {
         }
@@ -133,6 +143,7 @@ namespace Synthesia
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
+            options.Converters.Add(new global::Synthesia.JsonConverters.TranslationsItemJsonConverter());
             options.Converters.Add(new global::Synthesia.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
@@ -155,7 +166,39 @@ namespace Synthesia
             public override bool CanConvert(global::System.Type typeToConvert)
             {
                 return
-                    typeToConvert == typeof(global::Synthesia.ActorSettingsHorizontalAlign)
+                    typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsApiRequestAutoGenerate)
+
+                    || typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsApiRequestAutoGenerate?)
+
+                    || typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStatus)
+
+                    || typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStatus?)
+
+                    || typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStep)
+
+                    || typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStep?)
+
+                    || typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemErrorStatus)
+
+                    || typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemErrorStatus?)
+
+                    || typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemErrorErrorCode)
+
+                    || typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemErrorErrorCode?)
+
+                    || typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemSuccessStatus)
+
+                    || typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemSuccessStatus?)
+
+                    || typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemSuccessStep)
+
+                    || typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemSuccessStep?)
+
+                    || typeToConvert == typeof(global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus)
+
+                    || typeToConvert == typeof(global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus?)
+
+                    || typeToConvert == typeof(global::Synthesia.ActorSettingsHorizontalAlign)
 
                     || typeToConvert == typeof(global::Synthesia.ActorSettingsHorizontalAlign?)
 
@@ -193,41 +236,93 @@ namespace Synthesia
 
                     || typeToConvert == typeof(global::Synthesia.VideoResponseStatus)
 
-                    || typeToConvert == typeof(global::Synthesia.VideoResponseStatus?)
-
-                    || typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility)
-
-                    || typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility?)
-
-                    || typeToConvert == typeof(global::Synthesia.CreateVideoRequestAspectRatio)
-
-                    || typeToConvert == typeof(global::Synthesia.CreateVideoRequestAspectRatio?)
-
-                    || typeToConvert == typeof(global::Synthesia.CreateVideoRequestSoundtrack)
-
-                    || typeToConvert == typeof(global::Synthesia.CreateVideoRequestSoundtrack?)
-
-                    || typeToConvert == typeof(global::Synthesia.CreateVideoRequestVisibility)
-
-                    || typeToConvert == typeof(global::Synthesia.CreateVideoRequestVisibility?)
-
-                    || typeToConvert == typeof(global::Synthesia.UpdateVideoMetadataRequestVisibility)
-
-                    || typeToConvert == typeof(global::Synthesia.UpdateVideoMetadataRequestVisibility?)
-
-                    || typeToConvert == typeof(global::Synthesia.GetVideosSourceItem)
-
-                    || typeToConvert == typeof(global::Synthesia.GetVideosSourceItem?)
-
-                    || typeToConvert == typeof(global::Synthesia.GetVideosXliffXliffVersion)
-
-                    || typeToConvert == typeof(global::Synthesia.GetVideosXliffXliffVersion?);
+                    || typeToConvert == typeof(global::Synthesia.VideoResponseStatus?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
                 global::System.Type typeToConvert,
                 global::System.Text.Json.JsonSerializerOptions options)
             {
+                if (typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsApiRequestAutoGenerate))
+                {
+                    return new global::Synthesia.JsonConverters.UpsertVideoTranslationsApiRequestAutoGenerateJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsApiRequestAutoGenerate?))
+                {
+                    return new global::Synthesia.JsonConverters.UpsertVideoTranslationsApiRequestAutoGenerateNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStatus))
+                {
+                    return new global::Synthesia.JsonConverters.UpsertVideoTranslationsRunningWorkflowApiItemStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStatus?))
+                {
+                    return new global::Synthesia.JsonConverters.UpsertVideoTranslationsRunningWorkflowApiItemStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStep))
+                {
+                    return new global::Synthesia.JsonConverters.UpsertVideoTranslationsRunningWorkflowApiItemStepJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStep?))
+                {
+                    return new global::Synthesia.JsonConverters.UpsertVideoTranslationsRunningWorkflowApiItemStepNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemErrorStatus))
+                {
+                    return new global::Synthesia.JsonConverters.TranslationStatusApiItemErrorStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemErrorStatus?))
+                {
+                    return new global::Synthesia.JsonConverters.TranslationStatusApiItemErrorStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemErrorErrorCode))
+                {
+                    return new global::Synthesia.JsonConverters.TranslationStatusApiItemErrorErrorCodeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemErrorErrorCode?))
+                {
+                    return new global::Synthesia.JsonConverters.TranslationStatusApiItemErrorErrorCodeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemSuccessStatus))
+                {
+                    return new global::Synthesia.JsonConverters.TranslationStatusApiItemSuccessStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemSuccessStatus?))
+                {
+                    return new global::Synthesia.JsonConverters.TranslationStatusApiItemSuccessStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemSuccessStep))
+                {
+                    return new global::Synthesia.JsonConverters.TranslationStatusApiItemSuccessStepJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.TranslationStatusApiItemSuccessStep?))
+                {
+                    return new global::Synthesia.JsonConverters.TranslationStatusApiItemSuccessStepNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus))
+                {
+                    return new global::Synthesia.JsonConverters.GetVideoTranslationsApiResponseTranslationDiscriminatorStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus?))
+                {
+                    return new global::Synthesia.JsonConverters.GetVideoTranslationsApiResponseTranslationDiscriminatorStatusNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Synthesia.ActorSettingsHorizontalAlign))
                 {
                     return new global::Synthesia.JsonConverters.ActorSettingsHorizontalAlignJsonConverter();
@@ -327,76 +422,6 @@ namespace Synthesia
                 {
                     return new global::Synthesia.JsonConverters.VideoResponseStatusNullableJsonConverter();
                 }
-
-                if (typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility))
-                {
-                    return new global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility?))
-                {
-                    return new global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.CreateVideoRequestAspectRatio))
-                {
-                    return new global::Synthesia.JsonConverters.CreateVideoRequestAspectRatioJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.CreateVideoRequestAspectRatio?))
-                {
-                    return new global::Synthesia.JsonConverters.CreateVideoRequestAspectRatioNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.CreateVideoRequestSoundtrack))
-                {
-                    return new global::Synthesia.JsonConverters.CreateVideoRequestSoundtrackJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.CreateVideoRequestSoundtrack?))
-                {
-                    return new global::Synthesia.JsonConverters.CreateVideoRequestSoundtrackNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.CreateVideoRequestVisibility))
-                {
-                    return new global::Synthesia.JsonConverters.CreateVideoRequestVisibilityJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.CreateVideoRequestVisibility?))
-                {
-                    return new global::Synthesia.JsonConverters.CreateVideoRequestVisibilityNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.UpdateVideoMetadataRequestVisibility))
-                {
-                    return new global::Synthesia.JsonConverters.UpdateVideoMetadataRequestVisibilityJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.UpdateVideoMetadataRequestVisibility?))
-                {
-                    return new global::Synthesia.JsonConverters.UpdateVideoMetadataRequestVisibilityNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.GetVideosSourceItem))
-                {
-                    return new global::Synthesia.JsonConverters.GetVideosSourceItemJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.GetVideosSourceItem?))
-                {
-                    return new global::Synthesia.JsonConverters.GetVideosSourceItemNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.GetVideosXliffXliffVersion))
-                {
-                    return new global::Synthesia.JsonConverters.GetVideosXliffXliffVersionJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.GetVideosXliffXliffVersion?))
-                {
-                    return new global::Synthesia.JsonConverters.GetVideosXliffXliffVersionNullableJsonConverter();
-                }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }
         }
@@ -440,7 +465,7 @@ namespace Synthesia
             {
                 return index switch
                 {
-                    0 => new VideosSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => new TranslationsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }
