@@ -83,6 +83,10 @@ namespace Synthesia
         /// <summary>
         ///
         /// </summary>
+        ApplicationVndSynthesiaStudioSyrenImportedVideo,
+        /// <summary>
+        ///
+        /// </summary>
         ApplicationVndSynthesiaStudioUserCourse,
         /// <summary>
         ///
@@ -208,6 +212,7 @@ namespace Synthesia
                 AssetContentType.ApplicationVndSynthesiaStudioSynthesiaProcessedGif => "application/vnd.synthesia.studio-synthesia-processed-gif",
                 AssetContentType.ApplicationVndSynthesiaStudioSynthesiaTemplate => "application/vnd.synthesia.studio-synthesia-template",
                 AssetContentType.ApplicationVndSynthesiaStudioSynthesiaWelcomeWebinarVideo => "application/vnd.synthesia.studio-synthesia-welcome-webinar-video",
+                AssetContentType.ApplicationVndSynthesiaStudioSyrenImportedVideo => "application/vnd.synthesia.studio-syren-imported-video",
                 AssetContentType.ApplicationVndSynthesiaStudioUserCourse => "application/vnd.synthesia.studio-user-course",
                 AssetContentType.ApplicationVndSynthesiaStudioUserTemplate => "application/vnd.synthesia.studio-user-template",
                 AssetContentType.ApplicationVndSynthesiaStudioVideo => "application/vnd.synthesia.studio-video",
@@ -260,6 +265,7 @@ namespace Synthesia
                 "application/vnd.synthesia.studio-synthesia-processed-gif" => AssetContentType.ApplicationVndSynthesiaStudioSynthesiaProcessedGif,
                 "application/vnd.synthesia.studio-synthesia-template" => AssetContentType.ApplicationVndSynthesiaStudioSynthesiaTemplate,
                 "application/vnd.synthesia.studio-synthesia-welcome-webinar-video" => AssetContentType.ApplicationVndSynthesiaStudioSynthesiaWelcomeWebinarVideo,
+                "application/vnd.synthesia.studio-syren-imported-video" => AssetContentType.ApplicationVndSynthesiaStudioSyrenImportedVideo,
                 "application/vnd.synthesia.studio-user-course" => AssetContentType.ApplicationVndSynthesiaStudioUserCourse,
                 "application/vnd.synthesia.studio-user-template" => AssetContentType.ApplicationVndSynthesiaStudioUserTemplate,
                 "application/vnd.synthesia.studio-video" => AssetContentType.ApplicationVndSynthesiaStudioVideo,
