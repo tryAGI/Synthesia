@@ -63,11 +63,6 @@ namespace Synthesia
         /// <summary>
         ///
         /// </summary>
-        public InteractiveAvatarClient InteractiveAvatar { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
         public TemplatesClient Templates { get; }
 
         /// <summary>
