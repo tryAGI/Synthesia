@@ -155,6 +155,10 @@ namespace Synthesia
 
             typeof(global::Synthesia.JsonConverters.TemplateResponseVisibilityNullableJsonConverter),
 
+            typeof(global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityJsonConverter),
+
+            typeof(global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityNullableJsonConverter),
+
             typeof(global::Synthesia.JsonConverters.ActorSettingsHorizontalAlignJsonConverter),
 
             typeof(global::Synthesia.JsonConverters.ActorSettingsHorizontalAlignNullableJsonConverter),
@@ -194,10 +198,6 @@ namespace Synthesia
             typeof(global::Synthesia.JsonConverters.VideoResponseStatusJsonConverter),
 
             typeof(global::Synthesia.JsonConverters.VideoResponseStatusNullableJsonConverter),
-
-            typeof(global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityJsonConverter),
-
-            typeof(global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityNullableJsonConverter),
 
             typeof(global::Synthesia.JsonConverters.CreateVideoRequestAspectRatioJsonConverter),
 
@@ -351,6 +351,8 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateListResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.TemplateResponse>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.Error))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApi))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApiVisibility), TypeInfoPropertyName = "VideoFromTemplateApiVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoAssetCaptionTypesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ActorSettings))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ActorSettingsHorizontalAlign), TypeInfoPropertyName = "ActorSettingsHorizontalAlign2")]
@@ -377,10 +379,6 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseSoundtrack), TypeInfoPropertyName = "VideoResponseSoundtrack2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseVisibility), TypeInfoPropertyName = "VideoResponseVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseStatus), TypeInfoPropertyName = "VideoResponseStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateTranslatedVideoFromXliffRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateTranslatedVideoFromXliffResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApi))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApiVisibility), TypeInfoPropertyName = "VideoFromTemplateApiVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoListResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.VideoResponse>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequest))]
@@ -396,6 +394,8 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateWebhookRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.CreateWebhookRequestEvent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateWebhookRequestEvent), TypeInfoPropertyName = "CreateWebhookRequestEvent2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateTranslatedVideoFromXliffRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateTranslatedVideoFromXliffResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.OneOf<global::Synthesia.CreateDubbingProjectApiRequestFromSourceAssetId, global::Synthesia.CreateDubbingProjectApiRequestFromSourceVideoUrl?>), TypeInfoPropertyName = "OneOfCreateDubbingProjectApiRequestFromSourceAssetIdCreateDubbingProjectApiRequestFromSourceVideoUrl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.GetTemplatesSourceItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetTemplatesSourceItem), TypeInfoPropertyName = "GetTemplatesSourceItem2")]

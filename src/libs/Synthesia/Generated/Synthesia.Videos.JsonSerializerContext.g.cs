@@ -21,6 +21,8 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CtaSettings))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.Error))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApi))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApiVisibility), TypeInfoPropertyName = "VideoFromTemplateApiVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoAssetCaptionTypesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ActorSettings))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ActorSettingsHorizontalAlign), TypeInfoPropertyName = "ActorSettingsHorizontalAlign2")]
@@ -47,8 +49,6 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseSoundtrack), TypeInfoPropertyName = "VideoResponseSoundtrack2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseVisibility), TypeInfoPropertyName = "VideoResponseVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseStatus), TypeInfoPropertyName = "VideoResponseStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApi))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApiVisibility), TypeInfoPropertyName = "VideoFromTemplateApiVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoListResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.VideoResponse>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequest))]
@@ -65,6 +65,7 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApiVisibility?), TypeInfoPropertyName = "NullableVideoFromTemplateApiVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ActorSettingsHorizontalAlign?), TypeInfoPropertyName = "NullableActorSettingsHorizontalAlign2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ActorSettingsStyle?), TypeInfoPropertyName = "NullableActorSettingsStyle2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.InputVideoBackgroundSettingsShortBackgroundContentMatchMode?), TypeInfoPropertyName = "NullableInputVideoBackgroundSettingsShortBackgroundContentMatchMode2")]
@@ -75,7 +76,6 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseSoundtrack?), TypeInfoPropertyName = "NullableVideoResponseSoundtrack2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseVisibility?), TypeInfoPropertyName = "NullableVideoResponseVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseStatus?), TypeInfoPropertyName = "NullableVideoResponseStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApiVisibility?), TypeInfoPropertyName = "NullableVideoFromTemplateApiVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestAspectRatio?), TypeInfoPropertyName = "NullableCreateVideoRequestAspectRatio2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestSoundtrack?), TypeInfoPropertyName = "NullableCreateVideoRequestSoundtrack2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestVisibility?), TypeInfoPropertyName = "NullableCreateVideoRequestVisibility2")]
@@ -155,7 +155,11 @@ namespace Synthesia
             public override bool CanConvert(global::System.Type typeToConvert)
             {
                 return
-                    typeToConvert == typeof(global::Synthesia.ActorSettingsHorizontalAlign)
+                    typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility)
+
+                    || typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility?)
+
+                    || typeToConvert == typeof(global::Synthesia.ActorSettingsHorizontalAlign)
 
                     || typeToConvert == typeof(global::Synthesia.ActorSettingsHorizontalAlign?)
 
@@ -195,10 +199,6 @@ namespace Synthesia
 
                     || typeToConvert == typeof(global::Synthesia.VideoResponseStatus?)
 
-                    || typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility)
-
-                    || typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility?)
-
                     || typeToConvert == typeof(global::Synthesia.CreateVideoRequestAspectRatio)
 
                     || typeToConvert == typeof(global::Synthesia.CreateVideoRequestAspectRatio?)
@@ -228,6 +228,16 @@ namespace Synthesia
                 global::System.Type typeToConvert,
                 global::System.Text.Json.JsonSerializerOptions options)
             {
+                if (typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility))
+                {
+                    return new global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility?))
+                {
+                    return new global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Synthesia.ActorSettingsHorizontalAlign))
                 {
                     return new global::Synthesia.JsonConverters.ActorSettingsHorizontalAlignJsonConverter();
@@ -326,16 +336,6 @@ namespace Synthesia
                 if (typeToConvert == typeof(global::Synthesia.VideoResponseStatus?))
                 {
                     return new global::Synthesia.JsonConverters.VideoResponseStatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility))
-                {
-                    return new global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Synthesia.VideoFromTemplateApiVisibility?))
-                {
-                    return new global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Synthesia.CreateVideoRequestAspectRatio))
