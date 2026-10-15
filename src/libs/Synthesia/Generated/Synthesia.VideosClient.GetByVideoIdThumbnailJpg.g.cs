@@ -27,11 +27,13 @@ namespace Synthesia
             };
         partial void PrepareGetByVideoIdThumbnailJpgArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string videoId);
+            ref string videoId,
+            ref string? token);
         partial void PrepareGetByVideoIdThumbnailJpgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string videoId);
+            string videoId,
+            string? token);
         partial void ProcessGetByVideoIdThumbnailJpgResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -41,16 +43,19 @@ namespace Synthesia
         /// Use this endpoint to pull information on a given video thumbnail.
         /// </summary>
         /// <param name="videoId"></param>
+        /// <param name="token"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Synthesia.ApiException"></exception>
         public async global::System.Threading.Tasks.Task GetByVideoIdThumbnailJpgAsync(
             string videoId,
+            string? token = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             await GetByVideoIdThumbnailJpgAsResponseAsync(
                 videoId: videoId,
+                token: token,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -60,11 +65,13 @@ namespace Synthesia
         /// Use this endpoint to pull information on a given video thumbnail.
         /// </summary>
         /// <param name="videoId"></param>
+        /// <param name="token"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Synthesia.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Synthesia.AutoSDKHttpResponse> GetByVideoIdThumbnailJpgAsResponseAsync(
             string videoId,
+            string? token = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -72,7 +79,8 @@ namespace Synthesia
                 client: HttpClient);
             PrepareGetByVideoIdThumbnailJpgArguments(
                 httpClient: HttpClient,
-                videoId: ref videoId);
+                videoId: ref videoId,
+                token: ref token);
 
 
             var __authorizations = global::Synthesia.EndPointSecurityResolver.ResolveAuthorizations(
@@ -100,6 +108,9 @@ namespace Synthesia
                             var __pathBuilder = new global::Synthesia.PathBuilder(
                                 path: $"/{videoId}/thumbnail.jpg",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddOptionalParameter("token", token)
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Synthesia.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -140,7 +151,8 @@ namespace Synthesia
                 PrepareGetByVideoIdThumbnailJpgRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    videoId: videoId);
+                    videoId: videoId,
+                    token: token);
 
                 return __httpRequest;
             }
