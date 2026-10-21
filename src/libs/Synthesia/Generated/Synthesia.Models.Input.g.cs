@@ -9,7 +9,7 @@ namespace Synthesia
     public sealed partial class Input
     {
         /// <summary>
-        /// Use one of [Synthesia stock avatars or your custom avatar](https://docs.synthesia.io/reference/avatars).
+        /// Use one of [Synthesia stock avatars or your custom avatar](https://developers.synthesia.io/docs/avatars).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("avatar")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -23,7 +23,7 @@ namespace Synthesia
         public global::Synthesia.ActorSettings? AvatarSettings { get; set; }
 
         /// <summary>
-        /// Use Synthesia' stock backgrounds or your custom background. For the custom background, provide the ID of an uploaded asset (see [Create an asset](https://docs.synthesia.io/reference/create-an-asset)), or URL from where Synthesia should download the background.<br/>
+        /// Use Synthesia' stock backgrounds or your custom background. For the custom background, provide the ID of an uploaded asset (see [Create an asset](https://developers.synthesia.io/docs/create-an-asset)), or URL from where Synthesia should download the background.<br/>
         /// Transparent: green_screen Green screen background can be used if you want to replace background using FFMPEG or any of the video editing software.<br/>
         /// Solid: `off_white` / `warm_white` / `light_pink` / `soft_pink` / `light_blue` / `dark_blue` / `soft_cyan` / `strong_cyan` / `light_orange` / `soft_orange`<br/>
         /// Image: `white_studio` / `white_cafe` / `luxury_lobby` / `large_window` / `white_meeting_room` / `open_office`
@@ -39,7 +39,7 @@ namespace Synthesia
         public global::Synthesia.InputBackgroundSettings? BackgroundSettings { get; set; }
 
         /// <summary>
-        /// As an alternative to `scriptText`, provide the ID of uploaded script audio. See [Upload script audio for details](https://docs.synthesia.io/reference/upload-script-audio).<br/>
+        /// As an alternative to `scriptText`, provide the ID of uploaded script audio. See [Upload script audio for details](https://developers.synthesia.io/docs/upload-script-audio).<br/>
         /// If you use `scriptAudio` you must provide `scriptLanguage`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scriptAudio")]
@@ -55,7 +55,7 @@ namespace Synthesia
         public global::Synthesia.InputScriptLanguage? ScriptLanguage { get; set; }
 
         /// <summary>
-        /// Script for text-to-voice can be entered in any of the [supported languages](https://docs.synthesia.io/reference/voices).
+        /// Script for text-to-voice can be entered in any of the [supported languages](https://developers.synthesia.io/docs/voices).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scriptText")]
         public string? ScriptText { get; set; }
@@ -83,10 +83,10 @@ namespace Synthesia
         /// Initializes a new instance of the <see cref="Input" /> class.
         /// </summary>
         /// <param name="avatar">
-        /// Use one of [Synthesia stock avatars or your custom avatar](https://docs.synthesia.io/reference/avatars).
+        /// Use one of [Synthesia stock avatars or your custom avatar](https://developers.synthesia.io/docs/avatars).
         /// </param>
         /// <param name="background">
-        /// Use Synthesia' stock backgrounds or your custom background. For the custom background, provide the ID of an uploaded asset (see [Create an asset](https://docs.synthesia.io/reference/create-an-asset)), or URL from where Synthesia should download the background.<br/>
+        /// Use Synthesia' stock backgrounds or your custom background. For the custom background, provide the ID of an uploaded asset (see [Create an asset](https://developers.synthesia.io/docs/create-an-asset)), or URL from where Synthesia should download the background.<br/>
         /// Transparent: green_screen Green screen background can be used if you want to replace background using FFMPEG or any of the video editing software.<br/>
         /// Solid: `off_white` / `warm_white` / `light_pink` / `soft_pink` / `light_blue` / `dark_blue` / `soft_cyan` / `strong_cyan` / `light_orange` / `soft_orange`<br/>
         /// Image: `white_studio` / `white_cafe` / `luxury_lobby` / `large_window` / `white_meeting_room` / `open_office`
@@ -99,7 +99,7 @@ namespace Synthesia
         /// Video Settings object
         /// </param>
         /// <param name="scriptAudio">
-        /// As an alternative to `scriptText`, provide the ID of uploaded script audio. See [Upload script audio for details](https://docs.synthesia.io/reference/upload-script-audio).<br/>
+        /// As an alternative to `scriptText`, provide the ID of uploaded script audio. See [Upload script audio for details](https://developers.synthesia.io/docs/upload-script-audio).<br/>
         /// If you use `scriptAudio` you must provide `scriptLanguage`.
         /// </param>
         /// <param name="scriptLanguage">
@@ -108,7 +108,7 @@ namespace Synthesia
         /// Language code should be in the format: `en-US`, where the first two characters represent language and the second two-character represent the country.
         /// </param>
         /// <param name="scriptText">
-        /// Script for text-to-voice can be entered in any of the [supported languages](https://docs.synthesia.io/reference/voices).
+        /// Script for text-to-voice can be entered in any of the [supported languages](https://developers.synthesia.io/docs/voices).
         /// </param>
         /// <param name="soundSettings"></param>
         /// <param name="transition">
