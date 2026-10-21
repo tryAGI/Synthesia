@@ -9,7 +9,7 @@ namespace Synthesia
     public sealed partial class CreateWebhookRequest
     {
         /// <summary>
-        /// [The webhook events](https://docs.synthesia.io/reference/webhook-events) for which notifications should be sent.
+        /// [The webhook events](https://developers.synthesia.io/docs/webhook-events) for which notifications should be sent.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("events")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -32,7 +32,7 @@ namespace Synthesia
         /// Initializes a new instance of the <see cref="CreateWebhookRequest" /> class.
         /// </summary>
         /// <param name="events">
-        /// [The webhook events](https://docs.synthesia.io/reference/webhook-events) for which notifications should be sent.
+        /// [The webhook events](https://developers.synthesia.io/docs/webhook-events) for which notifications should be sent.
         /// </param>
         /// <param name="url">
         /// The URL to send notifications to

@@ -35,7 +35,7 @@ namespace Synthesia
         /// Use the Create a webhook endpoint to create a new even subscription.
         /// </summary>
         /// <param name="events">
-        /// [The webhook events](https://docs.synthesia.io/reference/webhook-events) for which notifications should be sent.
+        /// [The webhook events](https://developers.synthesia.io/docs/webhook-events) for which notifications should be sent.
         /// </param>
         /// <param name="url">
         /// The URL to send notifications to

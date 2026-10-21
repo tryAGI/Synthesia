@@ -6,7 +6,7 @@ namespace Synthesia
     {
         /// <summary>
         /// Create a video<br/>
-        /// Create a video within your Synthesia account. To get started on this endpoint check the [API Quickstart guide](https://docs.synthesia.io/reference/synthesia-api-quickstart).
+        /// Create a video within your Synthesia account. To get started on this endpoint check the [API Quickstart guide](https://developers.synthesia.io/docs/synthesia-api-quickstart).
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -19,7 +19,7 @@ namespace Synthesia
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a video<br/>
-        /// Create a video within your Synthesia account. To get started on this endpoint check the [API Quickstart guide](https://docs.synthesia.io/reference/synthesia-api-quickstart).
+        /// Create a video within your Synthesia account. To get started on this endpoint check the [API Quickstart guide](https://developers.synthesia.io/docs/synthesia-api-quickstart).
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -32,7 +32,7 @@ namespace Synthesia
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a video<br/>
-        /// Create a video within your Synthesia account. To get started on this endpoint check the [API Quickstart guide](https://docs.synthesia.io/reference/synthesia-api-quickstart).
+        /// Create a video within your Synthesia account. To get started on this endpoint check the [API Quickstart guide](https://developers.synthesia.io/docs/synthesia-api-quickstart).
         /// </summary>
         /// <param name="folderId">
         /// Optional folder ID. If provided, the new video will be created under this folder and inherit its permissions.<br/>
