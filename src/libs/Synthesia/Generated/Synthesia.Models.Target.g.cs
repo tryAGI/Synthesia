@@ -17,7 +17,8 @@ namespace Synthesia
         /// ASSET: An asset entity (avatars, images, etc.)<br/>
         /// LEARNER_GROUP: An LMS learner group (cohort) entity<br/>
         /// ASSIGNMENT: An LMS training assignment entity<br/>
-        /// CALENDAR_INVITE: A calendar invite sent by the calendar module
+        /// CALENDAR_INVITE: A calendar invite sent by the calendar module<br/>
+        /// INTERACTIVE_AVATAR_DEPLOYMENT: An Interactive Avatar deployment (a widget embed or hosted page)
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.TargetTypeJsonConverter))]
@@ -55,7 +56,8 @@ namespace Synthesia
         /// ASSET: An asset entity (avatars, images, etc.)<br/>
         /// LEARNER_GROUP: An LMS learner group (cohort) entity<br/>
         /// ASSIGNMENT: An LMS training assignment entity<br/>
-        /// CALENDAR_INVITE: A calendar invite sent by the calendar module
+        /// CALENDAR_INVITE: A calendar invite sent by the calendar module<br/>
+        /// INTERACTIVE_AVATAR_DEPLOYMENT: An Interactive Avatar deployment (a widget embed or hosted page)
         /// </param>
         /// <param name="id"></param>
         /// <param name="name">
