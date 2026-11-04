@@ -13,7 +13,8 @@ namespace Synthesia
     /// LEARNER_GROUP: An LMS learner group (cohort) entity<br/>
     /// ASSIGNMENT: An LMS training assignment entity<br/>
     /// CALENDAR_INVITE: A calendar invite sent by the calendar module<br/>
-    /// INTERACTIVE_AVATAR_DEPLOYMENT: An Interactive Avatar deployment (a widget embed or hosted page)
+    /// INTERACTIVE_AVATAR_DEPLOYMENT: An Interactive Avatar deployment (a widget embed or hosted page)<br/>
+    /// INTERACTIVE_AVATAR_CONFIGURATION: An Interactive Avatar configuration (an agent)
     /// </summary>
     public enum TargetType
     {
@@ -33,6 +34,10 @@ namespace Synthesia
         ///
         /// </summary>
         CalendarInvite,
+        /// <summary>
+        ///
+        /// </summary>
+        InteractiveAvatarConfiguration,
         /// <summary>
         ///
         /// </summary>
@@ -79,6 +84,7 @@ namespace Synthesia
                 TargetType.Assignment => "assignment",
                 TargetType.BillingPlan => "billing_plan",
                 TargetType.CalendarInvite => "calendar_invite",
+                TargetType.InteractiveAvatarConfiguration => "interactive_avatar_configuration",
                 TargetType.InteractiveAvatarDeployment => "interactive_avatar_deployment",
                 TargetType.LearnerGroup => "learner_group",
                 TargetType.Organization => "organization",
@@ -100,6 +106,7 @@ namespace Synthesia
                 "assignment" => TargetType.Assignment,
                 "billing_plan" => TargetType.BillingPlan,
                 "calendar_invite" => TargetType.CalendarInvite,
+                "interactive_avatar_configuration" => TargetType.InteractiveAvatarConfiguration,
                 "interactive_avatar_deployment" => TargetType.InteractiveAvatarDeployment,
                 "learner_group" => TargetType.LearnerGroup,
                 "organization" => TargetType.Organization,
