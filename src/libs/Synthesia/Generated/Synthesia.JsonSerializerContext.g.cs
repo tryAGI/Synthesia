@@ -155,9 +155,17 @@ namespace Synthesia
 
             typeof(global::Synthesia.JsonConverters.TemplateResponseVisibilityNullableJsonConverter),
 
+            typeof(global::Synthesia.JsonConverters.TemplateResponseAvatarEngineJsonConverter),
+
+            typeof(global::Synthesia.JsonConverters.TemplateResponseAvatarEngineNullableJsonConverter),
+
             typeof(global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityJsonConverter),
 
             typeof(global::Synthesia.JsonConverters.VideoFromTemplateApiVisibilityNullableJsonConverter),
+
+            typeof(global::Synthesia.JsonConverters.VideoFromTemplateApiAvatarEngineJsonConverter),
+
+            typeof(global::Synthesia.JsonConverters.VideoFromTemplateApiAvatarEngineNullableJsonConverter),
 
             typeof(global::Synthesia.JsonConverters.ActorSettingsHorizontalAlignJsonConverter),
 
@@ -191,6 +199,10 @@ namespace Synthesia
 
             typeof(global::Synthesia.JsonConverters.VideoResponseSoundtrackNullableJsonConverter),
 
+            typeof(global::Synthesia.JsonConverters.VideoResponseAvatarEngineJsonConverter),
+
+            typeof(global::Synthesia.JsonConverters.VideoResponseAvatarEngineNullableJsonConverter),
+
             typeof(global::Synthesia.JsonConverters.VideoResponseVisibilityJsonConverter),
 
             typeof(global::Synthesia.JsonConverters.VideoResponseVisibilityNullableJsonConverter),
@@ -206,6 +218,10 @@ namespace Synthesia
             typeof(global::Synthesia.JsonConverters.CreateVideoRequestSoundtrackJsonConverter),
 
             typeof(global::Synthesia.JsonConverters.CreateVideoRequestSoundtrackNullableJsonConverter),
+
+            typeof(global::Synthesia.JsonConverters.CreateVideoRequestAvatarEngineJsonConverter),
+
+            typeof(global::Synthesia.JsonConverters.CreateVideoRequestAvatarEngineNullableJsonConverter),
 
             typeof(global::Synthesia.JsonConverters.CreateVideoRequestVisibilityJsonConverter),
 
@@ -348,12 +364,14 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CtaSettings))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateResponseVisibility), TypeInfoPropertyName = "TemplateResponseVisibility2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateResponseAvatarEngine), TypeInfoPropertyName = "TemplateResponseAvatarEngine2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateListResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.TemplateResponse>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.Error))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApi))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApiVisibility), TypeInfoPropertyName = "VideoFromTemplateApiVisibility2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoFromTemplateApiAvatarEngine), TypeInfoPropertyName = "VideoFromTemplateApiAvatarEngine2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoAssetCaptionTypesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ActorSettings))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ActorSettingsHorizontalAlign), TypeInfoPropertyName = "ActorSettingsHorizontalAlign2")]
@@ -378,6 +396,7 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseAspectRatio), TypeInfoPropertyName = "VideoResponseAspectRatio2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.Input>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseSoundtrack), TypeInfoPropertyName = "VideoResponseSoundtrack2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseAvatarEngine), TypeInfoPropertyName = "VideoResponseAvatarEngine2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseVisibility), TypeInfoPropertyName = "VideoResponseVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoResponseStatus), TypeInfoPropertyName = "VideoResponseStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.VideoListResponse))]
@@ -385,6 +404,7 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestAspectRatio), TypeInfoPropertyName = "CreateVideoRequestAspectRatio2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestSoundtrack), TypeInfoPropertyName = "CreateVideoRequestSoundtrack2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestAvatarEngine), TypeInfoPropertyName = "CreateVideoRequestAvatarEngine2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CreateVideoRequestVisibility), TypeInfoPropertyName = "CreateVideoRequestVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpdateVideoMetadataRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpdateVideoMetadataRequestVisibility), TypeInfoPropertyName = "UpdateVideoMetadataRequestVisibility2")]

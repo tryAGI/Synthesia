@@ -41,7 +41,7 @@ namespace Synthesia
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
-            get => JsonSerializerContextProvider?.Value ?? global::Synthesia.SourceGenerationContext.Default;
+            get => JsonSerializerContextProvider?.Value ?? global::Synthesia.TranslationsSourceGenerationContext.Default;
             set => JsonSerializerContextProvider = new(() => value);
         }
 
