@@ -75,6 +75,13 @@ namespace Synthesia
         public string? Title { get; set; }
 
         /// <summary>
+        /// The engine EXPRESS avatars are rendered with: `express_3`, also the default when omitted. Requires the expressive avatars API entitlement for the workspace.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("avatarEngine")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.CreateVideoRequestAvatarEngineJsonConverter))]
+        public global::Synthesia.CreateVideoRequestAvatarEngine? AvatarEngine { get; set; }
+
+        /// <summary>
         /// Public videos will be visible to anyone with a share URL.<br/>
         /// Private videos can only be downloaded via a time-limited download link. See Retrieve a video for details.<br/>
         /// Visibility can be changed also once the video is created via Update a video.<br/>
@@ -124,6 +131,9 @@ namespace Synthesia
         /// <param name="title">
         /// Title of the video to be shown on the share page.
         /// </param>
+        /// <param name="avatarEngine">
+        /// The engine EXPRESS avatars are rendered with: `express_3`, also the default when omitted. Requires the expressive avatars API entitlement for the workspace.
+        /// </param>
         /// <param name="visibility">
         /// Public videos will be visible to anyone with a share URL.<br/>
         /// Private videos can only be downloaded via a time-limited download link. See Retrieve a video for details.<br/>
@@ -144,6 +154,7 @@ namespace Synthesia
             global::Synthesia.ParentSoundSettings? soundSettings,
             bool? test,
             string? title,
+            global::Synthesia.CreateVideoRequestAvatarEngine? avatarEngine,
             global::Synthesia.CreateVideoRequestVisibility? visibility)
         {
             this.FolderId = folderId;
@@ -156,6 +167,7 @@ namespace Synthesia
             this.SoundSettings = soundSettings;
             this.Test = test;
             this.Title = title;
+            this.AvatarEngine = avatarEngine;
             this.Visibility = visibility;
         }
 

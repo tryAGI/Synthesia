@@ -69,6 +69,13 @@ namespace Synthesia
         public global::Synthesia.VideoFromTemplateApiVisibility? Visibility { get; set; }
 
         /// <summary>
+        /// The engine EXPRESS avatars are rendered with: `express_3`, also the default when omitted. Requires the expressive avatars API entitlement for the workspace.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("avatarEngine")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.VideoFromTemplateApiAvatarEngineJsonConverter))]
+        public global::Synthesia.VideoFromTemplateApiAvatarEngine? AvatarEngine { get; set; }
+
+        /// <summary>
         /// Brand kit ID for the video. Defaults to 'workspace_default' if not set. Use 'no_brand_kit' for no branding, or a UUID for a custom brand kit.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("brandKitId")]
@@ -109,6 +116,9 @@ namespace Synthesia
         /// Describes the private settings of the video. - If public, the video's share page is active. - If private, the video's share page is not active; visitors will receive a 404 Not Found response.<br/>
         /// Default Value: private
         /// </param>
+        /// <param name="avatarEngine">
+        /// The engine EXPRESS avatars are rendered with: `express_3`, also the default when omitted. Requires the expressive avatars API entitlement for the workspace.
+        /// </param>
         /// <param name="brandKitId">
         /// Brand kit ID for the video. Defaults to 'workspace_default' if not set. Use 'no_brand_kit' for no branding, or a UUID for a custom brand kit.
         /// </param>
@@ -125,6 +135,7 @@ namespace Synthesia
             bool? test,
             string? title,
             global::Synthesia.VideoFromTemplateApiVisibility? visibility,
+            global::Synthesia.VideoFromTemplateApiAvatarEngine? avatarEngine,
             string? brandKitId)
         {
             this.FolderId = folderId;
@@ -136,6 +147,7 @@ namespace Synthesia
             this.Test = test;
             this.Title = title;
             this.Visibility = visibility;
+            this.AvatarEngine = avatarEngine;
             this.BrandKitId = brandKitId;
         }
 

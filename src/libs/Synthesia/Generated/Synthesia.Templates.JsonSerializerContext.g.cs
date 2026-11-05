@@ -22,6 +22,7 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.CtaSettings))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateResponseVisibility), TypeInfoPropertyName = "TemplateResponseVisibility2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateResponseAvatarEngine), TypeInfoPropertyName = "TemplateResponseAvatarEngine2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateListResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Synthesia.TemplateResponse>))]
@@ -32,6 +33,7 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateResponseVisibility?), TypeInfoPropertyName = "NullableTemplateResponseVisibility2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.TemplateResponseAvatarEngine?), TypeInfoPropertyName = "NullableTemplateResponseAvatarEngine2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetTemplatesSourceItem?), TypeInfoPropertyName = "NullableGetTemplatesSourceItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Synthesia.TemplateResponse>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Synthesia.GetTemplatesSourceItem>))]
@@ -108,6 +110,10 @@ namespace Synthesia
 
                     || typeToConvert == typeof(global::Synthesia.TemplateResponseVisibility?)
 
+                    || typeToConvert == typeof(global::Synthesia.TemplateResponseAvatarEngine)
+
+                    || typeToConvert == typeof(global::Synthesia.TemplateResponseAvatarEngine?)
+
                     || typeToConvert == typeof(global::Synthesia.GetTemplatesSourceItem)
 
                     || typeToConvert == typeof(global::Synthesia.GetTemplatesSourceItem?);
@@ -125,6 +131,16 @@ namespace Synthesia
                 if (typeToConvert == typeof(global::Synthesia.TemplateResponseVisibility?))
                 {
                     return new global::Synthesia.JsonConverters.TemplateResponseVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.TemplateResponseAvatarEngine))
+                {
+                    return new global::Synthesia.JsonConverters.TemplateResponseAvatarEngineJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Synthesia.TemplateResponseAvatarEngine?))
+                {
+                    return new global::Synthesia.JsonConverters.TemplateResponseAvatarEngineNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Synthesia.GetTemplatesSourceItem))

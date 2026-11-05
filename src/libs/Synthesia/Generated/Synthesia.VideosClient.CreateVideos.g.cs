@@ -579,6 +579,9 @@ namespace Synthesia
         /// <param name="title">
         /// Title of the video to be shown on the share page.
         /// </param>
+        /// <param name="avatarEngine">
+        /// The engine EXPRESS avatars are rendered with: `express_3`, also the default when omitted. Requires the expressive avatars API entitlement for the workspace.
+        /// </param>
         /// <param name="visibility">
         /// Public videos will be visible to anyone with a share URL.<br/>
         /// Private videos can only be downloaded via a time-limited download link. See Retrieve a video for details.<br/>
@@ -599,6 +602,7 @@ namespace Synthesia
             global::Synthesia.ParentSoundSettings? soundSettings = default,
             bool? test = default,
             string? title = default,
+            global::Synthesia.CreateVideoRequestAvatarEngine? avatarEngine = default,
             global::Synthesia.CreateVideoRequestVisibility? visibility = default,
             global::Synthesia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -615,6 +619,7 @@ namespace Synthesia
                 SoundSettings = soundSettings,
                 Test = test,
                 Title = title,
+                AvatarEngine = avatarEngine,
                 Visibility = visibility,
             };
 
