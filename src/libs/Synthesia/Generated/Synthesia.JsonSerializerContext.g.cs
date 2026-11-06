@@ -63,6 +63,14 @@ namespace Synthesia
 
             typeof(global::Synthesia.JsonConverters.UpsertVideoTranslationsApiRequestAutoGenerateNullableJsonConverter),
 
+            typeof(global::Synthesia.JsonConverters.DubbingGenerationStageJsonConverter),
+
+            typeof(global::Synthesia.JsonConverters.DubbingGenerationStageNullableJsonConverter),
+
+            typeof(global::Synthesia.JsonConverters.GenerationStateJsonConverter),
+
+            typeof(global::Synthesia.JsonConverters.GenerationStateNullableJsonConverter),
+
             typeof(global::Synthesia.JsonConverters.ImportedAndDubbedVideosErrorCodeJsonConverter),
 
             typeof(global::Synthesia.JsonConverters.ImportedAndDubbedVideosErrorCodeNullableJsonConverter),
@@ -298,6 +306,9 @@ namespace Synthesia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.UpsertVideoTranslationsApiRequestAutoGenerate), TypeInfoPropertyName = "UpsertVideoTranslationsApiRequestAutoGenerate2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GetDubbingAllowanceResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.DubbingGenerationStage), TypeInfoPropertyName = "DubbingGenerationStage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.GenerationState), TypeInfoPropertyName = "GenerationState2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.DubbedVideoProgress))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.DubbedVideosApiError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.ImportedAndDubbedVideosErrorCode), TypeInfoPropertyName = "ImportedAndDubbedVideosErrorCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Synthesia.DubbedAssetCaptions))]
