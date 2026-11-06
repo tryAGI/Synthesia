@@ -76,7 +76,7 @@ namespace Synthesia
         public global::Synthesia.TemplateResponseAvatarEngine? AvatarEngine { get; set; }
 
         /// <summary>
-        /// Brand kit ID for the video. Defaults to 'workspace_default' if not set. Use 'no_brand_kit' for no branding, or a UUID for a custom brand kit.
+        /// Brand kit ID for the video. Defaults to 'workspace_default' if not set: the workspace's default brand kit is applied, and it can replace the template's avatars and styling. Use 'no_brand_kit' to keep the template's own styling and avatars, or a UUID for a custom brand kit.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("brandKitId")]
         public string? BrandKitId { get; set; }
@@ -164,7 +164,7 @@ namespace Synthesia
         /// The engine EXPRESS avatars are rendered with: `express_3`, also the default when omitted. Requires the expressive avatars API entitlement for the workspace.
         /// </param>
         /// <param name="brandKitId">
-        /// Brand kit ID for the video. Defaults to 'workspace_default' if not set. Use 'no_brand_kit' for no branding, or a UUID for a custom brand kit.
+        /// Brand kit ID for the video. Defaults to 'workspace_default' if not set: the workspace's default brand kit is applied, and it can replace the template's avatars and styling. Use 'no_brand_kit' to keep the template's own styling and avatars, or a UUID for a custom brand kit.
         /// </param>
         /// <param name="createdAt"></param>
         /// <param name="download"></param>
