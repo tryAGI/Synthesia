@@ -9,7 +9,7 @@ namespace Synthesia
     public sealed partial class Input
     {
         /// <summary>
-        /// Use one of [Synthesia stock avatars or your custom avatar](https://developers.synthesia.io/docs/avatars).
+        /// Use one of [Synthesia stock avatars or your custom avatar](https://developers.synthesia.io/docs/avatars). Accepts the avatar ID shown by "Copy ID" on an avatar in STUDIO, which renders that avatar's default look, or the ID of a specific look of an avatar.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("avatar")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -83,7 +83,7 @@ namespace Synthesia
         /// Initializes a new instance of the <see cref="Input" /> class.
         /// </summary>
         /// <param name="avatar">
-        /// Use one of [Synthesia stock avatars or your custom avatar](https://developers.synthesia.io/docs/avatars).
+        /// Use one of [Synthesia stock avatars or your custom avatar](https://developers.synthesia.io/docs/avatars). Accepts the avatar ID shown by "Copy ID" on an avatar in STUDIO, which renders that avatar's default look, or the ID of a specific look of an avatar.
         /// </param>
         /// <param name="background">
         /// Use Synthesia' stock backgrounds or your custom background. For the custom background, provide the ID of an uploaded asset (see [Create an asset](https://developers.synthesia.io/docs/create-an-asset)), or URL from where Synthesia should download the background.<br/>
