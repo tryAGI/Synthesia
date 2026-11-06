@@ -162,519 +162,531 @@ namespace Synthesia
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.DubbedVideosApiError? Type31 { get; set; }
+        public global::Synthesia.DubbingGenerationStage? Type31 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.ImportedAndDubbedVideosErrorCode? Type32 { get; set; }
+        public global::Synthesia.GenerationState? Type32 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.DubbedAssetCaptions? Type33 { get; set; }
+        public global::Synthesia.DubbedVideoProgress? Type33 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.DubbedAssetComplete? Type34 { get; set; }
+        public global::Synthesia.DubbedVideosApiError? Type34 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.DubbedAssetCompleteStatus? Type35 { get; set; }
+        public global::Synthesia.ImportedAndDubbedVideosErrorCode? Type35 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.DateTimeOffset? Type36 { get; set; }
+        public global::Synthesia.DubbedAssetCaptions? Type36 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.DubbedAssetCompleteVisibility? Type37 { get; set; }
+        public global::Synthesia.DubbedAssetComplete? Type37 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.DubbedAssetThumbnail? Type38 { get; set; }
+        public global::Synthesia.DubbedAssetCompleteStatus? Type38 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.DubbedAssetError? Type39 { get; set; }
+        public global::System.DateTimeOffset? Type39 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.DubbedAssetErrorStatus? Type40 { get; set; }
+        public global::Synthesia.DubbedAssetCompleteVisibility? Type40 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.DubbedAssetInProgress? Type41 { get; set; }
+        public global::Synthesia.DubbedAssetThumbnail? Type41 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.DubbedAssetInProgressStatus? Type42 { get; set; }
+        public global::Synthesia.DubbedAssetError? Type42 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.AddLocalesToDubbingProjectResponse? Type43 { get; set; }
+        public global::Synthesia.DubbedAssetErrorStatus? Type43 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.DubbedVideosApiError>? Type44 { get; set; }
+        public global::Synthesia.DubbedAssetInProgress? Type44 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.AnyOf<global::Synthesia.DubbedAssetInProgress, global::Synthesia.DubbedAssetComplete, global::Synthesia.DubbedAssetError>>? Type45 { get; set; }
+        public global::Synthesia.DubbedAssetInProgressStatus? Type45 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.AnyOf<global::Synthesia.DubbedAssetInProgress, global::Synthesia.DubbedAssetComplete, global::Synthesia.DubbedAssetError>? Type46 { get; set; }
+        public global::Synthesia.AddLocalesToDubbingProjectResponse? Type46 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.MultipartUploadCredentialsResponse? Type47 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.DubbedVideosApiError>? Type47 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateAssetMultipartUploadResponse? Type48 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.AnyOf<global::Synthesia.DubbedAssetInProgress, global::Synthesia.DubbedAssetComplete, global::Synthesia.DubbedAssetError>>? Type48 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateDubbingProjectApiResponseFail? Type49 { get; set; }
+        public global::Synthesia.AnyOf<global::Synthesia.DubbedAssetInProgress, global::Synthesia.DubbedAssetComplete, global::Synthesia.DubbedAssetError>? Type49 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.ImportedAssetId? Type50 { get; set; }
+        public global::Synthesia.MultipartUploadCredentialsResponse? Type50 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateDubbingProjectApiResponseSuccess? Type51 { get; set; }
+        public global::Synthesia.CreateAssetMultipartUploadResponse? Type51 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.AssetContentType? Type52 { get; set; }
+        public global::Synthesia.CreateDubbingProjectApiResponseFail? Type52 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetPublicApiMediaAssetMetadataResponse? Type53 { get; set; }
+        public global::Synthesia.ImportedAssetId? Type53 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.LanguageBCP47? Type54 { get; set; }
+        public global::Synthesia.CreateDubbingProjectApiResponseSuccess? Type54 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.PublicApiUserUploadedAssetErrorCodes? Type55 { get; set; }
+        public global::Synthesia.AssetContentType? Type55 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.PublicApiUserUploadedAssetStatus? Type56 { get; set; }
+        public global::Synthesia.GetPublicApiMediaAssetMetadataResponse? Type56 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetPublicApiUserUploadedAssetResponse? Type57 { get; set; }
+        public global::Synthesia.LanguageBCP47? Type57 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetDubbingProjectVideosResponseUploading? Type58 { get; set; }
+        public global::Synthesia.PublicApiUserUploadedAssetErrorCodes? Type58 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetDubbingProjectVideosResponseUploadingStatus? Type59 { get; set; }
+        public global::Synthesia.PublicApiUserUploadedAssetStatus? Type59 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetDubbingProjectVideosResponseInProgress? Type60 { get; set; }
+        public global::Synthesia.GetPublicApiUserUploadedAssetResponse? Type60 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetDubbingProjectVideosResponseInProgressStatus? Type61 { get; set; }
+        public global::Synthesia.GetDubbingProjectVideosResponseUploading? Type61 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetDubbingProjectVideosResponseComplete? Type62 { get; set; }
+        public global::Synthesia.GetDubbingProjectVideosResponseUploadingStatus? Type62 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetDubbingProjectVideosResponseCompleteStatus? Type63 { get; set; }
+        public global::Synthesia.GetDubbingProjectVideosResponseInProgress? Type63 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetDubbingProjectVideosResponseError? Type64 { get; set; }
+        public global::Synthesia.GetDubbingProjectVideosResponseInProgressStatus? Type64 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetDubbingProjectVideosResponseErrorStatus? Type65 { get; set; }
+        public global::Synthesia.GetDubbingProjectVideosResponseComplete? Type65 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.DubbingAuthorizeResponse? Type66 { get; set; }
+        public global::Synthesia.GetDubbingProjectVideosResponseCompleteStatus? Type66 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.Actor? Type67 { get; set; }
+        public global::Synthesia.GetDubbingProjectVideosResponseError? Type67 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.ActorType? Type68 { get; set; }
+        public global::Synthesia.GetDubbingProjectVideosResponseErrorStatus? Type68 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.AuditLogEvent? Type69 { get; set; }
+        public global::Synthesia.DubbingAuthorizeResponse? Type69 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.Target? Type70 { get; set; }
+        public global::Synthesia.Actor? Type70 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.Context? Type71 { get; set; }
+        public global::Synthesia.ActorType? Type71 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public object? Type72 { get; set; }
+        public global::Synthesia.AuditLogEvent? Type72 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.Metadata? Type73 { get; set; }
+        public global::Synthesia.Target? Type73 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.DateTime? Type74 { get; set; }
+        public global::Synthesia.Context? Type74 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TargetType? Type75 { get; set; }
+        public object? Type75 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.AuditLogsPageResponse? Type76 { get; set; }
+        public global::Synthesia.Metadata? Type76 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.AuditLogEvent>? Type77 { get; set; }
+        public global::System.DateTime? Type77 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItem? Type78 { get; set; }
+        public global::Synthesia.TargetType? Type78 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStatus? Type79 { get; set; }
+        public global::Synthesia.AuditLogsPageResponse? Type79 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStep? Type80 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.AuditLogEvent>? Type80 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.UpsertVideoTranslationsSuccessApiResponse? Type81 { get; set; }
+        public global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItem? Type81 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItem>? Type82 { get; set; }
+        public global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStatus? Type82 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TranslationStatusApiItemError? Type83 { get; set; }
+        public global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItemStep? Type83 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TranslationStatusApiItemErrorStatus? Type84 { get; set; }
+        public global::Synthesia.UpsertVideoTranslationsSuccessApiResponse? Type84 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TranslationStatusApiItemErrorErrorCode? Type85 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.UpsertVideoTranslationsRunningWorkflowApiItem>? Type85 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TranslationStatusApiItemSuccess? Type86 { get; set; }
+        public global::Synthesia.TranslationStatusApiItemError? Type86 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TranslationStatusApiItemSuccessStatus? Type87 { get; set; }
+        public global::Synthesia.TranslationStatusApiItemErrorStatus? Type87 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TranslationStatusApiItemSuccessStep? Type88 { get; set; }
+        public global::Synthesia.TranslationStatusApiItemErrorErrorCode? Type88 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetVideoTranslationsApiResponse? Type89 { get; set; }
+        public global::Synthesia.TranslationStatusApiItemSuccess? Type89 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.TranslationsItem>? Type90 { get; set; }
+        public global::Synthesia.TranslationStatusApiItemSuccessStatus? Type90 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TranslationsItem? Type91 { get; set; }
+        public global::Synthesia.TranslationStatusApiItemSuccessStep? Type91 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminator? Type92 { get; set; }
+        public global::Synthesia.GetVideoTranslationsApiResponse? Type92 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus? Type93 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.TranslationsItem>? Type93 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CtaSettings? Type94 { get; set; }
+        public global::Synthesia.TranslationsItem? Type94 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TemplateResponse? Type95 { get; set; }
+        public global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminator? Type95 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TemplateResponseVisibility? Type96 { get; set; }
+        public global::Synthesia.GetVideoTranslationsApiResponseTranslationDiscriminatorStatus? Type96 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TemplateResponseAvatarEngine? Type97 { get; set; }
+        public global::Synthesia.CtaSettings? Type97 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<object>? Type98 { get; set; }
+        public global::Synthesia.TemplateResponse? Type98 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.TemplateListResponse? Type99 { get; set; }
+        public global::Synthesia.TemplateResponseVisibility? Type99 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.TemplateResponse>? Type100 { get; set; }
+        public global::Synthesia.TemplateResponseAvatarEngine? Type100 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.Error? Type101 { get; set; }
+        public global::System.Collections.Generic.IList<object>? Type101 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoFromTemplateApi? Type102 { get; set; }
+        public global::Synthesia.TemplateListResponse? Type102 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoFromTemplateApiVisibility? Type103 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.TemplateResponse>? Type103 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoFromTemplateApiAvatarEngine? Type104 { get; set; }
+        public global::Synthesia.Error? Type104 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoAssetCaptionTypesResponse? Type105 { get; set; }
+        public global::Synthesia.VideoFromTemplateApi? Type105 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.ActorSettings? Type106 { get; set; }
+        public global::Synthesia.VideoFromTemplateApiVisibility? Type106 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.ActorSettingsHorizontalAlign? Type107 { get; set; }
+        public global::Synthesia.VideoFromTemplateApiAvatarEngine? Type107 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.ActorSettingsStyle? Type108 { get; set; }
+        public global::Synthesia.VideoAssetCaptionTypesResponse? Type108 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.InputBackgroundPosition? Type109 { get; set; }
+        public global::Synthesia.ActorSettings? Type109 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.InputBackgroundTrim? Type110 { get; set; }
+        public global::Synthesia.ActorSettingsHorizontalAlign? Type110 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.InputVideoBackgroundSettings? Type111 { get; set; }
+        public global::Synthesia.ActorSettingsStyle? Type111 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.InputVideoBackgroundSettingsShortBackgroundContentMatchMode? Type112 { get; set; }
+        public global::Synthesia.InputBackgroundPosition? Type112 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.InputVideoBackgroundSettingsLongBackgroundContentMatchMode? Type113 { get; set; }
+        public global::Synthesia.InputBackgroundTrim? Type113 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.InputBackgroundSettings? Type114 { get; set; }
+        public global::Synthesia.InputVideoBackgroundSettings? Type114 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.InputSoundSettings? Type115 { get; set; }
+        public global::Synthesia.InputVideoBackgroundSettingsShortBackgroundContentMatchMode? Type115 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.Input? Type116 { get; set; }
+        public global::Synthesia.InputVideoBackgroundSettingsLongBackgroundContentMatchMode? Type116 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.InputScriptLanguage? Type117 { get; set; }
+        public global::Synthesia.InputBackgroundSettings? Type117 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.InputTransition? Type118 { get; set; }
+        public global::Synthesia.InputSoundSettings? Type118 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.ParentSoundtrackRegion? Type119 { get; set; }
+        public global::Synthesia.Input? Type119 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.ParentSoundSettings? Type120 { get; set; }
+        public global::Synthesia.InputScriptLanguage? Type120 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.ParentSoundtrackRegion>? Type121 { get; set; }
+        public global::Synthesia.InputTransition? Type121 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.C2PAContentProvenanceResponse? Type122 { get; set; }
+        public global::Synthesia.ParentSoundtrackRegion? Type122 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.ContentProvenanceResponse? Type123 { get; set; }
+        public global::Synthesia.ParentSoundSettings? Type123 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoThumbnailTypesResponse? Type124 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.ParentSoundtrackRegion>? Type124 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoResponse? Type125 { get; set; }
+        public global::Synthesia.C2PAContentProvenanceResponse? Type125 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoResponseAspectRatio? Type126 { get; set; }
+        public global::Synthesia.ContentProvenanceResponse? Type126 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.Input>? Type127 { get; set; }
+        public global::Synthesia.VideoThumbnailTypesResponse? Type127 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoResponseSoundtrack? Type128 { get; set; }
+        public global::Synthesia.VideoResponse? Type128 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoResponseAvatarEngine? Type129 { get; set; }
+        public global::Synthesia.VideoResponseAspectRatio? Type129 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoResponseVisibility? Type130 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.Input>? Type130 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoResponseStatus? Type131 { get; set; }
+        public global::Synthesia.VideoResponseSoundtrack? Type131 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoListResponse? Type132 { get; set; }
+        public global::Synthesia.VideoResponseAvatarEngine? Type132 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.VideoResponse>? Type133 { get; set; }
+        public global::Synthesia.VideoResponseVisibility? Type133 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateVideoRequest? Type134 { get; set; }
+        public global::Synthesia.VideoResponseStatus? Type134 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateVideoRequestAspectRatio? Type135 { get; set; }
+        public global::Synthesia.VideoListResponse? Type135 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateVideoRequestSoundtrack? Type136 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.VideoResponse>? Type136 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateVideoRequestAvatarEngine? Type137 { get; set; }
+        public global::Synthesia.CreateVideoRequest? Type137 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateVideoRequestVisibility? Type138 { get; set; }
+        public global::Synthesia.CreateVideoRequestAspectRatio? Type138 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.UpdateVideoMetadataRequest? Type139 { get; set; }
+        public global::Synthesia.CreateVideoRequestSoundtrack? Type139 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.UpdateVideoMetadataRequestVisibility? Type140 { get; set; }
+        public global::Synthesia.CreateVideoRequestAvatarEngine? Type140 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.VideoXliffResponse? Type141 { get; set; }
+        public global::Synthesia.CreateVideoRequestVisibility? Type141 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.WebhookResponse? Type142 { get; set; }
+        public global::Synthesia.UpdateVideoMetadataRequest? Type142 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.WebhookListResponse? Type143 { get; set; }
+        public global::Synthesia.UpdateVideoMetadataRequestVisibility? Type143 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.WebhookResponse>? Type144 { get; set; }
+        public global::Synthesia.VideoXliffResponse? Type144 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateWebhookRequest? Type145 { get; set; }
+        public global::Synthesia.WebhookResponse? Type145 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.CreateWebhookRequestEvent>? Type146 { get; set; }
+        public global::Synthesia.WebhookListResponse? Type146 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateWebhookRequestEvent? Type147 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.WebhookResponse>? Type147 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateTranslatedVideoFromXliffRequest? Type148 { get; set; }
+        public global::Synthesia.CreateWebhookRequest? Type148 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateTranslatedVideoFromXliffResponse? Type149 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.CreateWebhookRequestEvent>? Type149 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.OneOf<global::Synthesia.CreateDubbingProjectApiRequestFromSourceAssetId, global::Synthesia.CreateDubbingProjectApiRequestFromSourceVideoUrl?>? Type150 { get; set; }
+        public global::Synthesia.CreateWebhookRequestEvent? Type150 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.GetTemplatesSourceItem>? Type151 { get; set; }
+        public global::Synthesia.CreateTranslatedVideoFromXliffRequest? Type151 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetTemplatesSourceItem? Type152 { get; set; }
+        public global::Synthesia.CreateTranslatedVideoFromXliffResponse? Type152 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Synthesia.GetVideosSourceItem>? Type153 { get; set; }
+        public global::Synthesia.OneOf<global::Synthesia.CreateDubbingProjectApiRequestFromSourceAssetId, global::Synthesia.CreateDubbingProjectApiRequestFromSourceVideoUrl?>? Type153 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetVideosSourceItem? Type154 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.GetTemplatesSourceItem>? Type154 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.GetVideosXliffXliffVersion? Type155 { get; set; }
+        public global::Synthesia.GetTemplatesSourceItem? Type155 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public byte[]? Type156 { get; set; }
+        public global::System.Collections.Generic.IList<global::Synthesia.GetVideosSourceItem>? Type156 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.OneOf<global::Synthesia.CreateDubbingProjectApiResponseFail, global::Synthesia.CreateDubbingResponse2>? Type157 { get; set; }
+        public global::Synthesia.GetVideosSourceItem? Type157 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateDubbingResponse2? Type158 { get; set; }
+        public global::Synthesia.GetVideosXliffXliffVersion? Type158 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Synthesia.CreateDubbingResponse3? Type159 { get; set; }
+        public byte[]? Type159 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Synthesia.OneOf<global::Synthesia.CreateDubbingProjectApiResponseFail, global::Synthesia.CreateDubbingResponse2>? Type160 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Synthesia.CreateDubbingResponse2? Type161 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Synthesia.CreateDubbingResponse3? Type162 { get; set; }
 
         /// <summary>
         ///
