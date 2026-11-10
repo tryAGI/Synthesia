@@ -19,7 +19,8 @@ namespace Synthesia
         /// ASSIGNMENT: An LMS training assignment entity<br/>
         /// CALENDAR_INVITE: A calendar invite sent by the calendar module<br/>
         /// INTERACTIVE_AVATAR_DEPLOYMENT: An Interactive Avatar deployment (a widget embed or hosted page)<br/>
-        /// INTERACTIVE_AVATAR_CONFIGURATION: An Interactive Avatar configuration (an agent)
+        /// INTERACTIVE_AVATAR_CONFIGURATION: An Interactive Avatar configuration (an agent)<br/>
+        /// BILLING_GROUP: A billing group of users in an organization or workspace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Synthesia.JsonConverters.TargetTypeJsonConverter))]
@@ -59,7 +60,8 @@ namespace Synthesia
         /// ASSIGNMENT: An LMS training assignment entity<br/>
         /// CALENDAR_INVITE: A calendar invite sent by the calendar module<br/>
         /// INTERACTIVE_AVATAR_DEPLOYMENT: An Interactive Avatar deployment (a widget embed or hosted page)<br/>
-        /// INTERACTIVE_AVATAR_CONFIGURATION: An Interactive Avatar configuration (an agent)
+        /// INTERACTIVE_AVATAR_CONFIGURATION: An Interactive Avatar configuration (an agent)<br/>
+        /// BILLING_GROUP: A billing group of users in an organization or workspace
         /// </param>
         /// <param name="id"></param>
         /// <param name="name">

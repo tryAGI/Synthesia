@@ -14,7 +14,8 @@ namespace Synthesia
     /// ASSIGNMENT: An LMS training assignment entity<br/>
     /// CALENDAR_INVITE: A calendar invite sent by the calendar module<br/>
     /// INTERACTIVE_AVATAR_DEPLOYMENT: An Interactive Avatar deployment (a widget embed or hosted page)<br/>
-    /// INTERACTIVE_AVATAR_CONFIGURATION: An Interactive Avatar configuration (an agent)
+    /// INTERACTIVE_AVATAR_CONFIGURATION: An Interactive Avatar configuration (an agent)<br/>
+    /// BILLING_GROUP: A billing group of users in an organization or workspace
     /// </summary>
     public enum TargetType
     {
@@ -26,6 +27,10 @@ namespace Synthesia
         /// An LMS training assignment entity
         /// </summary>
         Assignment,
+        /// <summary>
+        ///
+        /// </summary>
+        BillingGroup,
         /// <summary>
         ///
         /// </summary>
@@ -82,6 +87,7 @@ namespace Synthesia
             {
                 TargetType.Asset => "asset",
                 TargetType.Assignment => "assignment",
+                TargetType.BillingGroup => "billing_group",
                 TargetType.BillingPlan => "billing_plan",
                 TargetType.CalendarInvite => "calendar_invite",
                 TargetType.InteractiveAvatarConfiguration => "interactive_avatar_configuration",
@@ -104,6 +110,7 @@ namespace Synthesia
             {
                 "asset" => TargetType.Asset,
                 "assignment" => TargetType.Assignment,
+                "billing_group" => TargetType.BillingGroup,
                 "billing_plan" => TargetType.BillingPlan,
                 "calendar_invite" => TargetType.CalendarInvite,
                 "interactive_avatar_configuration" => TargetType.InteractiveAvatarConfiguration,
