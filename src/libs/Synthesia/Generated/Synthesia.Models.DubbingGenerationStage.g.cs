@@ -15,6 +15,10 @@ namespace Synthesia
         /// <summary>
         ///
         /// </summary>
+        DetectingSpeakers,
+        /// <summary>
+        ///
+        /// </summary>
         Finalizing,
         /// <summary>
         ///
@@ -55,6 +59,7 @@ namespace Synthesia
             return value switch
             {
                 DubbingGenerationStage.ApplyingLipsync => "applying_lipsync",
+                DubbingGenerationStage.DetectingSpeakers => "detecting_speakers",
                 DubbingGenerationStage.Finalizing => "finalizing",
                 DubbingGenerationStage.Pending => "pending",
                 DubbingGenerationStage.Rendering => "rendering",
@@ -73,6 +78,7 @@ namespace Synthesia
             return value switch
             {
                 "applying_lipsync" => DubbingGenerationStage.ApplyingLipsync,
+                "detecting_speakers" => DubbingGenerationStage.DetectingSpeakers,
                 "finalizing" => DubbingGenerationStage.Finalizing,
                 "pending" => DubbingGenerationStage.Pending,
                 "rendering" => DubbingGenerationStage.Rendering,
