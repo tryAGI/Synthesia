@@ -23,14 +23,16 @@ namespace Synthesia
         public global::Synthesia.ActorSettings? AvatarSettings { get; set; }
 
         /// <summary>
+        /// Optional. Defaults to `off_white`. Applies to EXPRESS-1 avatars.<br/>
+        /// **Deprecated for EXPRESS-3 avatars**: an EXPRESS-3 look carries its own outfit and setting (space), and a look with a space covers the whole frame, so the background has no visible effect. To choose the setting, pass that look's ID as `avatar`: in the Synthesia video editor, right-click the avatar and choose **Copy Avatar ID** (the Avatars page's **Copy ID** gives the avatar's default look). For a transparent or green-screen EXPRESS-3 avatar, pick **No space** in the editor's space picker before copying the ID: the background then shows behind the avatar, so set it to `green_screen`.<br/>
         /// Use Synthesia' stock backgrounds or your custom background. For the custom background, provide the ID of an uploaded asset (see [Create an asset](https://developers.synthesia.io/docs/create-an-asset)), or URL from where Synthesia should download the background.<br/>
-        /// Transparent: green_screen Green screen background can be used if you want to replace background using FFMPEG or any of the video editing software.<br/>
+        /// Transparent: `green_screen` Green screen background can be used if you want to replace background using FFMPEG or any of the video editing software.<br/>
         /// Solid: `off_white` / `warm_white` / `light_pink` / `soft_pink` / `light_blue` / `dark_blue` / `soft_cyan` / `strong_cyan` / `light_orange` / `soft_orange`<br/>
-        /// Image: `white_studio` / `white_cafe` / `luxury_lobby` / `large_window` / `white_meeting_room` / `open_office`
+        /// Image: `white_studio` / `white_cafe` / `luxury_lobby` / `large_window` / `white_meeting_room` / `open_office`<br/>
+        /// Default Value: off_white
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("background")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Background { get; set; }
+        public string? Background { get; set; }
 
         /// <summary>
         /// Video Settings object
@@ -85,15 +87,18 @@ namespace Synthesia
         /// <param name="avatar">
         /// Use one of [Synthesia stock avatars or your custom avatar](https://developers.synthesia.io/docs/avatars). Accepts the avatar ID shown by "Copy ID" on an avatar in STUDIO, which renders that avatar's default look, or the ID of a specific look of an avatar.
         /// </param>
-        /// <param name="background">
-        /// Use Synthesia' stock backgrounds or your custom background. For the custom background, provide the ID of an uploaded asset (see [Create an asset](https://developers.synthesia.io/docs/create-an-asset)), or URL from where Synthesia should download the background.<br/>
-        /// Transparent: green_screen Green screen background can be used if you want to replace background using FFMPEG or any of the video editing software.<br/>
-        /// Solid: `off_white` / `warm_white` / `light_pink` / `soft_pink` / `light_blue` / `dark_blue` / `soft_cyan` / `strong_cyan` / `light_orange` / `soft_orange`<br/>
-        /// Image: `white_studio` / `white_cafe` / `luxury_lobby` / `large_window` / `white_meeting_room` / `open_office`
-        /// </param>
         /// <param name="avatarSettings">
         /// Avatar settings.<br/>
         /// Default Value: {"horizontalAlign":"center","scale":1.0,"style":"rectangular","voice":null,"seamless":false}
+        /// </param>
+        /// <param name="background">
+        /// Optional. Defaults to `off_white`. Applies to EXPRESS-1 avatars.<br/>
+        /// **Deprecated for EXPRESS-3 avatars**: an EXPRESS-3 look carries its own outfit and setting (space), and a look with a space covers the whole frame, so the background has no visible effect. To choose the setting, pass that look's ID as `avatar`: in the Synthesia video editor, right-click the avatar and choose **Copy Avatar ID** (the Avatars page's **Copy ID** gives the avatar's default look). For a transparent or green-screen EXPRESS-3 avatar, pick **No space** in the editor's space picker before copying the ID: the background then shows behind the avatar, so set it to `green_screen`.<br/>
+        /// Use Synthesia' stock backgrounds or your custom background. For the custom background, provide the ID of an uploaded asset (see [Create an asset](https://developers.synthesia.io/docs/create-an-asset)), or URL from where Synthesia should download the background.<br/>
+        /// Transparent: `green_screen` Green screen background can be used if you want to replace background using FFMPEG or any of the video editing software.<br/>
+        /// Solid: `off_white` / `warm_white` / `light_pink` / `soft_pink` / `light_blue` / `dark_blue` / `soft_cyan` / `strong_cyan` / `light_orange` / `soft_orange`<br/>
+        /// Image: `white_studio` / `white_cafe` / `luxury_lobby` / `large_window` / `white_meeting_room` / `open_office`<br/>
+        /// Default Value: off_white
         /// </param>
         /// <param name="backgroundSettings">
         /// Video Settings object
@@ -119,8 +124,8 @@ namespace Synthesia
 #endif
         public Input(
             string avatar,
-            string background,
             global::Synthesia.ActorSettings? avatarSettings,
+            string? background,
             global::Synthesia.InputBackgroundSettings? backgroundSettings,
             string? scriptAudio,
             global::Synthesia.InputScriptLanguage? scriptLanguage,
@@ -130,7 +135,7 @@ namespace Synthesia
         {
             this.Avatar = avatar ?? throw new global::System.ArgumentNullException(nameof(avatar));
             this.AvatarSettings = avatarSettings;
-            this.Background = background ?? throw new global::System.ArgumentNullException(nameof(background));
+            this.Background = background;
             this.BackgroundSettings = backgroundSettings;
             this.ScriptAudio = scriptAudio;
             this.ScriptLanguage = scriptLanguage;
